@@ -17,7 +17,7 @@
     {
       "id": "spotify-discovery",
       "title": "Spotify Genre Browser",
-      "description": "Discover new music through Spotify's genre ecosystem. Browse 34 genres and 5,800+ artists.",
+      "description": "Discover new music through Spotify's genre ecosystem. Browse main genres and subgenres with 5,800+ artists.",
       "url": "https://keeltekool.github.io/spotify-discovery/",
       "github": "https://github.com/keeltekool/spotify-discovery"
     },
