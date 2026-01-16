@@ -1,0 +1,34 @@
+{
+  "projects": [
+    {
+      "id": "pocket-clone",
+      "title": "Pocket Clone",
+      "description": "Save articles for later. Minimal link-saving with auto-fetched titles and thumbnails.",
+      "github": "https://github.com/keeltekool/Pocket_Clone"
+    },
+    {
+      "id": "spotify-artist-browser",
+      "title": "Spotify Artist Browser",
+      "description": "Discover 5,800+ artists across 34 genres. Find playlists on Spotify.",
+      "github": "https://github.com/keeltekool/spotify-artist-browser"
+    },
+    {
+      "id": "picmachine-web",
+      "title": "PicMachine Web",
+      "description": "Cloud image viewer. Upload, store, and browse photos with slideshow.",
+      "github": "https://github.com/keeltekool/PicMachine_Web"
+    },
+    {
+      "id": "r-pigenerator",
+      "title": "Estonian Rap Generator",
+      "description": "Create rap verses from keywords. Powered by linguistics and slang.",
+      "github": "https://github.com/keeltekool/R-pigenerator"
+    },
+    {
+      "id": "wordporn",
+      "title": "Wordporn",
+      "description": "Estonian slang and witty expressions. Curated creative phrases.",
+      "github": "https://github.com/keeltekool/Wordporn"
+    }
+  ]
+}
