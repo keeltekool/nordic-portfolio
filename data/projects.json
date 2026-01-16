@@ -25,7 +25,7 @@
       "id": "picmachine-web",
       "title": "PicMachine Web",
       "description": "Cloud image viewer. Upload, store, and browse photos with slideshow.",
-      "url": "https://keeltekool.github.io/PicMachine_Web/",
+      "url": "https://picmachine.vercel.app",
       "github": "https://github.com/keeltekool/PicMachine_Web"
     }
   ]
