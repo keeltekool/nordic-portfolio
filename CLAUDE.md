@@ -1,4 +1,4 @@
-# Nordic Portfolio - Claude Code Instructions
+# Egertv Portfolio - Claude Code Instructions
 
 ## Quick Reference
 
@@ -103,7 +103,7 @@ Each card displays:
 
 ## Design Notes
 
-- **Style**: Nordic minimal (inspired by leerob.io)
+- **Style**: Minimal, clean (inspired by leerob.io)
 - **Colors Light**: bg #fafafa, text #171717, border #e5e5e5
 - **Colors Dark**: bg #0a0a0a, text #ededed, border #262626
 - **Layout**: Max-width 672px, 2-column card grid on desktop, 1-column on mobile
