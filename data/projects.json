@@ -13,22 +13,16 @@
       "github": "https://github.com/keeltekool/spotify-artist-browser"
     },
     {
+      "id": "spotify-discovery",
+      "title": "Spotify Genre Browser",
+      "description": "Discover new music through Spotify's genre ecosystem. Browse 34 genres and 5,800+ artists.",
+      "github": "https://github.com/keeltekool/spotify-discovery"
+    },
+    {
       "id": "picmachine-web",
       "title": "PicMachine Web",
       "description": "Cloud image viewer. Upload, store, and browse photos with slideshow.",
       "github": "https://github.com/keeltekool/PicMachine_Web"
-    },
-    {
-      "id": "r-pigenerator",
-      "title": "Estonian Rap Generator",
-      "description": "Create rap verses from keywords. Powered by linguistics and slang.",
-      "github": "https://github.com/keeltekool/R-pigenerator"
-    },
-    {
-      "id": "wordporn",
-      "title": "Wordporn",
-      "description": "Estonian slang and witty expressions. Curated creative phrases.",
-      "github": "https://github.com/keeltekool/Wordporn"
     }
   ]
 }
