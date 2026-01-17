@@ -27,6 +27,13 @@
       "description": "Cloud image viewer. Upload, store, and browse photos with slideshow.",
       "url": "https://picmachine.vercel.app",
       "github": "https://github.com/keeltekool/PicMachine_Web"
+    },
+    {
+      "id": "dj-portfolio",
+      "title": "DJ Portfolio",
+      "description": "Interactive DJ portfolio with 3D vinyl record book, music player, and event showcase.",
+      "url": "https://dj-portfolio-omega.vercel.app",
+      "github": "https://github.com/keeltekool/dj-portfolio"
     }
   ]
 }
