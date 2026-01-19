@@ -1,6 +1,13 @@
 {
   "projects": [
     {
+      "id": "allekirjoitus-design-system",
+      "title": "Allekirjoitus.fi",
+      "description": "Digital signature platform design system. Product landing page and pricing for Estonian e-signature service.",
+      "url": "https://allekirjoitus-design-system.vercel.app/website/en/index.html",
+      "github": "https://github.com/keeltekool/allekirjoitus-design-system"
+    },
+    {
       "id": "pocket-clone",
       "title": "Pocket Clone",
       "description": "Save articles for later. Minimal link-saving with auto-fetched titles, thumbnails, and AI-powered categorization.",
