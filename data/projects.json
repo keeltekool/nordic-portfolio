@@ -8,6 +8,13 @@
       "github": "https://github.com/keeltekool/personal-finance-tracker"
     },
     {
+      "id": "cv-tailor",
+      "title": "CV Tailor",
+      "description": "AI-powered CV and cover letter tailoring engine. Match your resume to job descriptions and generate personalized applications.",
+      "url": "https://cv-tailor-omega.vercel.app",
+      "github": "https://github.com/keeltekool/cv-tailor"
+    },
+    {
       "id": "allekirjoitus-design-system",
       "title": "Allekirjoitus.fi",
       "description": "Digital signature platform design system. Product landing page and pricing for Estonian e-signature service.",
