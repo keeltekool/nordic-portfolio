@@ -1,6 +1,13 @@
 {
   "projects": [
     {
+      "id": "feedboard",
+      "title": "Feedboard",
+      "description": "Track any topic across News and Reddit. Personal dashboard for monitoring keywords with time filters and Vault for saving articles.",
+      "url": "https://data-tracker-alpha.vercel.app/",
+      "github": "https://github.com/keeltekool/data-tracker"
+    },
+    {
       "id": "personal-finance-tracker",
       "title": "Personal Finance Tracker",
       "description": "Smart bank statement analyzer. Upload CSV, auto-categorize transactions with AI pattern matching, and track spending with interactive dashboards.",
