@@ -49,3 +49,19 @@ body {
   background-color: var(--foreground);
   color: var(--background);
 }
+
+.stack-details {
+  display: grid;
+  grid-template-rows: 0fr;
+  opacity: 0;
+  transition: grid-template-rows 0.2s ease, opacity 0.2s ease;
+}
+
+.stack-details > div {
+  overflow: hidden;
+}
+
+.stack-details-open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}

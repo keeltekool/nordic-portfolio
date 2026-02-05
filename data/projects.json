@@ -5,64 +5,108 @@
       "title": "Feedboard",
       "description": "Track any topic across News and Reddit. Personal dashboard for monitoring keywords with time filters and Vault for saving articles.",
       "url": "https://data-tracker-alpha.vercel.app/",
-      "github": "https://github.com/keeltekool/data-tracker"
+      "github": "https://github.com/keeltekool/data-tracker",
+      "stack": {
+        "builtWith": "Next.js, React, Tailwind CSS",
+        "services": "Vercel (hosting), NewsAPI (articles), Reddit API (posts)",
+        "howItWorks": "Keyword-based monitoring dashboard with time filters and article vault."
+      }
     },
     {
       "id": "personal-finance-tracker",
       "title": "Personal Finance Tracker",
       "description": "Smart bank statement analyzer. Upload CSV, auto-categorize transactions with AI pattern matching, and track spending with interactive dashboards.",
       "url": "https://personal-finance-tracker-iota-dusky.vercel.app",
-      "github": "https://github.com/keeltekool/personal-finance-tracker"
+      "github": "https://github.com/keeltekool/personal-finance-tracker",
+      "stack": {
+        "builtWith": "Next.js, React, Tailwind CSS, Recharts",
+        "services": "Vercel (hosting), Anthropic Claude (AI categorization)",
+        "howItWorks": "Upload bank CSV, AI auto-categorizes transactions, interactive spending dashboards."
+      }
     },
     {
       "id": "cv-tailor",
       "title": "CV Tailor",
       "description": "AI-powered CV and cover letter tailoring engine. Match your resume to job descriptions and generate personalized applications.",
       "url": "https://cv-tailor-omega.vercel.app",
-      "github": "https://github.com/keeltekool/cv-tailor"
+      "github": "https://github.com/keeltekool/cv-tailor",
+      "stack": {
+        "builtWith": "Next.js, React, TypeScript, Tailwind CSS",
+        "services": "Vercel (hosting), Anthropic Claude (AI generation)",
+        "howItWorks": "Paste job description + resume, AI generates tailored CV and cover letter."
+      }
     },
     {
       "id": "allekirjoitus-design-system",
       "title": "Allekirjoitus.fi",
       "description": "Digital signature platform design system. Product landing page and pricing for Estonian e-signature service.",
       "url": "https://allekirjoitus-design-system.vercel.app/website/en/index.html",
-      "github": "https://github.com/keeltekool/allekirjoitus-design-system"
+      "github": "https://github.com/keeltekool/allekirjoitus-design-system",
+      "stack": {
+        "builtWith": "HTML, CSS, JavaScript",
+        "services": "Vercel (hosting)",
+        "howItWorks": "Static design system and product landing page for Estonian e-signature service."
+      }
     },
     {
       "id": "pocket-clone",
       "title": "Pocket Clone",
       "description": "Save articles for later. Minimal link-saving with auto-fetched titles, thumbnails, and AI-powered categorization.",
       "url": "https://pocket-clone-virid.vercel.app",
-      "github": "https://github.com/keeltekool/Pocket_Clone"
+      "github": "https://github.com/keeltekool/Pocket_Clone",
+      "stack": {
+        "builtWith": "Vanilla JS, TypeScript, Drizzle ORM",
+        "services": "Clerk (auth), Neon PostgreSQL (database), Anthropic Claude 3.5 (AI categorization), Vercel (hosting + serverless)",
+        "howItWorks": "Links saved instantly, metadata fetched in background via CORS proxy. AI auto-categorizes into user buckets."
+      }
     },
     {
       "id": "spotify-artist-browser",
       "title": "Spotify Artist Browser",
       "description": "Discover 5,800+ artists across 34 genres. Find playlists on Spotify.",
       "url": "https://spotify-artist-browser-gamma.vercel.app",
-      "github": "https://github.com/keeltekool/spotify-artist-browser"
+      "github": "https://github.com/keeltekool/spotify-artist-browser",
+      "stack": {
+        "builtWith": "Next.js, React, Tailwind CSS",
+        "services": "Vercel (hosting)",
+        "howItWorks": "Static dataset of 5,800+ artists browsable by genre with playlist links."
+      }
     },
     {
       "id": "spotify-discovery",
       "title": "Spotify Genre Browser",
       "description": "Discover new music through Spotify's genre ecosystem. Browse main genres and subgenres with 5,800+ artists.",
       "url": "https://keeltekool.github.io/spotify-discovery/",
-      "github": "https://github.com/keeltekool/spotify-discovery"
+      "github": "https://github.com/keeltekool/spotify-discovery",
+      "stack": {
+        "builtWith": "HTML, CSS, JavaScript",
+        "services": "GitHub Pages (hosting)",
+        "howItWorks": "Browse Spotify's genre tree — main genres and subgenres with artist counts."
+      }
     },
     {
       "id": "picmachine-web",
       "title": "PicMachine Web",
       "description": "Cloud image viewer. Upload, store, and browse photos with slideshow.",
       "url": "https://picmachine.vercel.app",
-      "github": "https://github.com/keeltekool/PicMachine_Web"
+      "github": "https://github.com/keeltekool/PicMachine_Web",
+      "stack": {
+        "builtWith": "Next.js, React, Tailwind CSS",
+        "services": "Vercel (hosting), Supabase (storage + auth)",
+        "howItWorks": "Upload photos to cloud storage, browse gallery with slideshow mode."
+      }
     },
     {
       "id": "dj-portfolio",
       "title": "DJ Portfolio",
       "description": "Interactive DJ portfolio with 3D vinyl record book, music player, and event showcase.",
       "url": "https://dj-portfolio-omega.vercel.app",
-      "github": "https://github.com/keeltekool/dj-portfolio"
+      "github": "https://github.com/keeltekool/dj-portfolio",
+      "stack": {
+        "builtWith": "Next.js, React, Three.js, Tailwind CSS",
+        "services": "Vercel (hosting)",
+        "howItWorks": "Interactive 3D vinyl record book, embedded music player, event timeline."
+      }
     }
   ]
 }
-

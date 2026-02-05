@@ -25,7 +25,12 @@
   "title": "Project Title",
   "description": "Short description (1-2 sentences max).",
   "url": "https://live-app-url.com",
-  "github": "https://github.com/keeltekool/repo-name"
+  "github": "https://github.com/keeltekool/repo-name",
+  "stack": {
+    "builtWith": "Next.js, React, Tailwind CSS",
+    "services": "Vercel (hosting), ServiceName (purpose)",
+    "howItWorks": "One sentence explaining the core mechanism."
+  }
 }
 ```
 3. Commit and push - Vercel auto-deploys
@@ -64,19 +69,19 @@ nordic-portfolio/
 ├── app/
 │   ├── layout.tsx        # Root layout + theme provider
 │   ├── page.tsx          # Main page
-│   └── globals.css       # Tailwind + CSS variables
+│   └── globals.css       # Tailwind + CSS variables + stack-details animation
 ├── components/
 │   ├── Header.tsx        # Name + LinkedIn + theme toggle
 │   ├── Intro.tsx         # Author bio
-│   ├── ProjectCard.tsx   # Single project card (Open App + GitHub links)
+│   ├── ProjectCard.tsx   # Single project card (links + expandable stack details)
 │   ├── ProjectGrid.tsx   # Grid container
 │   ├── Footer.tsx        # Footer
 │   ├── ThemeProvider.tsx # Dark/light mode wrapper
 │   └── ThemeToggle.tsx   # Theme switch button
 ├── data/
-│   └── projects.json     # ⭐ MAIN CONFIG FILE
+│   └── projects.json     # ⭐ MAIN CONFIG FILE (all projects + stack data)
 ├── lib/
-│   └── types.ts          # TypeScript interfaces (Project type)
+│   └── types.ts          # TypeScript interfaces (Project, Stack)
 └── package.json
 ```
 
@@ -84,10 +89,15 @@ nordic-portfolio/
 
 ## Current Projects (in projects.json)
 
-1. **Pocket Clone** - Link-saving app | [App](https://keeltekool.github.io/Pocket_Clone/)
-2. **Spotify Artist Browser** - Discover artists by genre | [App](https://spotify-artist-browser-gamma.vercel.app)
-3. **Spotify Genre Browser** - Browse genres and artists | [App](https://keeltekool.github.io/spotify-discovery/)
-4. **PicMachine Web** - Cloud image viewer | [App](https://keeltekool.github.io/PicMachine_Web/)
+1. **Feedboard** - Track topics across News/Reddit | [App](https://data-tracker-alpha.vercel.app/)
+2. **Personal Finance Tracker** - Bank statement analyzer with AI | [App](https://personal-finance-tracker-iota-dusky.vercel.app)
+3. **CV Tailor** - AI-powered resume tailoring | [App](https://cv-tailor-omega.vercel.app)
+4. **Allekirjoitus.fi** - E-signature design system | [App](https://allekirjoitus-design-system.vercel.app/website/en/index.html)
+5. **Pocket Clone** - Link-saving with AI categorization | [App](https://pocket-clone-virid.vercel.app)
+6. **Spotify Artist Browser** - Browse 5,800+ artists by genre | [App](https://spotify-artist-browser-gamma.vercel.app)
+7. **Spotify Genre Browser** - Browse Spotify genre tree | [App](https://keeltekool.github.io/spotify-discovery/)
+8. **PicMachine Web** - Cloud image viewer | [App](https://picmachine.vercel.app)
+9. **DJ Portfolio** - Interactive 3D DJ portfolio | [App](https://dj-portfolio-omega.vercel.app)
 
 ---
 
@@ -98,6 +108,12 @@ Each card displays:
 - **Description** (1-2 sentences)
 - **"Open App"** link → `url` field (opens live app)
 - **"GitHub"** link → `github` field (opens repo)
+- **"Stack details"** toggle → expandable section showing:
+  - **Built with** — frameworks and libraries
+  - **Services** — external services with their purpose
+  - **How it works** — one-sentence core mechanism
+
+The stack details section is collapsed by default. Click to expand/collapse with smooth animation.
 
 ---
 
@@ -108,6 +124,7 @@ Each card displays:
 - **Colors Dark**: bg #0a0a0a, text #ededed, border #262626
 - **Layout**: Max-width 672px, 2-column card grid on desktop, 1-column on mobile
 - **Theme**: System preference default, toggle in header
+- **Stack details**: CSS grid transition (grid-template-rows 0fr → 1fr) + opacity
 
 ---
 

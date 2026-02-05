@@ -1,3 +1,6 @@
+"use client";
+
+import { useState } from "react";
 import type { Project } from "@/lib/types";
 
 interface ProjectCardProps {
@@ -5,6 +8,8 @@ interface ProjectCardProps {
 }
 
 export function ProjectCard({ project }: ProjectCardProps) {
+  const [expanded, setExpanded] = useState(false);
+
   return (
     <div className="p-5 rounded-lg border border-[var(--border)] bg-[var(--card)] hover:bg-[var(--card-hover)] transition-colors">
       <h3 className="font-medium mb-2">
@@ -55,6 +60,50 @@ export function ProjectCard({ project }: ProjectCardProps) {
           <span>GitHub</span>
         </a>
       </div>
+
+      {project.stack && (
+        <>
+          <button
+            onClick={() => setExpanded(!expanded)}
+            className="mt-3 pt-3 border-t border-[var(--border)] w-full flex items-center gap-1.5 text-xs text-[var(--muted)] hover:text-[var(--foreground)] transition-colors cursor-pointer"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="12"
+              height="12"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              className={`transition-transform duration-200 ${expanded ? "rotate-90" : ""}`}
+            >
+              <polyline points="9 18 15 12 9 6" />
+            </svg>
+            <span>Stack details</span>
+          </button>
+
+          <div
+            className={`stack-details ${expanded ? "stack-details-open" : ""}`}
+          >
+            <div className="pt-2 flex flex-col gap-1.5">
+              <p className="text-xs text-[var(--muted)] leading-relaxed">
+                <span className="text-[var(--foreground)] font-medium">Built with: </span>
+                {project.stack.builtWith}
+              </p>
+              <p className="text-xs text-[var(--muted)] leading-relaxed">
+                <span className="text-[var(--foreground)] font-medium">Services: </span>
+                {project.stack.services}
+              </p>
+              <p className="text-xs text-[var(--muted)] leading-relaxed">
+                <span className="text-[var(--foreground)] font-medium">How it works: </span>
+                {project.stack.howItWorks}
+              </p>
+            </div>
+          </div>
+        </>
+      )}
     </div>
   );
 }
