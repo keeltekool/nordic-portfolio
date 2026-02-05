@@ -87,13 +87,13 @@
     {
       "id": "picmachine-web",
       "title": "PicMachine Web",
-      "description": "Cloud image viewer. Upload, store, and browse photos with slideshow.",
+      "description": "Cloud image viewer. Upload, store, and browse photos with slideshow, gallery management, and mass delete.",
       "url": "https://picmachine.vercel.app",
       "github": "https://github.com/keeltekool/PicMachine_Web",
       "stack": {
-        "builtWith": "Next.js, React, Tailwind CSS",
-        "services": "Vercel (hosting), Supabase (storage + auth)",
-        "howItWorks": "Upload photos to cloud storage, browse gallery with slideshow mode."
+        "builtWith": "Vanilla JS, TypeScript, AWS SDK",
+        "services": "Clerk (auth), Cloudflare R2 (storage), Vercel (hosting + serverless API)",
+        "howItWorks": "Upload photos via presigned URLs to R2 cloud storage, browse in fullscreen slideshow with zoom/pan, manage gallery."
       }
     },
     {
