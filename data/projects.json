@@ -107,6 +107,18 @@
         "services": "Vercel (hosting)",
         "howItWorks": "Interactive 3D vinyl record book, embedded music player, event timeline."
       }
+    },
+    {
+      "id": "skrift-cv",
+      "title": "Skrift-CV",
+      "description": "Professional CV and cover letter builder with clean Nordic design. Three elegant templates, matching cover letters, and AI-powered PDF import.",
+      "url": "https://skrift-cv.vercel.app",
+      "github": "https://github.com/keeltekool/skrift-cv",
+      "stack": {
+        "builtWith": "Next.js, React, TypeScript, Tailwind CSS",
+        "services": "Clerk (auth), Vercel (hosting), Anthropic Claude (AI PDF extraction)",
+        "howItWorks": "Build CVs with customizable templates, fonts, and colors. Import existing PDFs with AI extraction."
+      }
     }
   ]
 }
