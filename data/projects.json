@@ -1,11 +1,25 @@
 {
   "projects": [
     {
+      "id": "applykit",
+      "title": "ApplyKit",
+      "description": "Full-stack AI job application platform. Unifies CV-Tailor (AI tailoring engine) and Skrift-CV (visual CV builder) into one product — upload your CV, paste a job posting, get a tailored CV and cover letter in seconds.",
+      "url": "https://cv-tailor-plus.vercel.app",
+      "github": "https://github.com/keeltekool/cv-tailor-plus",
+      "updatedAt": "2025-02-08",
+      "stack": {
+        "builtWith": "Next.js 16, React, TypeScript, Tailwind CSS",
+        "services": "Supabase (auth + PostgreSQL + storage), Vercel (hosting), Anthropic Claude Opus (AI tailoring, cover letters, career consult, PDF extraction)",
+        "howItWorks": "Three CV templates with visual editor, AI-powered job-to-CV matching, smart cover letter generation, PDF import, job workspace with parsed requirements, and career consult chat."
+      }
+    },
+    {
       "id": "feedboard",
       "title": "Feedboard",
       "description": "Track any topic across News and Reddit. Personal dashboard for monitoring keywords with time filters and Vault for saving articles.",
       "url": "https://data-tracker-alpha.vercel.app/",
       "github": "https://github.com/keeltekool/data-tracker",
+      "updatedAt": "2025-01-20",
       "stack": {
         "builtWith": "Next.js, React, Tailwind CSS",
         "services": "Vercel (hosting), NewsAPI (articles), Reddit API (posts)",
@@ -18,6 +32,7 @@
       "description": "Smart bank statement analyzer. Upload CSV, auto-categorize transactions with AI pattern matching, and track spending with interactive dashboards.",
       "url": "https://personal-finance-tracker-iota-dusky.vercel.app",
       "github": "https://github.com/keeltekool/personal-finance-tracker",
+      "updatedAt": "2025-01-15",
       "stack": {
         "builtWith": "Next.js, React, Tailwind CSS, Recharts",
         "services": "Vercel (hosting), Anthropic Claude (AI categorization)",
@@ -30,6 +45,7 @@
       "description": "AI-powered CV and cover letter tailoring engine. Match your resume to job descriptions and generate personalized applications.",
       "url": "https://cv-tailor-omega.vercel.app",
       "github": "https://github.com/keeltekool/cv-tailor",
+      "updatedAt": "2024-12-10",
       "stack": {
         "builtWith": "Next.js, React, TypeScript, Tailwind CSS",
         "services": "Vercel (hosting), Anthropic Claude (AI generation)",
@@ -42,6 +58,7 @@
       "description": "Digital signature platform design system. Product landing page and pricing for Estonian e-signature service.",
       "url": "https://allekirjoitus-design-system.vercel.app/website/en/index.html",
       "github": "https://github.com/keeltekool/allekirjoitus-design-system",
+      "updatedAt": "2024-11-05",
       "stack": {
         "builtWith": "HTML, CSS, JavaScript",
         "services": "Vercel (hosting)",
@@ -54,6 +71,7 @@
       "description": "Save articles for later. Minimal link-saving with auto-fetched titles, thumbnails, and AI-powered categorization.",
       "url": "https://pocket-clone-virid.vercel.app",
       "github": "https://github.com/keeltekool/Pocket_Clone",
+      "updatedAt": "2024-10-20",
       "stack": {
         "builtWith": "Vanilla JS, TypeScript, Drizzle ORM",
         "services": "Clerk (auth), Neon PostgreSQL (database), Anthropic Claude 3.5 (AI categorization), Vercel (hosting + serverless)",
@@ -66,6 +84,7 @@
       "description": "Discover 5,800+ artists across 34 genres. Find playlists on Spotify.",
       "url": "https://spotify-artist-browser-gamma.vercel.app",
       "github": "https://github.com/keeltekool/spotify-artist-browser",
+      "updatedAt": "2024-09-15",
       "stack": {
         "builtWith": "Next.js, React, Tailwind CSS",
         "services": "Vercel (hosting)",
@@ -78,6 +97,7 @@
       "description": "Discover new music through Spotify's genre ecosystem. Browse main genres and subgenres with 5,800+ artists.",
       "url": "https://keeltekool.github.io/spotify-discovery/",
       "github": "https://github.com/keeltekool/spotify-discovery",
+      "updatedAt": "2024-08-10",
       "stack": {
         "builtWith": "HTML, CSS, JavaScript",
         "services": "GitHub Pages (hosting)",
@@ -90,6 +110,7 @@
       "description": "Cloud image viewer. Upload, store, and browse photos with slideshow, gallery management, and mass delete.",
       "url": "https://picmachine.vercel.app",
       "github": "https://github.com/keeltekool/PicMachine_Web",
+      "updatedAt": "2024-07-25",
       "stack": {
         "builtWith": "Vanilla JS, TypeScript, AWS SDK",
         "services": "Clerk (auth), Cloudflare R2 (storage), Vercel (hosting + serverless API)",
@@ -102,6 +123,7 @@
       "description": "Interactive DJ portfolio with 3D vinyl record book, music player, and event showcase.",
       "url": "https://dj-portfolio-omega.vercel.app",
       "github": "https://github.com/keeltekool/dj-portfolio",
+      "updatedAt": "2024-06-15",
       "stack": {
         "builtWith": "Next.js, React, Three.js, Tailwind CSS",
         "services": "Vercel (hosting)",
@@ -114,6 +136,7 @@
       "description": "Professional CV and cover letter builder with clean Nordic design. Three elegant templates, matching cover letters, and AI-powered PDF import.",
       "url": "https://skrift-cv.vercel.app",
       "github": "https://github.com/keeltekool/skrift-cv",
+      "updatedAt": "2025-02-01",
       "stack": {
         "builtWith": "Next.js, React, TypeScript, Tailwind CSS",
         "services": "Clerk (auth), Vercel (hosting), Anthropic Claude (AI PDF extraction)",
