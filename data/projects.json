@@ -4,7 +4,7 @@
       "id": "lead-radar",
       "title": "Lead Radar",
       "description": "AI-powered lead generation tool for consultants. Searches Google Places to find Estonian service businesses with mediocre digital presence, scores them on a 0-100 scale, scrapes contact emails, runs PageSpeed audits, and uses Claude AI to analyze each business and generate personalized cold outreach pitches.",
-      "url": "https://lead-radar.vercel.app",
+      "url": "https://lead-radar-two.vercel.app",
       "github": "https://github.com/keeltekool/lead-radar",
       "updatedAt": "2026-02-15",
       "stack": {
