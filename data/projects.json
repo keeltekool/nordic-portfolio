@@ -1,6 +1,19 @@
 {
   "projects": [
     {
+      "id": "prop-radar",
+      "title": "Prop-Radar",
+      "description": "Estonian real estate search and analysis tool. Search City24 listings with advanced filters, save properties, and run AI-powered market analysis with a 5-factor scoring engine that ranks deals by price/m\u00b2, condition, year, floor, and energy cert.",
+      "url": "https://prop-radar-one.vercel.app",
+      "github": "https://github.com/keeltekool/prop-radar",
+      "updatedAt": "2026-02-15",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM",
+        "services": "Clerk (auth), Neon PostgreSQL (database), Anthropic Claude Sonnet (AI analysis), Vercel (hosting), next-intl (ET/EN i18n)",
+        "howItWorks": "Search City24 property API with county/municipality/type/price filters. Save listings to personal collection. Run AI analysis across four modes: score report (client-side 5-factor weighted ranking), market overview, price analysis, and side-by-side comparison."
+      }
+    },
+    {
       "id": "applykit",
       "title": "ApplyKit",
       "description": "Full-stack AI job application platform. Unifies CV-Tailor (AI tailoring engine) and Skrift-CV (visual CV builder) into one product — upload your CV, paste a job posting, get a tailored CV and cover letter in seconds.",
