@@ -1,6 +1,19 @@
 {
   "projects": [
     {
+      "id": "lead-radar",
+      "title": "Lead Radar",
+      "description": "AI-powered lead generation tool for consultants. Searches Google Places to find Estonian service businesses with mediocre digital presence, scores them on a 0-100 scale, scrapes contact emails, runs PageSpeed audits, and uses Claude AI to analyze each business and generate personalized cold outreach pitches.",
+      "url": "https://lead-radar.vercel.app",
+      "github": "https://github.com/keeltekool/lead-radar",
+      "updatedAt": "2026-02-15",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM",
+        "services": "Clerk (auth), Neon PostgreSQL (database), Anthropic Claude Sonnet (AI analysis + pitch generation), Google Places API (business data), PageSpeed Insights API (website audit), Vercel (hosting), next-intl (ET/EN i18n)",
+        "howItWorks": "Search Google Places by industry and city. 5-factor lead scoring engine rates businesses by web presence, profile completeness, review health, contactability, and service fit. Save leads, scrape emails from websites, view PageSpeed scores, and generate AI-powered review summaries and sales pitches with one click."
+      }
+    },
+    {
       "id": "prop-radar",
       "title": "Prop-Radar",
       "description": "Estonian real estate search and analysis tool. Search City24 listings with advanced filters, save properties, and run AI-powered market analysis with a 5-factor scoring engine that ranks deals by price/m\u00b2, condition, year, floor, and energy cert.",
