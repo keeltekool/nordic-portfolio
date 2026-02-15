@@ -9,7 +9,7 @@
       "updatedAt": "2026-02-15",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM",
-        "services": "Clerk (auth), Neon PostgreSQL (database), Anthropic Claude Sonnet (AI analysis), Vercel (hosting), next-intl (ET/EN i18n)",
+        "services": "Clerk (auth), Neon PostgreSQL (database), Anthropic Claude Sonnet (AI analysis), Cloudflare Workers (API proxy), Vercel (hosting), next-intl (ET/EN i18n)",
         "howItWorks": "Search City24 property API with county/municipality/type/price filters. Save listings to personal collection. Run AI analysis across four modes: score report (client-side 5-factor weighted ranking), market overview, price analysis, and side-by-side comparison."
       }
     },
