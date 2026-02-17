@@ -1,6 +1,19 @@
 {
   "projects": [
     {
+      "id": "quote-kit",
+      "title": "QuoteKit",
+      "description": "AI-powered quoting and invoicing PWA for Estonian tradespeople. Build quotes from a smart service catalog, generate invoices, share via PDF/WhatsApp/email, with full Estonian legal compliance (VÕS, KMS).",
+      "url": "https://quote-kit.vercel.app",
+      "github": "https://github.com/keeltekool/quote-kit",
+      "updatedAt": "2026-02-18",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM",
+        "services": "Clerk (auth), Neon PostgreSQL (database), Anthropic Claude Sonnet (AI service suggestions), Cloudflare R2 (logo storage), Äriregister API (business registry), Vercel (hosting), next-intl (ET/EN i18n)",
+        "howItWorks": "Service catalog as AI foundation — add services manually or let AI suggest from trade type. Build quotes with labor/material line items, convert to invoices, generate PDFs with Puppeteer, share via WhatsApp/email links."
+      }
+    },
+    {
       "id": "lead-radar",
       "title": "Lead Radar",
       "description": "AI-powered lead generation tool for consultants. Searches Google Places to find Estonian service businesses with mediocre digital presence, scores them on a 0-100 scale, scrapes contact emails, runs PageSpeed audits, and uses Claude AI to analyze each business and generate personalized cold outreach pitches.",
