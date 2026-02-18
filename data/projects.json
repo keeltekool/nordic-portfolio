@@ -6,6 +6,7 @@
       "description": "AI-powered quoting and invoicing PWA for Estonian tradespeople. Build quotes from a smart service catalog, generate invoices, share via PDF/WhatsApp/email, with full Estonian legal compliance (VÕS, KMS).",
       "url": "https://quote-kit.vercel.app",
       "github": "https://github.com/keeltekool/quote-kit",
+      "image": "/screenshots/quote-kit.webp",
       "updatedAt": "2026-02-18",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM",
@@ -19,6 +20,7 @@
       "description": "AI-powered lead generation tool for consultants. Searches Google Places to find Estonian service businesses with mediocre digital presence, scores them on a 0-100 scale, scrapes contact emails, runs PageSpeed audits, and uses Claude AI to analyze each business and generate personalized cold outreach pitches.",
       "url": "https://lead-radar-two.vercel.app",
       "github": "https://github.com/keeltekool/lead-radar",
+      "image": "/screenshots/lead-radar.webp",
       "updatedAt": "2026-02-15",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM",
@@ -32,6 +34,7 @@
       "description": "Estonian real estate search and analysis tool. Search City24 listings with advanced filters, save properties, and run AI-powered market analysis with a 5-factor scoring engine that ranks deals by price/m\u00b2, condition, year, floor, and energy cert.",
       "url": "https://prop-radar-one.vercel.app",
       "github": "https://github.com/keeltekool/prop-radar",
+      "image": "/screenshots/prop-radar.webp",
       "updatedAt": "2026-02-15",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM",
@@ -45,6 +48,7 @@
       "description": "Full-stack AI job application platform. Unifies CV-Tailor (AI tailoring engine) and Skrift-CV (visual CV builder) into one product — upload your CV, paste a job posting, get a tailored CV and cover letter in seconds.",
       "url": "https://cv-tailor-plus.vercel.app",
       "github": "https://github.com/keeltekool/cv-tailor-plus",
+      "image": "/screenshots/applykit.webp",
       "updatedAt": "2025-02-08",
       "stack": {
         "builtWith": "Next.js 16, React, TypeScript, Tailwind CSS",
@@ -58,6 +62,7 @@
       "description": "Track any topic across News and Reddit. Personal dashboard for monitoring keywords with time filters and Vault for saving articles.",
       "url": "https://data-tracker-alpha.vercel.app/",
       "github": "https://github.com/keeltekool/data-tracker",
+      "image": "/screenshots/feedboard.webp",
       "updatedAt": "2025-01-20",
       "stack": {
         "builtWith": "Next.js, React, Tailwind CSS",
@@ -71,6 +76,7 @@
       "description": "Smart bank statement analyzer. Upload CSV, auto-categorize transactions with AI pattern matching, and track spending with interactive dashboards.",
       "url": "https://personal-finance-tracker-iota-dusky.vercel.app",
       "github": "https://github.com/keeltekool/personal-finance-tracker",
+      "image": "/screenshots/personal-finance-tracker.webp",
       "updatedAt": "2025-01-15",
       "stack": {
         "builtWith": "Next.js, React, Tailwind CSS, Recharts",
@@ -84,6 +90,7 @@
       "description": "AI-powered CV and cover letter tailoring engine. Match your resume to job descriptions and generate personalized applications.",
       "url": "https://cv-tailor-omega.vercel.app",
       "github": "https://github.com/keeltekool/cv-tailor",
+      "image": "/screenshots/cv-tailor.webp",
       "updatedAt": "2024-12-10",
       "stack": {
         "builtWith": "Next.js, React, TypeScript, Tailwind CSS",
@@ -97,6 +104,7 @@
       "description": "Digital signature platform design system. Product landing page and pricing for Estonian e-signature service.",
       "url": "https://allekirjoitus-design-system.vercel.app/website/en/index.html",
       "github": "https://github.com/keeltekool/allekirjoitus-design-system",
+      "image": "/screenshots/allekirjoitus-design-system.webp",
       "updatedAt": "2024-11-05",
       "stack": {
         "builtWith": "HTML, CSS, JavaScript",
@@ -110,6 +118,7 @@
       "description": "Save articles for later. Minimal link-saving with auto-fetched titles, thumbnails, and AI-powered categorization.",
       "url": "https://pocket-clone-virid.vercel.app",
       "github": "https://github.com/keeltekool/Pocket_Clone",
+      "image": "/screenshots/pocket-clone.webp",
       "updatedAt": "2024-10-20",
       "stack": {
         "builtWith": "Vanilla JS, TypeScript, Drizzle ORM",
@@ -123,6 +132,7 @@
       "description": "Discover 5,800+ artists across 34 genres. Find playlists on Spotify.",
       "url": "https://spotify-artist-browser-gamma.vercel.app",
       "github": "https://github.com/keeltekool/spotify-artist-browser",
+      "image": "/screenshots/spotify-artist-browser.webp",
       "updatedAt": "2024-09-15",
       "stack": {
         "builtWith": "Next.js, React, Tailwind CSS",
@@ -136,6 +146,7 @@
       "description": "Discover new music through Spotify's genre ecosystem. Browse main genres and subgenres with 5,800+ artists.",
       "url": "https://keeltekool.github.io/spotify-discovery/",
       "github": "https://github.com/keeltekool/spotify-discovery",
+      "image": "/screenshots/spotify-discovery.webp",
       "updatedAt": "2024-08-10",
       "stack": {
         "builtWith": "HTML, CSS, JavaScript",
@@ -149,6 +160,7 @@
       "description": "Cloud image viewer. Upload, store, and browse photos with slideshow, gallery management, and mass delete.",
       "url": "https://picmachine.vercel.app",
       "github": "https://github.com/keeltekool/PicMachine_Web",
+      "image": "/screenshots/picmachine-web.webp",
       "updatedAt": "2024-07-25",
       "stack": {
         "builtWith": "Vanilla JS, TypeScript, AWS SDK",
@@ -162,6 +174,7 @@
       "description": "Interactive DJ portfolio with 3D vinyl record book, music player, and event showcase.",
       "url": "https://dj-portfolio-omega.vercel.app",
       "github": "https://github.com/keeltekool/dj-portfolio",
+      "image": "/screenshots/dj-portfolio.webp",
       "updatedAt": "2024-06-15",
       "stack": {
         "builtWith": "Next.js, React, Three.js, Tailwind CSS",
@@ -175,6 +188,7 @@
       "description": "Professional CV and cover letter builder with clean Nordic design. Three elegant templates, matching cover letters, and AI-powered PDF import.",
       "url": "https://skrift-cv.vercel.app",
       "github": "https://github.com/keeltekool/skrift-cv",
+      "image": "/screenshots/skrift-cv.webp",
       "updatedAt": "2025-02-01",
       "stack": {
         "builtWith": "Next.js, React, TypeScript, Tailwind CSS",

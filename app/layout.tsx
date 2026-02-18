@@ -21,7 +21,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body>
         <ThemeProvider>
-          <main className="min-h-screen px-6 max-w-2xl mx-auto">
+          <main className="min-h-screen px-6 max-w-4xl mx-auto">
             {children}
           </main>
         </ThemeProvider>

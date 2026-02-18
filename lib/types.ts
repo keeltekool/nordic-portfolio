@@ -10,7 +10,9 @@ export interface Project {
   description: string;
   url: string;
   github: string;
+  image?: string;
   stack?: Stack;
+  updatedAt?: string;
 }
 
 export interface ProjectsData {
