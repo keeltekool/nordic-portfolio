@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "hind-radar",
+      "title": "HindRadar",
+      "description": "Estonian grocery price explorer for light alcohol. Browse Selver's beer, cider, long drinks, and cocktails with real-time pricing, unit price comparison, brand/country/volume filters, and EAN barcode country-of-origin detection.",
+      "url": "https://hind-radar.vercel.app",
+      "github": "https://github.com/keeltekool/hind-radar",
+      "image": "/screenshots/hind-radar.webp",
+      "updatedAt": "2026-02-19",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4",
+        "services": "Selver VueStorefront API (product data), Vercel (hosting with ISR)",
+        "howItWorks": "Fetches live product data from Selver's VueStorefront API. Category tabs filter by drink type, filters narrow by brand, country, volume, and price range. EAN/GS1 barcode prefixes detect country of origin. Static generation with 5-minute ISR revalidation — no database, no auth needed."
+      }
+    },
+    {
       "id": "quote-kit",
       "title": "QuoteKit",
       "description": "AI-powered quoting and invoicing PWA for Estonian tradespeople. Build quotes from a smart service catalog, generate invoices, share via PDF/WhatsApp/email, with full Estonian legal compliance (VÕS, KMS).",
