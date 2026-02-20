@@ -3,15 +3,15 @@
     {
       "id": "hind-radar",
       "title": "HindRadar",
-      "description": "Estonian grocery price explorer across 4 stores. Compare ~1,383 light alcohol products (beer, cider, long drinks, cocktails) from Selver, Prisma, Rimi, and Barbora with real-time pricing, unit price comparison, brand/country/volume filters, and discount tracking.",
+      "description": "Estonian grocery price explorer across 5 stores. Compare ~1,588 light alcohol products (beer, cider, long drinks, cocktails) from Selver, Prisma, Rimi, Barbora, and Cityalko with real-time pricing, unit price comparison, brand/country/volume filters, and discount tracking.",
       "url": "https://hind-radar.vercel.app",
       "github": "https://github.com/keeltekool/hind-radar",
       "image": "/screenshots/hind-radar.webp",
       "updatedAt": "2026-02-20",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4",
-        "services": "Selver VueStorefront API, Prisma SSR pages, Rimi SSR pages, Barbora SSR pages (all public, no auth), Vercel (hosting with ISR)",
-        "howItWorks": "Fetches live product data from 4 Estonian grocery stores in parallel using store-specific extraction (VueStorefront API, __NEXT_DATA__ Apollo cache, HTML parsing, window.b_productList). Store toggle switches between catalogs, category tabs filter by drink type, filters narrow by brand, country, volume, and price. EAN/GS1 barcode prefixes detect country of origin. Static generation with 5-minute ISR revalidation — no database, no auth needed."
+        "services": "Selver VueStorefront API, Prisma SSR pages, Rimi SSR pages, Barbora SSR pages, Cityalko SSR pages (all public, no auth), Vercel (hosting with ISR)",
+        "howItWorks": "Fetches live product data from 5 Estonian grocery stores in parallel using store-specific extraction (VueStorefront API, __NEXT_DATA__ Apollo cache, HTML parsing, window.b_productList, DOM parsing). Store toggle switches between catalogs, category tabs filter by drink type, filters narrow by brand, country, volume, and price. EAN/GS1 barcode prefixes and explicit text detect country of origin. Static generation with 5-minute ISR revalidation — no database, no auth needed."
       }
     },
     {
