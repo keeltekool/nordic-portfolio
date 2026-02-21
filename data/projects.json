@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "egert-amp",
+      "title": "egert_amp",
+      "description": "Personal FLAC music player powered by Google Drive. Stream a 500-track lossless collection with album art, metadata display, queue management, liked tracks, dark/light themes, and full transport controls.",
+      "url": "https://drive-amp.vercel.app",
+      "github": "https://github.com/keeltekool/egert-amp",
+      "image": "/screenshots/egert-amp.webp",
+      "updatedAt": "2026-02-21",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM",
+        "services": "NextAuth (Google OAuth), Google Drive API (file listing + streaming), Neon PostgreSQL (liked tracks), Vercel (hosting)",
+        "howItWorks": "Authenticates via Google OAuth, lists FLAC files from a shared Drive folder, streams audio with range requests, extracts ID3 metadata (title, artist, album, art) client-side via music-metadata-browser. Manual queue system, liked tracks persisted to Neon DB, shuffle/repeat modes, seek bar, and dark/light theme toggle."
+      }
+    },
+    {
       "id": "hind-radar",
       "title": "HindRadar",
       "description": "Estonian grocery price explorer across 5 stores. Compare ~1,588 light alcohol products (beer, cider, long drinks, cocktails) from Selver, Prisma, Rimi, Barbora, and Cityalko with real-time pricing, unit price comparison, brand/country/volume filters, and discount tracking.",
