@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "crate-dig",
+      "title": "CrateDig",
+      "description": "Music discovery app for DJs. Upload your library CSV, roll the dice, and let YouTube Music find tracks you've never heard — seeded by songs you already love. Creates playlists automatically on your YouTube Music account.",
+      "url": "https://crate-dig-two.vercel.app",
+      "github": "https://github.com/keeltekool/crate-dig",
+      "image": "/screenshots/crate-dig.webp",
+      "updatedAt": "2026-02-22",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, FastAPI, Python",
+        "services": "Google OAuth (YouTube + login), Neon PostgreSQL (library + history), ytmusicapi (YouTube Music search + radio discovery), YouTube Data API v3 (playlist creation), Vercel (frontend), Render (backend)",
+        "howItWorks": "Upload DJ library CSV, pick dice mode (random or deep), set output size. Client picks seed tracks, FastAPI backend searches YouTube Music for each seed, fetches related tracks via get_watch_playlist(radio=True), deduplicates and filters out library tracks. Preview results with thumbnails, remove unwanted tracks, then push to YouTube Music as a private playlist."
+      }
+    },
+    {
       "id": "egert-amp",
       "title": "egert_amp",
       "description": "Personal FLAC music player powered by Google Drive. Stream a 500-track lossless collection with album art, metadata display, queue management, liked tracks, dark/light themes, and full transport controls.",
