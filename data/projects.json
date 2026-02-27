@@ -3,15 +3,15 @@
     {
       "id": "applykit-admin",
       "title": "ApplyKit Admin",
-      "description": "Admin console for controlling ApplyKit's AI output. Define system prompts, style presets, guardrails, banned phrases, output structure, few-shot examples, and API parameters. Includes a playground for testing generations before going live. ET/EN language toggle support.",
+      "description": "Two-tier AI config system for ApplyKit. Global settings (model, Estonian language rules, 20 banned cliches, self-check) shared across all modes. Per-mode configs for Cover Letter, CV Tailoring, and Interview Prep — each with system prompts, 3 style presets, output structure, guardrails, and few-shot examples. Playground for testing any config+preset combo with live AI generation.",
       "url": "https://cv-tailor-plus.vercel.app/en/admin",
       "github": "https://github.com/keeltekool/cv-tailor-plus",
       "image": "/screenshots/applykit-admin.webp",
       "updatedAt": "2026-02-27",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4",
-        "services": "Supabase (auth + PostgreSQL), Anthropic Claude (AI generation + playground), Vercel (hosting)",
-        "howItWorks": "Admin-only panel (email whitelist). Two feature configs: Cover Letter and CV Tailoring. Each has a system prompt, preset styles (Concise/Balanced/Detailed), output structure constraints, guardrails, and few-shot examples. Users pick a preset on /my-kit, admin controls what each preset does. Playground lets admin test any config+preset combo with sample data before saving."
+        "services": "Supabase (auth + PostgreSQL — global_ai_config + admin_ai_configs tables), Anthropic Claude Sonnet (AI generation + playground), Vercel (hosting)",
+        "howItWorks": "Admin-only panel (email whitelist). Two-tier config: Global (model, Estonian instructions with Teie-form rules, banned phrases, self-check) + Per-Mode (3 modes: cover_letter, cv_tailoring, interview_prep). Each mode has a system prompt, 3 presets with token/temperature overrides, output structure, guardrails, and few-shot examples. buildSystemPrompt() assembles: base prompt + Estonian + preset modifier + output structure + guardrails + few-shot. Users pick presets on /my-kit, admin controls everything else. Playground tests any feature+preset with systemPromptPreview."
       }
     },
     {
