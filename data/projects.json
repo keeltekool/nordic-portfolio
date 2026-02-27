@@ -101,15 +101,15 @@
     {
       "id": "applykit",
       "title": "ApplyKit",
-      "description": "Full-stack AI job application platform. Unifies CV-Tailor (AI tailoring engine) and Skrift-CV (visual CV builder) into one product — upload your CV, paste a job posting, get a tailored CV and cover letter in seconds.",
+      "description": "Full-stack AI job application platform. Upload your CV, paste a job posting, get a tailored CV, cover letter, and interview prep sheet. Two-phase interview preparation: chat with an AI interview coach, then compile a structured prep sheet with likely questions, talking points, and salary negotiation tips.",
       "url": "https://cv-tailor-plus.vercel.app",
       "github": "https://github.com/keeltekool/cv-tailor-plus",
       "image": "/screenshots/applykit.webp",
-      "updatedAt": "2025-02-08",
+      "updatedAt": "2026-02-27",
       "stack": {
-        "builtWith": "Next.js 16, React, TypeScript, Tailwind CSS",
-        "services": "Supabase (auth + PostgreSQL + storage), Vercel (hosting), Anthropic Claude Opus (AI tailoring, cover letters, career consult, PDF extraction)",
-        "howItWorks": "Three CV templates with visual editor, AI-powered job-to-CV matching, smart cover letter generation, PDF import, job workspace with parsed requirements, and career consult chat."
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4",
+        "services": "Supabase (auth + PostgreSQL + storage), Vercel (hosting), Anthropic Claude Sonnet (AI tailoring, cover letters, interview prep, career consult, PDF extraction)",
+        "howItWorks": "Three CV templates with visual editor, AI-powered job-to-CV matching, smart cover letter generation, interview prep with AI coach (chat freely then compile structured prep sheet), PDF import, job workspace with parsed requirements, TööRadar job search (Töötukassa + CV Keskus), and career consult chat."
       }
     },
     {
