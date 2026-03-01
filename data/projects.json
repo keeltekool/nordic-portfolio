@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "hoog",
+      "title": "HOOG",
+      "description": "Harjumaa event aggregator — all cultural, sport, and community events across 16 Estonian towns in one place. Aggregates from 4 sources: Facebook Events, Kultuurikava API, Fienta API, and Piletitasku (via Cloudflare Worker proxy). Category filtering, date navigation, city pages, and event detail views — all in Estonian.",
+      "url": "https://event-radar-six.vercel.app",
+      "github": "https://github.com/keeltekool/event-radar",
+      "image": "/screenshots/hoog.webp",
+      "updatedAt": "2026-03-01",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, Playwright (scraper)",
+        "services": "Neon PostgreSQL (1400+ events), Kultuurikava API (public), Fienta API (public), Piletitasku API (CF Worker proxy), Vercel (frontend + cron), Render (Facebook scraper), Cloudflare Workers (piletitasku-proxy)",
+        "howItWorks": "Four data sources sync daily via Vercel cron jobs (06:00–07:00 UTC). Kultuurikava and Fienta have public APIs; Piletitasku requires a Cloudflare Worker proxy to bypass bot protection. Facebook Events are scraped by a Playwright-based Docker service on Render. All events are upserted into Neon PostgreSQL with source-prefixed IDs (kk-, fi-, pt-, fb-), mapped to 5 categories and 16 Harju county towns. Frontend serves grid/list views with category, date, and city filtering."
+      }
+    },
+    {
       "id": "applykit-admin",
       "title": "ApplyKit Admin",
       "description": "Two-tier AI config system for ApplyKit. Global settings (model, Estonian language rules, 20 banned cliches, self-check) shared across all modes. Per-mode configs for Cover Letter, CV Tailoring, and Interview Prep — each with system prompts, 3 style presets, output structure, guardrails, and few-shot examples. Playground for testing any config+preset combo with live AI generation.",
