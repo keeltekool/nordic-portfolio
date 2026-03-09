@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "loop-control-center",
+      "title": "Loop Control Center",
+      "description": "Dashboard for managing autonomous Claude Code loops — recurring AI tasks like Gmail morning briefs, promotions digests, and CrateDig playlist generation. Toggle loops on/off, monitor run history, view execution logic, and track success/failure rates across projects.",
+      "url": "https://loop-control-center.vercel.app",
+      "github": "https://github.com/keeltekool/loop-control-center",
+      "image": "/screenshots/loop-control-center.webp",
+      "updatedAt": "2026-03-10",
+      "stack": {
+        "builtWith": "Next.js 15, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM",
+        "services": "Neon PostgreSQL (loop configs + run history), Vercel (hosting + API), Claude Code CronCreate (execution engine)",
+        "howItWorks": "Web dashboard stores loop configurations (prompts, schedules, enabled state) in Neon DB. Claude Code acts as the execution engine — a /sync-loops skill reads configs from the API and registers CronCreate tasks. Each loop prompt is self-contained with pre-flight checks (respects dashboard toggle), task logic, error handling, and post-run reporting back to the dashboard."
+      }
+    },
+    {
       "id": "hoog",
       "title": "HOOG",
       "description": "Harjumaa event aggregator — all cultural, sport, and community events across 16 Estonian towns in one place. Aggregates from 4 sources: Facebook Events, Kultuurikava API, Fienta API, and Piletitasku (via Cloudflare Worker proxy). Category filtering, date navigation, city pages, and event detail views — all in Estonian.",
