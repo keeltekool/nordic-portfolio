@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "soel",
+      "title": "SÕEL",
+      "description": "AI-curated daily digest of the best articles on Claude Code, AI tools, and development. Mobile-first PWA that renders scored and categorized articles from Google Sheets, with hero layouts, grid sections, and an archive view.",
+      "url": "https://soel-sigma.vercel.app",
+      "github": "https://github.com/keeltekool/soel",
+      "image": "/screenshots/soel.webp",
+      "updatedAt": "2026-03-10",
+      "stack": {
+        "builtWith": "React 19, Vite 7, TypeScript, Tailwind CSS 4, React Router 7, vite-plugin-pwa",
+        "services": "Google Sheets API v4 (article database + section config), Vercel (hosting), Google Cloud (API key management)",
+        "howItWorks": "Frontend-only PWA that reads articles and layout configuration from a public Google Sheet via API key. Articles are scored 1-10 and categorized; Config tab controls which sections appear, their display style (hero/grid/list), and filtering rules. Falls back to mock data when Sheets credentials aren't configured."
+      }
+    },
+    {
       "id": "loop-control-center",
       "title": "Loop Control Center",
       "description": "Dashboard for managing autonomous Claude Code loops — recurring AI tasks like Gmail morning briefs, promotions digests, and CrateDig playlist generation. Toggle loops on/off, monitor run history, view execution logic, and track success/failure rates across projects.",
