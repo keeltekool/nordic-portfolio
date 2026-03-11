@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "smartid-adobe-sign",
+      "title": "Smart-ID for Adobe Sign",
+      "description": "Landing page for Smart-ID integration with Adobe Sign. Legally binding digital signatures for the Baltics — Estonia, Latvia, and Lithuania — with EU-wide eIDAS validity.",
+      "url": "https://smartid-adobe-sign.vercel.app",
+      "github": "https://github.com/keeltekool/smartid-adobe-sign",
+      "image": "/screenshots/smartid-adobe-sign.webp",
+      "updatedAt": "2026-03-11",
+      "stack": {
+        "builtWith": "HTML, Tailwind CSS (CDN), Google Fonts",
+        "services": "Vercel (hosting), GitHub (source)",
+        "howItWorks": "Static single-page landing site showcasing Smart-ID as an Adobe Sign integration for Baltic digital signatures. Brand-aligned design with Smart-ID teal/navy palette, integration partner logos, and feature breakdowns."
+      }
+    },
+    {
       "id": "soel",
       "title": "SÕEL",
       "description": "AI-curated daily digest of the best articles on Claude Code, AI tools, and development. Mobile-first PWA that renders scored and categorized articles from Google Sheets, with hero layouts, grid sections, and an archive view.",
