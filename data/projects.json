@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "energiatark",
+      "title": "Energiatark",
+      "description": "Personal electricity consumption tracker for Estonian homes. Visualizes Estfeed CSV data with monthly bar charts, day-of-week patterns, period comparison, and live NordPool spot prices with cheapest/expensive hour windows.",
+      "url": "https://energiatark.vercel.app",
+      "github": "https://github.com/keeltekool/energiatark",
+      "image": "/screenshots/energiatark.webp",
+      "updatedAt": "2026-03-15",
+      "stack": {
+        "builtWith": "React Native, Expo SDK 55, NativeWind v4, react-native-gifted-charts, Expo Router",
+        "services": "Elering Dashboard API (NordPool prices via CF Worker proxy), Vercel (static web hosting), Cloudflare Workers (elering-proxy CORS proxy)",
+        "howItWorks": "Expo app exported as static web build. Estfeed CSV files are parsed at build time into bundled JSON — drop new CSVs, push to GitHub, Vercel auto-rebuilds. NordPool spot prices fetched live via Cloudflare Worker proxy. Three views: monthly usage with color-coded bars, period comparison with grouped overlay, and hourly price charts with cheapest/expensive 3h windows."
+      }
+    },
+    {
       "id": "smartid-adobe-sign",
       "title": "Smart-ID for Adobe Sign",
       "description": "Landing page for Smart-ID integration with Adobe Sign. Legally binding digital signatures for the Baltics — Estonia, Latvia, and Lithuania — with EU-wide eIDAS validity.",
