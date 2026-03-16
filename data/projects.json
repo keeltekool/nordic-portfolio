@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "gympal",
+      "title": "GymPal",
+      "description": "Fat-loss strength training PWA. Generates tier-based, recency-aware full body workouts with exercise rotation, live timer, swap/shuffle, vault for favorites, and calendar history. Dark mode with lime accent, alternating exercise thumbnails, and iOS-optimized gym UX.",
+      "url": "https://gym-app-eight-phi.vercel.app",
+      "github": "https://github.com/keeltekool/gympal",
+      "image": "/screenshots/gympal.webp",
+      "updatedAt": "2026-03-16",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Framer Motion, Drizzle ORM",
+        "services": "Clerk (Google auth), Neon PostgreSQL (sessions, exercises, vault, settings), Vercel (hosting)",
+        "howItWorks": "36-exercise catalog with A/B/C tier ratings and 6 movement patterns. Workout generator picks exercises by tier priority and recency from last 2 sessions. Wake Lock API keeps screen on during workouts. Exercise thumbnails crossfade between start/end positions. Weekly progress tracking, streak badges, and session history on calendar with stat cards."
+      }
+    },
+    {
       "id": "energiatark",
       "title": "Energiatark",
       "description": "Personal electricity consumption tracker for Estonian homes. Visualizes Estfeed CSV data with monthly bar charts, day-of-week patterns, period comparison, and live NordPool spot prices with cheapest/expensive hour windows.",
