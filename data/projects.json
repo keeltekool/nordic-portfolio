@@ -1,6 +1,34 @@
 {
   "projects": [
     {
+      "id": "rental-business-kit-landing",
+      "title": "Rental Business Kit — Landing",
+      "description": "Customer-facing booking page for Estonian rental businesses. Interactive calendar, date picker, booking form with Estonian labels, Stripe payment, and confirmation email flow. First tenant: Muraste ICE (ice cream machine rental).",
+      "url": "https://rental-business-kit.vercel.app/t/mets",
+      "github": "https://github.com/keeltekool/rental-business-kit",
+      "image": "/screenshots/rental-business-kit-landing.webp",
+      "updatedAt": "2026-03-19",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, react-day-picker",
+        "services": "Neon PostgreSQL (multi-tenant DB), Stripe (checkout + webhook), Resend (transactional emails), Cloudflare R2 (image storage), Vercel (hosting)",
+        "howItWorks": "Multi-tenant platform — middleware resolves tenant from hostname, rewrites to /t/[tenant]/ routes. Customer picks dates on react-day-picker calendar, fills booking form, pays via Stripe Checkout. Webhook confirms booking and sends customer confirmation + operator notification emails via Resend. All content (text, images, colors, sections) managed by tenant through the admin console. Every section toggleable on/off."
+      }
+    },
+    {
+      "id": "rental-business-kit-admin",
+      "title": "Rental Business Kit — Console",
+      "description": "Tenant management console with 8 sections: bookings, calendar, content editor, media uploads (R2), color branding, FAQ, testimonials, and email customization. Clerk auth with Google sign-in. Every landing page section toggleable on/off.",
+      "url": "https://rental-business-kit.vercel.app/admin",
+      "github": "https://github.com/keeltekool/rental-business-kit",
+      "image": "/screenshots/rental-business-kit-admin.webp",
+      "updatedAt": "2026-03-19",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM",
+        "services": "Clerk (Google OAuth, tenant auth), Neon PostgreSQL (tenant-scoped queries), Cloudflare R2 (logo, hero, gallery uploads), Vercel (hosting)",
+        "howItWorks": "Clerk protects /admin routes. requireTenant() resolves the logged-in Clerk user to their tenant record. 8 admin sections: bookings table with detail modal, availability calendar (block/unblock dates), content editor with inline section toggles, media manager (R2 upload), 8-palette color picker, FAQ/testimonials CRUD with reorder, and email settings for post-booking instructions. All changes reflect on the landing page immediately via SSR."
+      }
+    },
+    {
       "id": "gympal",
       "title": "GymPal",
       "description": "Fat-loss strength training PWA. Generates tier-based, recency-aware full body workouts with exercise rotation, live timer, swap/shuffle, vault for favorites, and calendar history. Dark mode with lime accent, alternating exercise thumbnails, and iOS-optimized gym UX.",
