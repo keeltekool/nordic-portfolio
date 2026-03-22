@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "alkoholiks-api",
+      "title": "Alkoholiks API",
+      "description": "Production-grade REST API for Estonian drink prices. OAuth 2.0 Client Credentials flow, OpenAPI 3.1 spec with Swagger UI, rate limiting (100 req/hr), developer dashboard with credential management and usage stats, and 1,871 products across 5 store chains.",
+      "url": "https://alkoholiks-api.vercel.app",
+      "github": "https://github.com/keeltekool/alkoholiks-api",
+      "image": "/screenshots/alkoholiks-api.webp",
+      "updatedAt": "2026-03-22",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, Swagger UI React",
+        "services": "Clerk (developer portal auth), Neon PostgreSQL (consumers, credentials, usage logs), Upstash Redis (OAuth tokens, rate limits, product cache), Vercel (hosting + daily cron)",
+        "howItWorks": "API product with full OAuth 2.0 Client Credentials flow — developers register via Clerk, get alk_cid/alk_sec credentials, exchange for 1h Bearer tokens stored in Redis. Four authenticated endpoints serve product data scraped daily from 5 Estonian stores (Selver, Prisma, Rimi, Barbora, Cityalko) and cached in Redis with 24h TTL. Rate limiting via Redis counters with X-RateLimit headers on every response. Developer dashboard shows credentials and live usage stats."
+      }
+    },
+    {
       "id": "rental-business-kit-landing",
       "title": "Rental Business Kit — Landing",
       "description": "Customer-facing booking page for Estonian rental businesses. Multi-service support — browse a service carousel, pick one or more services, see combined availability on an interactive calendar, and pay per-service line items via Stripe. First tenant: Mets (ice cream + cotton candy machines).",
