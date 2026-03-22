@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "price-hntr",
+      "title": "PriceHNTR",
+      "description": "Mobile-only drink price comparison app for Estonia. Compare prices across 5 retail chains (Selver, Prisma, Rimi, Barbora, Cityalko), browse today's deals sorted by discount, and search any product to find the cheapest store. Bilingual EN/ET. First official consumer of the Alkoholiks API.",
+      "url": "https://price-hntr.vercel.app",
+      "github": "https://github.com/keeltekool/price-hntr",
+      "image": "/screenshots/price-hntr.webp",
+      "updatedAt": "2026-03-22",
+      "stack": {
+        "builtWith": "React 19, Vite 8, TypeScript, Tailwind CSS 4",
+        "services": "Alkoholiks API (OAuth 2.0 SDK, drink prices from 5 stores), Vercel (hosting + API proxy via rewrites)",
+        "howItWorks": "Pure client-side SPA consuming the Alkoholiks API via its official TypeScript SDK. OAuth 2.0 Client Credentials flow handled automatically by the SDK. Two views: Deals (on-sale products sorted by discount %) and Search (debounced query, results sorted by cheapest price with CHEAPEST badge). API calls proxied through Vercel rewrites to avoid CORS. Lightweight i18n with JSON translation files and React Context."
+      }
+    },
+    {
       "id": "alkoholiks-api",
       "title": "Alkoholiks API",
       "description": "Production-grade REST API for Estonian drink prices. OAuth 2.0 Client Credentials flow, OpenAPI 3.1 spec with Swagger UI, rate limiting (100 req/hr), developer dashboard with credential management and usage stats, and 1,871 products across 5 store chains.",
