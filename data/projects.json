@@ -3,7 +3,7 @@
     {
       "id": "egert-ai",
       "title": "Egert AI",
-      "description": "Personal landing page cloned from seppo.ai's design using the clone-website Claude Code skill. Dark hero, cream sections, copper accents, Cormorant Garamond typography. Built as a test of AI-driven website cloning.",
+      "description": "Personal landing page built by cloning an existing site's design with the clone-website Claude Code skill. Dark hero, cream sections, copper accents, elegant serif typography. Single-page layout with projects, services, and contact.",
       "url": "https://egert-ai.vercel.app",
       "github": "https://github.com/keeltekool/egert-ai",
       "image": "/screenshots/egert-ai.webp",
@@ -11,7 +11,7 @@
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4",
         "services": "Vercel (hosting)",
-        "howItWorks": "Design cloned from seppo.ai using the clone-website Claude Code skill. Chrome MCP extracts exact CSS values, fonts, colors, and assets from the source site. Components built to match extracted design tokens. Content swapped with personal portfolio data."
+        "howItWorks": "Design cloned from a reference site using Chrome MCP to extract exact CSS values, fonts, colors, and layout structure. Components rebuilt to match extracted design tokens with personal content. Cormorant Garamond headings, Outfit body text, copper accent color."
       }
     },
     {
