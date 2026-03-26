@@ -1,6 +1,34 @@
 {
   "projects": [
     {
+      "id": "eudi-wallet-tracker",
+      "title": "EUDI Wallet Tracker",
+      "description": "Automated intelligence monitoring for EU Digital Identity Wallet developments. Three-stage AI pipeline: scrapes 36 sources twice weekly, filters for EUDI relevance, then AI-curates with summaries and scoring. Three public tabs — raw feed, filtered, and curated — with search, category filters, and source filtering.",
+      "url": "https://eudi-wallet-tracker.vercel.app",
+      "github": "https://github.com/keeltekool/eudi-wallet-tracker",
+      "image": "/screenshots/eudi-wallet-tracker.webp",
+      "updatedAt": "2026-03-26",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, Cheerio, rss-parser",
+        "services": "Neon PostgreSQL (sources, articles, scrape runs), GitHub Actions (twice-weekly scraper), Anthropic Claude (CSS selector analysis), Loop Control Center (AI loop scheduling), Vercel (hosting), Google Fonts (Fraunces, DM Sans, Epilogue)",
+        "howItWorks": "GitHub Actions scrapes 36 RSS and CSS sources twice weekly into Neon. Claude Code filter loop marks articles as EUDI-relevant or irrelevant. Curation loop scores accepted articles 1-10, writes summaries, and assigns categories. Three public dashboard tabs show raw feed, filtered (noise removed), and curated (AI-scored with summaries). SÕEL-inspired design with warm parchment palette."
+      }
+    },
+    {
+      "id": "eudi-wallet-tracker-admin",
+      "title": "EUDI Wallet Tracker — Admin",
+      "description": "Source management console for the EUDI Wallet Tracker. Add sources by URL with automatic RSS detection or AI-powered CSS selector analysis. Health monitoring (healthy/needs setup/broken/paused), dry-run preview, batch AI selector setup for CSS sources, bulk import with duplicate detection, and scrape run history.",
+      "url": "https://eudi-wallet-tracker.vercel.app/admin",
+      "github": "https://github.com/keeltekool/eudi-wallet-tracker",
+      "image": "/screenshots/eudi-wallet-tracker-admin.webp",
+      "updatedAt": "2026-03-26",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM",
+        "services": "Neon PostgreSQL (36 sources, config storage), Anthropic Claude Sonnet (one-off CSS selector generation, ~$0.01/source), Vercel (hosting)",
+        "howItWorks": "Password-protected admin. Add source flow: paste URL, system auto-detects RSS feed or runs Claude API to generate CSS selectors, shows dry-run preview, activate. Batch setup button runs AI analysis on all unconfigured CSS sources at once. Bulk import accepts JSON from AI research with automatic duplicate URL detection. Health dashboard shows source status with last scrape time, article counts, and error details."
+      }
+    },
+    {
       "id": "egert-ai",
       "title": "Egert AI",
       "description": "Personal landing page built by cloning an existing site's design with the clone-website Claude Code skill. Dark hero, cream sections, copper accents, elegant serif typography. Single-page layout with projects, services, and contact.",
