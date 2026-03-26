@@ -78,6 +78,25 @@ export function ProjectCard({ project }: ProjectCardProps) {
             </svg>
             <span>GitHub</span>
           </a>
+          {project.updatedAt && (
+            <span className="inline-flex items-center gap-1.5 text-xs text-[var(--muted)]">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <circle cx="12" cy="12" r="10" />
+                <polyline points="12 6 12 12 16 14" />
+              </svg>
+              <span>Updated {project.updatedAt}</span>
+            </span>
+          )}
         </div>
 
         {project.stack && (

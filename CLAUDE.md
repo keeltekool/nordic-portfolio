@@ -35,8 +35,9 @@
   }
 }
 ```
-3. **Capture a screenshot** (MANDATORY — see Screenshot Rules below)
-4. Commit and push — Vercel auto-deploys
+3. **Set `updatedAt` to today's date** (YYYY-MM-DD) — this is displayed on the card as "Updated YYYY-MM-DD"
+4. **Capture a screenshot** (MANDATORY — see Screenshot Rules below)
+5. Commit and push — Vercel auto-deploys
 
 **Note**: To find live URLs for projects, run:
 ```bash
@@ -167,6 +168,7 @@ Each card displays:
 - **Description** (1-2 sentences)
 - **"Open App"** link → `url` field (opens live app)
 - **"GitHub"** link → `github` field (opens repo)
+- **"Updated YYYY-MM-DD"** → `updatedAt` field (clock icon, shows last update date)
 - **"Stack details"** toggle → expandable section showing:
   - **Built with** — frameworks and libraries
   - **Services** — external services with their purpose
