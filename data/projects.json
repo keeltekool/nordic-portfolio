@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "egert-ai",
+      "title": "Egert AI",
+      "description": "Personal landing page cloned from seppo.ai's design using the clone-website Claude Code skill. Dark hero, cream sections, copper accents, Cormorant Garamond typography. Built as a test of AI-driven website cloning.",
+      "url": "https://egert-ai.vercel.app",
+      "github": "https://github.com/keeltekool/egert-ai",
+      "image": "/screenshots/egert-ai.webp",
+      "updatedAt": "2026-03-26",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4",
+        "services": "Vercel (hosting)",
+        "howItWorks": "Design cloned from seppo.ai using the clone-website Claude Code skill. Chrome MCP extracts exact CSS values, fonts, colors, and assets from the source site. Components built to match extracted design tokens. Content swapped with personal portfolio data."
+      }
+    },
+    {
       "id": "price-hntr",
       "title": "PriceHNTR",
       "description": "Mobile-only drink price comparison app for Estonia. Browse the cheapest drinks across 5 retail chains (Selver, Prisma, Rimi, Barbora, Cityalko) with store, category, and package size filters. Search any product to find the cheapest store. Bilingual EN/ET. First official consumer of the Alkoholiks API.",
