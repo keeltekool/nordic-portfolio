@@ -2,8 +2,8 @@
   "projects": [
     {
       "id": "sk-e-seal-prototype",
-      "title": "SK E-Seal Prototype",
-      "description": "First open-source CSC v2 compliant remote e-sealing service. Full working prototype: 6 API endpoints, TypeScript client SDK (8 modules, 24 tests), live demo with SSE Process X-Ray, PAdES B-T signatures with RFC 3161 timestamps, and SK-branded landing page. Built for SK ID Solutions initiative validation.",
+      "title": "E-Seal Prototype",
+      "description": "First open-source CSC v2 compliant remote e-sealing service. Full working prototype: 6 API endpoints, TypeScript client SDK (8 modules, 24 tests), live demo with SSE Process X-Ray, PAdES B-T signatures with RFC 3161 timestamps. Hash-only privacy model - documents never leave client infrastructure.",
       "url": "https://sk-e-seal-prototype.vercel.app",
       "github": "https://github.com/keeltekool/sk-e-seal-prototype",
       "image": "/screenshots/sk-e-seal-prototype.webp",
