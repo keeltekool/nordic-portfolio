@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "sk-e-seal-prototype",
+      "title": "SK E-Seal Prototype",
+      "description": "First open-source CSC v2 compliant remote e-sealing service. Full working prototype: 6 API endpoints, TypeScript client SDK (8 modules, 24 tests), live demo with SSE Process X-Ray, PAdES B-T signatures with RFC 3161 timestamps, and SK-branded landing page. Built for SK ID Solutions initiative validation.",
+      "url": "https://sk-e-seal-prototype.vercel.app",
+      "github": "https://github.com/keeltekool/sk-e-seal-prototype",
+      "image": "/screenshots/sk-e-seal-prototype.webp",
+      "updatedAt": "2026-03-29",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, node-forge, pdf-lib, @signpdf, jose",
+        "services": "Neon PostgreSQL (tenants, credentials, audit log, SAD tokens), FreeTSA.org (RFC 3161 timestamps), Vercel (hosting + serverless API), Swagger UI (interactive API docs)",
+        "howItWorks": "Client SDK computes SHA-256 of PDF byte ranges locally (document never leaves client), builds CMS SignedAttributes, then calls CSC v2 API: OAuth2 token, SCAL2 PIN authorization (SAD token), signHash. Server signs with RSA PKCS#1 v1.5. SDK assembles CMS/PKCS#7 SignedData, fetches RFC 3161 timestamp, injects into PDF placeholder. Output: PAdES B-T sealed PDF validated by Adobe Acrobat."
+      }
+    },
+    {
       "id": "feedboard-pro",
       "title": "Feedboard Pro",
       "description": "RSS feed design studio replacing rss.app ($8-83/mo). Create Google News, YouTube, and Reddit feeds from keywords or channels, preview articles with thumbnails, copy RSS URLs, and organize feeds in a collapsible sidebar grouped by source type. Dark mode included.",
