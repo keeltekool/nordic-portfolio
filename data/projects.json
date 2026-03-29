@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "feedboard-pro",
+      "title": "Feedboard Pro",
+      "description": "RSS feed design studio replacing rss.app ($8-83/mo). Create Google News, YouTube, and Reddit feeds from keywords or channels, preview articles with thumbnails, copy RSS URLs, and organize feeds in a collapsible sidebar grouped by source type. Dark mode included.",
+      "url": "https://feedboard-pro.vercel.app",
+      "github": "https://github.com/keeltekool/feedboard-pro",
+      "image": "/screenshots/feedboard-pro.webp",
+      "updatedAt": "2026-03-29",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM",
+        "services": "Neon PostgreSQL (feed storage), Vercel (hosting + serverless API routes)",
+        "howItWorks": "Custom regex-based RSS/Atom parsers fetch Google News, YouTube, and Reddit feeds server-side. YouTube @handle resolution via page scraping. Articles previewed with lazy og:image extraction or source letter avatars. Feeds saved to Neon DB with RSS URL for use in any feed reader."
+      }
+    },
+    {
       "id": "eudi-wallet-tracker",
       "title": "EUDI Wallet Tracker",
       "description": "Automated intelligence monitoring for EU Digital Identity Wallet developments. Three-stage AI pipeline: scrapes 36 sources twice weekly, filters for EUDI relevance, then AI-curates with summaries and scoring. Three public tabs — raw feed, filtered, and curated — with search, category filters, and source filtering.",
