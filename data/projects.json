@@ -155,6 +155,20 @@
       }
     },
     {
+      "id": "smartid-adobe-sign-v2",
+      "title": "Smart-ID for Adobe Acrobat Sign v2",
+      "description": "Copy-revised landing page for Smart-ID integration with Adobe Acrobat Sign. Tightened benefit copy, restructured sections, replaced generic icons with brand SVGs, updated pricing model, and removed speculative claims. Built as static HTML for handoff to Elementor.",
+      "url": "https://smartid-adobe-sign-v2.vercel.app",
+      "github": "https://github.com/keeltekool/smartid-adobe-sign-v2",
+      "image": "/screenshots/smartid-adobe-sign-v2.webp",
+      "updatedAt": "2026-03-30",
+      "stack": {
+        "builtWith": "HTML, Tailwind CSS (CDN), Google Fonts, SVG icons",
+        "services": "Vercel (hosting), GitHub (source)",
+        "howItWorks": "Static single-page landing site for Smart-ID as an Adobe Acrobat Sign integration. Copy-revised from v1 with restructured sections, updated pricing, brand-aligned teal circle SVG icons, and platform logo integrations. Serves as visual reference for WordPress/Elementor build."
+      }
+    },
+    {
       "id": "smartid-adobe-sign",
       "title": "Smart-ID for Adobe Sign",
       "description": "Landing page for Smart-ID integration with Adobe Sign. Legally binding digital signatures for the Baltics — Estonia, Latvia, and Lithuania — with EU-wide eIDAS validity.",
