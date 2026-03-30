@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "allekirjoitus-v2",
+      "title": "Allekirjoitus.fi v2",
+      "description": "Redesigned enterprise landing page for Finnish e-signature platform. Updated hero with brand photography, rewritten platform capabilities with brand book icons, QES signing method added, trusted-by logos, pricing with three tiers, FAQ, and contact section with character illustrations.",
+      "url": "https://allekirjoitus-design-system.vercel.app/website/en/index_v2.html",
+      "github": "https://github.com/keeltekool/allekirjoitus-design-system",
+      "image": "/screenshots/allekirjoitus-v2.webp",
+      "updatedAt": "2026-03-30",
+      "stack": {
+        "builtWith": "HTML, CSS, JavaScript, Metropolis + Barlow Condensed fonts",
+        "services": "Vercel (hosting)",
+        "howItWorks": "Static enterprise landing page for Allekirjoitus.fi e-signature service. Brand book assets extracted from PDF (icons, illustrations, photos) used throughout. Three signing methods (Finnish Bank ID, Mobile ID, QES), tiered pricing, and responsive layout."
+      }
+    },
+    {
       "id": "sk-e-seal-prototype",
       "title": "E-Seal Prototype",
       "description": "First open-source CSC v2 compliant remote e-sealing service. Full working prototype: 6 API endpoints, TypeScript client SDK (8 modules, 24 tests), live demo with SSE Process X-Ray, PAdES B-T signatures with RFC 3161 timestamps. Hash-only privacy model - documents never leave client infrastructure.",
