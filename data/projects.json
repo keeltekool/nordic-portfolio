@@ -21,11 +21,25 @@
       "url": "https://sk-e-seal-prototype.vercel.app",
       "github": "https://github.com/keeltekool/sk-e-seal-prototype",
       "image": "/screenshots/sk-e-seal-prototype.webp",
-      "updatedAt": "2026-03-29",
+      "updatedAt": "2026-04-02",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, node-forge, pdf-lib, @signpdf, jose",
-        "services": "Neon PostgreSQL (tenants, credentials, audit log, SAD tokens), FreeTSA.org (RFC 3161 timestamps), Vercel (hosting + serverless API), Swagger UI (interactive API docs)",
-        "howItWorks": "Client SDK computes SHA-256 of PDF byte ranges locally (document never leaves client), builds CMS SignedAttributes, then calls CSC v2 API: OAuth2 token, SCAL2 PIN authorization (SAD token), signHash. Server signs with RSA PKCS#1 v1.5. SDK assembles CMS/PKCS#7 SignedData, fetches RFC 3161 timestamp, injects into PDF placeholder. Output: PAdES B-T sealed PDF validated by Adobe Acrobat."
+        "services": "Neon PostgreSQL (tenants, credentials, audit log, SAD tokens), Sectigo Qualified TSA (RFC 3161 timestamps), Vercel (hosting + serverless API), Swagger UI (interactive API docs)",
+        "howItWorks": "Client SDK computes SHA-256 of PDF byte ranges locally (document never leaves client), builds CMS SignedAttributes, then calls CSC v2 API: OAuth2 token, SCAL2 PIN authorization (SAD token), signHash. Server signs with RSA PKCS#1 v1.5. SDK assembles CMS/PKCS#7 SignedData, fetches RFC 3161 timestamp, injects into PDF placeholder. Output: PAdES B-T sealed PDF validated by EU DSS."
+      }
+    },
+    {
+      "id": "e-seal-developer-portal",
+      "title": "E-Seal Developer Portal",
+      "description": "Developer portal for CSC v2 remote e-sealing service. OAuth credential management, SCAL2 PIN generation, multi-certificate display (3 seal credentials), and interactive seal playground showing the full 8-step API flow with API/SDK tagging. Educational annotations explain eIDAS regulation at each step.",
+      "url": "https://sk-e-seal-prototype.vercel.app/dashboard",
+      "github": "https://github.com/keeltekool/sk-e-seal-prototype",
+      "image": "/screenshots/e-seal-developer-portal.webp",
+      "updatedAt": "2026-04-02",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, bcryptjs, Intersection Observer API",
+        "services": "Neon PostgreSQL (tenants, credentials), Sectigo Qualified TSA (RFC 3161 timestamps), Vercel (hosting + serverless API)",
+        "howItWorks": "Developer generates OAuth client_secret and SCAL2 PIN, selects a seal credential from 3 pre-provisioned certificates, uploads a PDF, and watches the full CSC v2 sealing flow execute step-by-step with real request/response data. Steps tagged as API (OAuth, SCAL2 authorize, signHash) or Client SDK (PDF prep, CMS assembly, timestamping). Scroll-aware educational annotations explain eIDAS/EN 419 241-1 regulation throughout."
       }
     },
     {
