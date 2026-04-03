@@ -66,7 +66,7 @@ export function AdminDashboard({ initialProjects }: AdminDashboardProps) {
 
   async function handleLogout() {
     await fetch("/api/admin/logout", { method: "POST" });
-    router.refresh();
+    router.push("/");
   }
 
   return (
