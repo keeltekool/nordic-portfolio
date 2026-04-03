@@ -13,6 +13,7 @@ export interface Project {
   image?: string;
   stack?: Stack;
   updatedAt?: string;
+  archived?: boolean;
 }
 
 export interface ProjectsData {
