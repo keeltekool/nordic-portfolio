@@ -378,7 +378,8 @@
         "builtWith": "Next.js, React, Tailwind CSS",
         "services": "Vercel (hosting), NewsAPI (articles), Reddit API (posts)",
         "howItWorks": "Keyword-based monitoring dashboard with time filters and article vault."
-      }
+      },
+      "archived": true
     },
     {
       "id": "personal-finance-tracker",
