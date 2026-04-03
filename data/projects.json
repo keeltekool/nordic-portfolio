@@ -96,7 +96,8 @@
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4",
         "services": "Vercel (hosting)",
         "howItWorks": "Design cloned from a reference site using Chrome MCP to extract exact CSS values, fonts, colors, and layout structure. Components rebuilt to match extracted design tokens with personal content. Cormorant Garamond headings, Outfit body text, copper accent color."
-      }
+      },
+      "archived": true
     },
     {
       "id": "price-hntr",
@@ -208,7 +209,8 @@
         "builtWith": "HTML, Tailwind CSS (CDN), Google Fonts",
         "services": "Vercel (hosting), GitHub (source)",
         "howItWorks": "Static single-page landing site showcasing Smart-ID as an Adobe Sign integration for Baltic digital signatures. Brand-aligned design with Smart-ID teal/navy palette, integration partner logos, and feature breakdowns."
-      }
+      },
+      "archived": true
     },
     {
       "id": "soel",
@@ -339,7 +341,7 @@
     {
       "id": "prop-radar",
       "title": "Prop-Radar",
-      "description": "Estonian real estate search and analysis tool. Search City24 listings with advanced filters, save properties, and run AI-powered market analysis with a 5-factor scoring engine that ranks deals by price/m\u00b2, condition, year, floor, and energy cert.",
+      "description": "Estonian real estate search and analysis tool. Search City24 listings with advanced filters, save properties, and run AI-powered market analysis with a 5-factor scoring engine that ranks deals by price/m², condition, year, floor, and energy cert.",
       "url": "https://prop-radar-one.vercel.app",
       "github": "https://github.com/keeltekool/prop-radar",
       "image": "/screenshots/prop-radar.webp",
@@ -418,7 +420,8 @@
         "builtWith": "HTML, CSS, JavaScript",
         "services": "Vercel (hosting)",
         "howItWorks": "Static design system and product landing page for Estonian e-signature service."
-      }
+      },
+      "archived": true
     },
     {
       "id": "pocket-clone",
@@ -474,7 +477,8 @@
         "builtWith": "Vanilla JS, TypeScript, AWS SDK",
         "services": "Clerk (auth), Cloudflare R2 (storage), Vercel (hosting + serverless API)",
         "howItWorks": "Upload photos via presigned URLs to R2 cloud storage, browse in fullscreen slideshow with zoom/pan, manage gallery."
-      }
+      },
+      "archived": true
     },
     {
       "id": "dj-portfolio",
