@@ -4,8 +4,8 @@
       "id": "who-dis",
       "title": "WHO DIS?",
       "description": "Photo-based celebrity guessing game. 49 iconic celebrities from the 70s–00s hidden behind a 6-square grid. Reveal squares through hints, guess the icon, score points. Neo-Noir design with Vinyl Yellow accents, personal score tracking, and session history.",
-      "url": "https://whodis-game.vercel.app",
-      "github": "https://github.com/keeltekool/who-dis",
+      "url": "https://app-zeta-nine-52.vercel.app",
+      "github": "https://github.com/keeltekool/whodis-game",
       "image": "/screenshots/who-dis.webp",
       "updatedAt": "2026-04-04",
       "stack": {
