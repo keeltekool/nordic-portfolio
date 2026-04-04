@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "who-dis",
+      "title": "WHO DIS?",
+      "description": "Photo-based celebrity guessing game. 49 iconic celebrities from the 70s–00s hidden behind a 6-square grid. Reveal squares through hints, guess the icon, score points. Neo-Noir design with Vinyl Yellow accents, personal score tracking, and session history.",
+      "url": "https://who-dis.vercel.app",
+      "github": "https://github.com/keeltekool/who-dis",
+      "image": "/screenshots/who-dis.webp",
+      "updatedAt": "2026-04-04",
+      "stack": {
+        "builtWith": "Next.js 15, React 19, TypeScript, Tailwind CSS 4, Space Grotesk + Manrope fonts",
+        "services": "Neon PostgreSQL (celebrity metadata — names, hints, categories), Cloudflare R2 (photo CDN — 49 B&W celebrity photos), Vercel (hosting + serverless API)",
+        "howItWorks": "5 rounds per session. Each round: 1 random grid square auto-revealed, player guesses for 3 pts. Use Hint 1 reveals 2 more squares + clue (2 pts max). Use Hint 2 reveals all 6 + second clue (1 pt max). Wrong guess = 0 pts, round over. Scores persisted in localStorage with personal best tracking."
+      }
+    },
+    {
       "id": "allekirjoitus-v2",
       "title": "Allekirjoitus.fi v2",
       "description": "Redesigned enterprise landing page for Finnish e-signature platform. Updated hero with brand photography, rewritten platform capabilities with brand book icons, QES signing method added, trusted-by logos, pricing with three tiers, FAQ, and contact section with character illustrations.",
