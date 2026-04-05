@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "whodis-screensaver",
+      "title": "WHO DIS? — The Wall",
+      "description": "Branded hub + fullscreen celebrity photo screensaver. Auto-cycling slideshow with B&W portraits, cool facts, and configurable settings. Gateway to the WHO DIS? experience collection.",
+      "url": "https://whodis-screensaver.vercel.app",
+      "github": "https://github.com/keeltekool/whodis-screensaver",
+      "image": "/screenshots/whodis-screensaver.webp",
+      "updatedAt": "2026-04-05",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Space Grotesk + Manrope fonts",
+        "services": "Neon PostgreSQL (shared celebrity DB — read-only), Cloudflare R2 (shared photo CDN), Vercel (hosting + serverless API)",
+        "howItWorks": "Hub landing page with 3 experience cards. Screensaver fetches all celebrities from Neon, applies user filters (category, era, shuffle), auto-advances with configurable transitions. Settings persisted in localStorage. Keyboard controls for pause, skip, fullscreen."
+      }
+    },
+    {
       "id": "who-dis",
       "title": "WHO DIS?",
       "description": "Photo-based celebrity guessing game. 49 iconic celebrities from the 70s–00s hidden behind a 6-square grid. Reveal squares through hints, guess the icon, score points. Neo-Noir design with Vinyl Yellow accents, personal score tracking, and session history.",
