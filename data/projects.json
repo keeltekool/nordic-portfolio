@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "thesis-showcase",
+      "title": "Thesis Showcase",
+      "description": "Interactive web presentation of my TalTech master's thesis on business analytics in FP&A. Qualitative research with 13 expert interviews, benchmarked against 2024–2026 AI developments.",
+      "url": "https://thesis-showcase.vercel.app",
+      "github": "https://github.com/keeltekool/thesis-showcase",
+      "image": "/screenshots/thesis-showcase.webp",
+      "updatedAt": "2026-04-09",
+      "stack": {
+        "builtWith": "Next.js 15, TypeScript, Tailwind CSS 4, Newsreader + Inter fonts, Material Symbols",
+        "services": "Vercel (hosting), TalTech Digital Library (original thesis)",
+        "howItWorks": "Static single-page showcase following a custom TalTech-inspired design system. Thesis content translated to English, interview quotes verified against original Estonian source. Includes a 2024 vs 2026 benchmarking section with verified industry research."
+      }
+    },
+    {
       "id": "whodis-screensaver",
       "title": "WHO DIS? — The Wall",
       "description": "Branded hub + fullscreen celebrity photo screensaver. Auto-cycling slideshow with B&W portraits, cool facts, and configurable settings. Gateway to the WHO DIS? experience collection.",
