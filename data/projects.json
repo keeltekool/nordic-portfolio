@@ -3,15 +3,15 @@
     {
       "id": "sinu-aed",
       "title": "Sinu Aed",
-      "description": "Spring gardening price comparison across 4 Estonian home improvement chains. Search any product — see which store has it cheapest. Real-time data from Bauhof, Espak, Decora, and Ehituse ABC.",
+      "description": "Garden price comparison across 4 Estonian chains — 469 products, 38 brands, 8 categories. Pre-built catalog with watchlist, deals engine, and automated twice-weekly price refresh.",
       "url": "https://hind-compare.vercel.app",
       "github": "https://github.com/keeltekool/sinu-aed",
       "image": "/screenshots/sinu-aed.webp",
-      "updatedAt": "2026-04-12",
+      "updatedAt": "2026-04-13",
       "stack": {
-        "builtWith": "Next.js 16, TypeScript, Tailwind CSS 4, Plus Jakarta Sans + Inter fonts, Material Symbols",
-        "services": "Vercel (hosting + API routes), Klevu Search API (Decora + Ehituse ABC), Algolia (Espak), Bauhof __NUXT__ decoder",
-        "howItWorks": "Search queries 4 chain APIs in parallel. Product matcher normalizes names (brand + size for supplies, brand + model for tools), groups identical products across chains, sorts by cheapest. Image proxy bypasses chain hotlink protection. Every price row links directly to the product on that store's website."
+        "builtWith": "Next.js 16, TypeScript, Tailwind CSS 4, Upstash Redis, GitHub Actions, Plus Jakarta Sans + Inter fonts",
+        "services": "Vercel (hosting + API routes), Upstash Redis (catalog + cache), Klevu Search API (Decora + Ehituse ABC), Algolia (Espak), Bauhof __NUXT__ decoder, GitHub Actions (scheduled catalog builder)",
+        "howItWorks": "Background catalog builder searches 38 top brands at all 4 chains (twice weekly via GitHub Actions), matches products by brand+type+size, stores 469 comparable products in Redis. Users get instant results from pre-built catalog. Watchlist feature lets users heart products for a personal price dashboard. Deals engine surfaces biggest cross-chain price spreads."
       }
     },
     {
