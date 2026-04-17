@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "allekirjoitus-competitive-tracker",
+      "title": "Allekirjoitus Competitive Intel Tracker",
+      "description": "User-triggered competitive intelligence agent for Allekirjoitus.fi. Scrapes 15 tracked competitor pages (Visma Sign, Scrive, Dokobit, Signicat), diffs vs prior snapshots, and surgically updates a living Master Brief through Claude-in-session analysis. Sources managed via the EUDI admin extended with a project switcher; runs reported to the Loop Control Center dashboard.",
+      "url": "https://allekirjoitus-competitive-tracker.vercel.app",
+      "github": "https://github.com/keeltekool/allekirjoitus-competitive-tracker",
+      "image": "/screenshots/allekirjoitus-competitive-tracker.webp",
+      "updatedAt": "2026-04-17",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, Plus Jakarta Sans + Inter fonts",
+        "services": "Neon PostgreSQL (separate per-project instance — sources, snapshots, scrape_runs), Cloudflare Browser Rendering API (markdown scraping, 10s rate-limit spacing), EUDI Wallet Tracker admin (federated source management via project switcher), Loop Control Center (manual-mode run dashboard), Claude Code subscription (in-session substantive-vs-cosmetic classification + surgical brief edits), Vercel (public brief viewer)",
+        "howItWorks": "User types /allekirjoitus-scan in Claude Code. Worker scrapes active competitor URLs through Cloudflare with rate-limit spacing, sha256-hashes each page, and stores new snapshots only when content changed. Emits a changes JSON that Claude reads in-session to classify each delta (substantive = pricing/features/integrations/certs/eID shifts; cosmetic = wording/nav/timestamps — skipped). Substantive changes produce surgical Edit-tool replacements in brief/MASTER_COMPETITIVE_BRIEF.md scoped to the right theme subsection, plus a prepended Recent Changes log entry with impact. First-ever scan is a silent baseline — no log entries, only a header timestamp. Run result POSTed to LCC. Public viewer renders the brief in Editorial Signature styling with sticky left-rail nav and a Recent Changes card at top."
+      }
+    },
+    {
       "id": "sinu-aed",
       "title": "Sinu Aed",
       "description": "Garden price comparison across 4 Estonian chains — 469 products, 38 brands, 8 categories. Pre-built catalog with watchlist, deals engine, and automated twice-weekly price refresh.",
