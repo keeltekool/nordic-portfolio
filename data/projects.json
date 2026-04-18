@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "trackid-radar",
+      "title": "TrackID Radar",
+      "description": "Spotify DJ playlist update tracker. Monitors 23+ Track IDs playlists for changes using public embed fingerprinting — no Spotify API auth needed. Add playlists by URL, click to open in Spotify, unread-style update badges clear on visit. Daily cron checks for changes.",
+      "url": "https://trackid-radar.vercel.app",
+      "github": "https://github.com/keeltekool/trackid-radar",
+      "image": "/screenshots/trackid-radar.webp",
+      "updatedAt": "2026-04-18",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, Inter + JetBrains Mono fonts",
+        "services": "Neon PostgreSQL (playlist registry, fingerprints, click timestamps), Spotify oEmbed API (cover art + title, no auth), Spotify Embed Pages (track list scraping for MD5 fingerprint change detection), Vercel (hosting + daily cron)",
+        "howItWorks": "Daily cron fetches each tracked playlist's embed page, parses the track list from HTML, computes an MD5 fingerprint, and compares with the stored hash. Changed fingerprint = playlist updated. Users see green 'Updated' badges that clear when they click 'Open in Spotify' (records click timestamp in DB). Add any Spotify playlist by pasting its URL — oEmbed validates and fetches metadata instantly. Grid and list view toggle, search filter, updated-first sorting."
+      }
+    },
+    {
       "id": "allekirjoitus-competitive-tracker",
       "title": "Allekirjoitus Competitive Intel Tracker",
       "description": "User-triggered competitive intelligence agent for Allekirjoitus.fi. Scrapes 15 tracked competitor pages (Visma Sign, Scrive, Dokobit, Signicat), diffs vs prior snapshots, and surgically updates a living Master Brief through Claude-in-session analysis. Sources managed via the EUDI admin extended with a project switcher; runs reported to the Loop Control Center dashboard.",
