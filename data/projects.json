@@ -143,15 +143,15 @@
     {
       "id": "feedboard-pro",
       "title": "Feedboard Pro",
-      "description": "RSS feed design studio replacing rss.app ($8-83/mo). Create Google News, YouTube, and Reddit feeds from keywords or channels, preview articles with thumbnails, copy RSS URLs, and organize feeds in a collapsible sidebar grouped by source type. Dark mode included.",
+      "description": "RSS feed design studio replacing rss.app ($8-83/mo). Create Google News, YouTube, Reddit, and RSS feeds from keywords or channels. Feed categories group channels by topic (AI & Tech, DJ Techniques) with separate merged views. Public embed route renders any category iframe-safe with dark/light theme and 5-minute auto-refresh — used to power the DJ Recall learning hub.",
       "url": "https://feedboard-pro.vercel.app",
       "github": "https://github.com/keeltekool/feedboard-pro",
       "image": "/screenshots/feedboard-pro.webp",
-      "updatedAt": "2026-03-29",
+      "updatedAt": "2026-04-20",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM",
-        "services": "Neon PostgreSQL (feed storage), Vercel (hosting + serverless API routes)",
-        "howItWorks": "Custom regex-based RSS/Atom parsers fetch Google News, YouTube, and Reddit feeds server-side. YouTube @handle resolution via page scraping. Articles previewed with lazy og:image extraction or source letter avatars. Feeds saved to Neon DB with RSS URL for use in any feed reader."
+        "services": "Neon PostgreSQL (feeds + feed_categories tables), Vercel (hosting + serverless API routes)",
+        "howItWorks": "Custom regex-based RSS/Atom parsers fetch Google News, YouTube, Reddit, and RSS feeds server-side. YouTube @handle resolution via page scraping. Feed categories table groups feeds by topic within source types — sidebar renders 3-level nesting (type → category → feeds). Public embed route at /embed/[type]/[slug] serves a category's merged feed iframe-safe with dark/light theme, is_public toggle, optional share_token, and client-side 5-minute auto-refresh."
       }
     },
     {
