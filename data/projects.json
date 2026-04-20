@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "dj-recall",
+      "title": "DJ Recall",
+      "description": "Personal DJ self-learning hub for refreshing transition techniques before gigs. Features 10 technique cards with curated YouTube tutorials, Denon SC Live 4 gear reference with controls cheat sheet, and a live YouTube tutorial feed embedded via iframe from a separate FeedBoard Pro app.",
+      "url": "https://dj-recall.vercel.app",
+      "github": "https://github.com/keeltekool/dj-recall",
+      "image": "/screenshots/dj-recall.webp",
+      "updatedAt": "2026-04-20",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, next-themes, Bebas Neue + JetBrains Mono fonts",
+        "services": "Vercel (hosting), FeedBoard Pro (embedded YouTube feed via iframe — separate app providing a curated DJ techniques feed with auto-refresh)",
+        "howItWorks": "Static one-pager with 10 DJ transition technique cards, each linked to a curated YouTube tutorial. Gear section references the Denon SC Live 4 with specs, manual links, and a quick controls cheat sheet. A FeedBoard Pro iframe embeds a live, auto-refreshing YouTube feed filtered for DJ content from a separate app. Design system generated via Claude Design, harmonized with the DJ Portfolio site for potential future merging."
+      }
+    },
+    {
       "id": "trackid-radar",
       "title": "TrackID Radar",
       "description": "Spotify DJ playlist update tracker. Monitors 23+ Track IDs playlists for changes using public embed fingerprinting — no Spotify API auth needed. Add playlists by URL, click to open in Spotify, unread-style update badges clear on visit. Daily cron checks for changes.",
