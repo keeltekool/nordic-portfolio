@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "allekirjoitus-sales-tool",
+      "title": "Allekirjoitus Sales Template Tool",
+      "description": "Multi-brand sales enablement tool for SK ID Solutions KA managers. Generates branded Enterprise proposals, feature introductions, pricing proposals, and price lists from a knowledge base. Onboarding flow, FI/EN language switching, edit mode with deletable rows, configurable sender contact, and print-to-PDF export with Continuous or A4 format.",
+      "url": "https://allekirjoitus-sales-tool.vercel.app",
+      "github": "https://github.com/keeltekool/allekirjoitus-sales-tool",
+      "image": "/screenshots/allekirjoitus-sales-tool.webp",
+      "updatedAt": "2026-04-25",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Metropolis + Barlow Condensed fonts",
+        "services": "Neon PostgreSQL (brand config + presets — created, not yet connected), Vercel (hosting + production deploy)",
+        "howItWorks": "Brand-driven multi-tenant architecture — BrandProvider injects colors, fonts, logos, contact info, and KB paths as CSS vars and React context. Markdown knowledge base files parsed at runtime into structured sections with layer toggles (6 content layers), depth switch (Overview/Detail), and pricing sub-blocks (4 tiers). Onboarding flow sets language, customer name, sender contact, template type, and PDF format. Four templates: Enterprise Offer (KB-driven layers), Feature Introduction (left-border blocks), Pricing Proposal (curated sales narrative), Price List (pricing-only). Edit mode enables contentEditable on all text + deletable rows via hover X buttons. Service Terms extracted from T&C PDF into two-tier summary. Print-to-PDF with Continuous (one page) or A4 (paginated) format."
+      }
+    },
+    {
       "id": "dj-recall",
       "title": "DJ Recall",
       "description": "Personal DJ self-learning hub for refreshing transition techniques before gigs. Features 10 technique cards with curated YouTube tutorials, Denon SC Live 4 gear reference with controls cheat sheet, and a live YouTube tutorial feed embedded via iframe from a separate FeedBoard Pro app.",
