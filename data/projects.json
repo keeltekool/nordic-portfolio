@@ -3,15 +3,15 @@
     {
       "id": "allekirjoitus-sales-tool",
       "title": "Allekirjoitus Sales Template Tool",
-      "description": "Multi-brand sales enablement tool for SK ID Solutions KA managers. Generates branded Enterprise proposals, feature introductions, pricing proposals, and price lists from a knowledge base. Onboarding flow, FI/EN language switching, edit mode with deletable rows, configurable sender contact, and print-to-PDF export with Continuous or A4 format.",
+      "description": "Multi-brand sales enablement tool for SK ID Solutions KA managers. Generates branded Enterprise proposals with full FI/EN localization — KB content, pricing labels, service terms, and UI. localStorage autosave on edit, desktop-only guard, dynamic PDF filenames, and print-to-PDF export.",
       "url": "https://allekirjoitus-sales-tool.vercel.app",
       "github": "https://github.com/keeltekool/allekirjoitus-sales-tool",
       "image": "/screenshots/allekirjoitus-sales-tool.webp",
-      "updatedAt": "2026-04-25",
+      "updatedAt": "2026-04-26",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Metropolis + Barlow Condensed fonts",
-        "services": "Neon PostgreSQL (brand config + presets — created, not yet connected), Vercel (hosting + production deploy)",
-        "howItWorks": "Brand-driven multi-tenant architecture — BrandProvider injects colors, fonts, logos, contact info, and KB paths as CSS vars and React context. Markdown knowledge base files parsed at runtime into structured sections with layer toggles (6 content layers), depth switch (Overview/Detail), and pricing sub-blocks (4 tiers). Onboarding flow sets language, customer name, sender contact, template type, and PDF format. Four templates: Enterprise Offer (KB-driven layers), Feature Introduction (left-border blocks), Pricing Proposal (curated sales narrative), Price List (pricing-only). Edit mode enables contentEditable on all text + deletable rows via hover X buttons. Service Terms extracted from T&C PDF into two-tier summary. Print-to-PDF with Continuous (one page) or A4 (paginated) format."
+        "services": "Neon PostgreSQL (created, not yet connected), Vercel (hosting + production deploy)",
+        "howItWorks": "Brand-driven multi-tenant architecture with BrandProvider injecting CSS vars and React context. Markdown KB files parsed into structured sections with 6 layer toggles, depth switch, and 4 pricing tiers — all fully localized EN/FI including pricing labels, table headers, and service terms. Onboarding sets language, customer, sender, template, and PDF format. Four templates: Enterprise Offer, Feature Introduction, Pricing Proposal, Price List. Edit mode with contentEditable + deletable rows. localStorage autosave triggers only on actual content edits (not casual browsing) with resume banner on reload. Desktop-only guard blocks mobile editor. Dynamic PDF filename includes brand, template, customer, and date."
       }
     },
     {
