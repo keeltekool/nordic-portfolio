@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "trump-roast-lab",
+      "title": "Trump Roast Lab",
+      "description": "Satirical Trump-style roast tweet generator. Enter friend details, AI searches 2,808 filtered Trump insult posts for matching patterns, Claude generates an original parody roast rendered as a pixel-perfect X/Twitter tweet card. Export as PNG and share on WhatsApp to prank friends.",
+      "url": "https://trump-roast-lab.vercel.app",
+      "github": "https://github.com/keeltekool/trump-roast-lab",
+      "image": "/screenshots/trump-roast-lab.webp",
+      "updatedAt": "2026-05-01",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, html2canvas, Inter Tight + Newsreader + JetBrains Mono fonts",
+        "services": "Anthropic Claude API Opus 4 (roast text generation from dossier + matched archive posts), Vercel (hosting + serverless API)",
+        "howItWorks": "User fills a friend dossier (name, details, inside jokes, intensity 1-10). API route keyword-searches 2,808 pre-filtered Trump insult posts bundled as static JSON, feeds top matches + dossier to Claude Opus 4 which generates an original Trump-style roast with nickname, ALL CAPS, and signature signoffs. Output renders as a pixel-perfect X/Twitter tweet card with Trump profile photo, verified badge, and randomized engagement numbers. html2canvas exports the card as PNG (parody label excluded) for WhatsApp/social sharing. Web Share API + platform deep links for direct sharing."
+      }
+    },
+    {
       "id": "allekirjoitus-sales-tool",
       "title": "Allekirjoitus Sales Template Tool",
       "description": "Multi-brand sales enablement tool for SK ID Solutions KA managers. Generates branded Enterprise proposals with full FI/EN localization — KB content, pricing labels, service terms, and UI. localStorage autosave on edit, desktop-only guard, dynamic PDF filenames, and print-to-PDF export.",
