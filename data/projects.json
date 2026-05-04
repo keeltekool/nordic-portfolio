@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "idea-radar",
+      "title": "Idea Radar",
+      "description": "Personal inspiration discovery dashboard for indie builders. Scrapes 15 sources across 7 platforms, AI-scores projects for feasibility, novelty, and stretch against your builder portfolio. Growth compass — surfaces what you haven't built yet, not more of the same.",
+      "url": "https://idea-radar-topaz.vercel.app",
+      "github": "https://github.com/keeltekool/idea-radar",
+      "image": "/screenshots/idea-radar.webp",
+      "updatedAt": "2026-05-04",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, Newsreader + Plus Jakarta Sans fonts",
+        "services": "Neon PostgreSQL (discoveries, sources, builder profile, scrape runs), Vercel (hosting), Loop Control Center (manual pipeline scheduling), Federated Tracker Admin (shared with EUDI + Allekirjoitus)",
+        "howItWorks": "Three-stage pipeline cloned from EUDI Wallet Tracker: 15 source parsers (Product Hunt, GitHub Search API, Hacker News Show HN, Dev.to, Reddit, Lobsters, Medium) fetch raw items into Neon. Keyword pre-filter drops 60-70% noise. Claude Code in-session scores survivors against a Builder Profile (auto-generated from 41 project STACK.md files) on feasibility/novelty/stretch axes with wildcard picks for maximum growth. Dashboard shows curated cards with composite scores, 'Why this matters' summaries, and Sparked/Pass feedback buttons."
+      }
+    },
+    {
       "id": "trump-roast-lab",
       "title": "Trump Roast Lab",
       "description": "Satirical Trump-style roast tweet generator. Enter friend details, AI searches 2,808 filtered Trump insult posts for matching patterns, Claude generates an original parody roast rendered as a pixel-perfect X/Twitter tweet card. Export as PNG and share on WhatsApp to prank friends.",
