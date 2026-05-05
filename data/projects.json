@@ -141,6 +141,20 @@
       }
     },
     {
+      "id": "allekirjoitus-fi-v3",
+      "title": "Allekirjoitus.fi V3",
+      "description": "Enterprise-focused V3 redesign of the Allekirjoitus.fi e-signature landing page. Complete webmaster handover package with all brand assets, pricing tiers (Enterprise €275/mo + Basic S/M/L), signing method explainers, FAQ, and contact form. Self-contained static HTML — no build step.",
+      "url": "https://allekirjoitus-fi-v3.vercel.app",
+      "github": "https://github.com/keeltekool/allekirjoitus-fi-v3",
+      "image": "/screenshots/allekirjoitus-fi-v3.webp",
+      "updatedAt": "2026-05-05",
+      "stack": {
+        "builtWith": "HTML, CSS, JavaScript, Metropolis + Barlow Condensed fonts",
+        "services": "Vercel (hosting)",
+        "howItWorks": "Self-contained static landing page with all CSS inline and vanilla JS accordion. Brand assets (icons, illustrations, photos, fonts) flattened into a clean directory structure for webmaster handover. HANDOVER.md provides deployment instructions, section map with line references, and asset replacement guide. No framework, no build step — upload files to any static host."
+      }
+    },
+    {
       "id": "allekirjoitus-v2",
       "title": "Allekirjoitus.fi v2",
       "description": "Redesigned enterprise landing page for Finnish e-signature platform. Updated hero with brand photography, rewritten platform capabilities with brand book icons, QES signing method added, trusted-by logos, pricing with three tiers, FAQ, and contact section with character illustrations.",
