@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "kalkulaator",
+      "title": "Kalkulaator",
+      "description": "Estonian vehicle tax calculator competing with kalkulaator.ee. Exact calculation parity verified E2E — 85 unit tests, 4 golden fixtures matching to the cent. Zero ads, modern UX, dark mode. First calculator of a planned aggregator.",
+      "url": "https://kalkulaator-six.vercel.app",
+      "github": "https://github.com/keeltekool/kalkulaator",
+      "image": "/screenshots/kalkulaator.webp",
+      "updatedAt": "2026-05-10",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Vitest, Plus Jakarta Sans + JetBrains Mono fonts",
+        "services": "Vercel (hosting + static generation)",
+        "howItWorks": "Pure client-side calculation engine with law-derived formulas reverse-engineered from kalkulaator.ee source code. Supports all Estonian vehicle types (cars, vans, motorcycles, ATVs, tractors), all engine types (ICE, hybrid, plug-in hybrid, EV), and three CO₂ modes (WLTP, NEDC with conversion coefficient, missing with estimation formula). Calculates annual tax and registration fee with full component breakdowns. Design tokens from Claude Design output, calculation logic from Codex source extraction."
+      }
+    },
+    {
       "id": "idea-radar",
       "title": "Idea Radar",
       "description": "Personal inspiration discovery dashboard for indie builders. Scrapes 15 sources across 7 platforms, AI-scores projects for feasibility, novelty, and stretch against your builder portfolio. Growth compass — surfaces what you haven't built yet, not more of the same.",
