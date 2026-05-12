@@ -3,7 +3,7 @@
     {
       "id": "kalkulaator",
       "title": "Kalkulaator",
-      "description": "Estonian calculator aggregator competing with kalkulaator.ee. Two calculators live: vehicle tax (Automaks) and salary/payroll (Palgakalkulaator). 185 unit tests, exact E2E parity verified against the reference site. Zero ads, modern UX, dark mode.",
+      "description": "Estonian calculator aggregator competing with kalkulaator.ee. Three calculators live: vehicle tax, salary/payroll, and VAT. 225 unit tests, exact E2E parity verified. Zero ads, modern UX, dark mode.",
       "url": "https://kalkulaator-six.vercel.app",
       "github": "https://github.com/keeltekool/kalkulaator",
       "image": "/screenshots/kalkulaator.webp",
