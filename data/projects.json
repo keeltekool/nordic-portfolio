@@ -3,15 +3,15 @@
     {
       "id": "kalkulaator",
       "title": "Kalkulaator",
-      "description": "Estonian vehicle tax calculator competing with kalkulaator.ee. Exact calculation parity verified E2E — 85 unit tests, 4 golden fixtures matching to the cent. Zero ads, modern UX, dark mode. First calculator of a planned aggregator.",
+      "description": "Estonian calculator aggregator competing with kalkulaator.ee. Two calculators live: vehicle tax (Automaks) and salary/payroll (Palgakalkulaator). 185 unit tests, exact E2E parity verified against the reference site. Zero ads, modern UX, dark mode.",
       "url": "https://kalkulaator-six.vercel.app",
       "github": "https://github.com/keeltekool/kalkulaator",
       "image": "/screenshots/kalkulaator.webp",
-      "updatedAt": "2026-05-10",
+      "updatedAt": "2026-05-12",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Vitest, Plus Jakarta Sans + JetBrains Mono fonts",
         "services": "Vercel (hosting + static generation)",
-        "howItWorks": "Pure client-side calculation engine with law-derived formulas reverse-engineered from kalkulaator.ee source code. Supports all Estonian vehicle types (cars, vans, motorcycles, ATVs, tractors), all engine types (ICE, hybrid, plug-in hybrid, EV), and three CO₂ modes (WLTP, NEDC with conversion coefficient, missing with estimation formula). Calculates annual tax and registration fee with full component breakdowns. Design tokens from Claude Design output, calculation logic from Codex source extraction."
+        "howItWorks": "Pure client-side calculation engines with law-derived formulas reverse-engineered from kalkulaator.ee source code via Codex. Automaks: all vehicle types, engine types, CO₂ modes, annual tax + registration fee with component breakdowns. Palgakalkulaator: bidirectional gross/net/employer-cost conversion, 2022-2026 tax years, sliding tax-free income, pension/unemployment toggles, minimum social tax. Flywheel workflow: Codex extracts source → writes handoff → Claude builds with golden fixture parity gates."
       }
     },
     {
