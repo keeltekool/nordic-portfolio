@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "hankeradar",
+      "title": "HankeRadar",
+      "description": "AI-powered construction tender matching for Estonian builders. Scrapes Hange.ee + Holt.ee, matches listings to company profiles via Haiku 4.5, and sends Telegram notifications. 5-step onboarding with live Business Register auto-fill. SÕEL design system.",
+      "url": "https://hankeradar-alpha.vercel.app",
+      "github": "https://github.com/keeltekool/hankeradar",
+      "image": "/screenshots/hankeradar.webp",
+      "updatedAt": "2026-05-14",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, grammy, Cheerio, Fraunces + DM Sans + Epilogue + JetBrains Mono fonts",
+        "services": "Neon PostgreSQL (companies, trades, listings, matches), Vercel (hosting + serverless), Anthropic Claude Haiku 4.5 (AI matching — not yet connected), Telegram Bot API via grammy (notifications — not yet connected), ariregister.rik.ee (Business Register lookup — live), GitHub Actions (cron scrapers every 2hr)",
+        "howItWorks": "Cron scrapes Hange.ee (50 listings/page, category from individual pages) and Holt.ee (inline categories from .listingCard). Location pre-filter narrows by Estonian county neighbor map. Haiku 4.5 classifies each listing-company pair with a 1-10 score and Estonian-language reason. Score ≥7 triggers Telegram notification. 5-step onboarding: enter registrikood → auto-fill from Äriregister → pick 20 trades (EMTAK pre-selection) → set travel radius → connect Telegram. SÕEL design: warm parchment #F5F3EE, ink #1A1A2E, amber #FFD166."
+      }
+    },
+    {
       "id": "kalkulaator",
       "title": "Kalkulaator",
       "description": "Estonian calculator aggregator competing with kalkulaator.ee. Three calculators live: vehicle tax, salary/payroll, and VAT. 225 unit tests, exact E2E parity verified. Zero ads, modern UX, dark mode.",
