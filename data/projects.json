@@ -3,15 +3,15 @@
     {
       "id": "hankeradar",
       "title": "HankeRadar",
-      "description": "AI-powered construction tender matching for Estonian builders. Scrapes Hange.ee + Holt.ee, matches listings to company profiles via Haiku 4.5, and sends Telegram notifications. 5-step onboarding with live Business Register auto-fill. SÕEL design system.",
+      "description": "AI-powered construction tender matching for Estonian builders. Scrapes Hange.ee + Holt.ee, matches via Haiku 4.5, sends email + Telegram notifications. Desktop responsive with editable profiles and dual notification cadence.",
       "url": "https://hankeradar-alpha.vercel.app",
       "github": "https://github.com/keeltekool/hankeradar",
       "image": "/screenshots/hankeradar.webp",
-      "updatedAt": "2026-05-14",
+      "updatedAt": "2026-05-18",
       "stack": {
-        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, grammy, Cheerio, Fraunces + DM Sans + Epilogue + JetBrains Mono fonts",
-        "services": "Neon PostgreSQL (companies, trades, listings, matches), Vercel (hosting + serverless), Anthropic Claude Haiku 4.5 (AI matching — not yet connected), Telegram Bot API via grammy (notifications — not yet connected), ariregister.rik.ee (Business Register lookup — live), GitHub Actions (cron scrapers every 2hr)",
-        "howItWorks": "Cron scrapes Hange.ee (50 listings/page, category from individual pages) and Holt.ee (inline categories from .listingCard). Location pre-filter narrows by Estonian county neighbor map. Haiku 4.5 classifies each listing-company pair with a 1-10 score and Estonian-language reason. Score ≥7 triggers Telegram notification. 5-step onboarding: enter registrikood → auto-fill from Äriregister → pick 20 trades (EMTAK pre-selection) → set travel radius → connect Telegram. SÕEL design: warm parchment #F5F3EE, ink #1A1A2E, amber #FFD166."
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, grammy, Cheerio, Clerk v7, Fraunces + DM Sans + Epilogue + JetBrains Mono fonts",
+        "services": "Neon PostgreSQL (companies, trades, listings, matches), Vercel (hosting + serverless), Anthropic Claude Haiku 4.5 (AI match scoring), Resend (email notifications — digest + instant), Telegram Bot API via grammy (@HankeRadarBot — instant alerts), Clerk (auth), ariregister.rik.ee (Business Register lookup), GitHub Actions (scrape cron every 2h + daily digest 7:00 UTC)",
+        "howItWorks": "GitHub Actions scrapes Hange.ee (paginated, ~387 listings) and Holt.ee every 2h. Location pre-filter narrows by county neighbor map with Tallinn-specific handling. Haiku 4.5 scores each listing-company pair 1-10 with Estonian reasoning. Score ≥7 triggers instant Telegram + email (Resend). Daily digest collects all unnotified matches. Two cadences: Päevakokkuvõte (daily) or Koheselt (instant). 6-step onboarding with Äriregister auto-fill. Editable trades and location (17 options incl. Tallinn/Tallinn+Harjumaa). SÕEL design system."
       }
     },
     {
