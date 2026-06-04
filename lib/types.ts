@@ -9,6 +9,7 @@ export interface Project {
   title: string;
   description: string;
   url: string;
+  adminUrl?: string;
   github: string;
   image?: string;
   stack?: Stack;

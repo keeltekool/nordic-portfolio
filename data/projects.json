@@ -3,15 +3,16 @@
     {
       "id": "saku-tennis",
       "title": "Saku Tenniseklubi",
-      "description": "Production website + custom booking system for an Estonian clay-court tennis club (live client work). Multi-tenant Next.js app: a CMS-driven public site — homepage, club page, and a gallery with click-to-enlarge lightbox — plus a Clerk-protected admin panel. The weekly booking grid, public request flow, and admin CMS are in active development.",
+      "description": "Production website + custom weekly-grid booking system for an Estonian clay-court tennis club (live client work). Public site with CMS-driven content, interactive booking calendar with request flow, and a full admin panel — 8 management sections, drag-select/move/resize grid, request inbox with approve/reject, closures, recurring series, and 6 content editors. 71 tests, DST-safe timezone engine, Resend email notifications. Deployed and handed over to client.",
       "url": "https://saku-tennis-revamp.vercel.app",
+      "adminUrl": "https://saku-tennis-revamp.vercel.app/admin",
       "github": "https://github.com/keeltekool/saku-tennis-revamp",
       "image": "/screenshots/saku-tennis.webp",
-      "updatedAt": "2026-06-02",
+      "updatedAt": "2026-06-04",
       "stack": {
-        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, Luxon, Clerk, Zod, sharp, Newsreader + Geist + JetBrains Mono fonts",
-        "services": "Neon PostgreSQL (multi-tenant — tenants, courts, booking_blocks, requests, recurring series, announcements, gallery, pricing), Cloudflare R2 (sharp-processed AVIF/WebP image CDN), Clerk (admin auth), Resend (booking-request notifications), Google Maps (embedded location), Vercel (hosting)",
-        "howItWorks": "Multi-tenant from day one — the tenant is resolved from the request host for public reads and from the authenticated Clerk user for every admin write, so the header is never an authz signal. A single Europe/Tallinn schedule engine (Luxon, DST-safe across the October switch) is designed to drive both the public read-only weekly grid and the interactive admin grid from one booking_blocks table. CMS content lives in flat tenant columns; images are processed with sharp into responsive AVIF/WebP served from R2. The public marketing site (homepage, Klubist, flat gallery with lightbox) is live; the booking grid, public request flow with Resend notifications, and admin CMS are the next build phases."
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, Vitest, Luxon, Clerk, Zod, sharp, Newsreader + Geist + JetBrains Mono fonts",
+        "services": "Neon PostgreSQL (multi-tenant — 9 tables: tenants, tenant_admins, courts, booking_blocks, booking_requests, recurring_series, announcements, gallery_items, price_rows), Cloudflare R2 (sharp-processed AVIF/WebP image CDN), Clerk (admin auth — email+password, multi-admin per tenant), Resend (booking-request notification emails to admin), Vercel (hosting + auto-deploy)",
+        "howItWorks": "Multi-tenant from day one — tenant resolved from request host for public reads, from authenticated Clerk user via tenant_admins join for every admin write. A single Europe/Tallinn schedule engine (Luxon, DST-safe across the October EEST→EET switch) drives both the public read-only weekly grid and the interactive admin grid from one booking_blocks table. Public visitors click free slots to submit booking requests (name/phone/email) — the slot is held as pending, admin gets a Resend notification email, then approves (auto-derives privacy-safe label like 'MartT') or rejects (frees the slot). Admin grid supports drag-select creation, click-to-edit, drag-move, and resize via custom pointer events (no DnD library) with pure-tested interaction math. Close-day creates rain/maintenance blocks with affected-booking preview. Recurring series generate DST-correct weekly blocks across the full season. Six CMS editors (homepage, Klubist, pricing, news, gallery, settings) let the admin update all public content. Images processed with sharp into responsive AVIF/WebP served from R2. 71 Vitest tests cover timezone math, schedule engine, conflicts, grid interactions, recurring generation, and label derivation."
       }
     },
     {
