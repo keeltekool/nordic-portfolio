@@ -1,6 +1,34 @@
 {
   "projects": [
     {
+      "id": "songdrop-guest",
+      "title": "SongDrop — Guest Request Page",
+      "description": "QR-driven song request app for party guests. Scan → search YouTube Music → preview → tap Request → track drops into the DJ's playlist instantly. Mobile-first, one-handed, no login. Branded per-DJ hero with grayscale scanline treatment, glassmorphism search, result cards with Preview/Request split buttons, toast confirmation.",
+      "url": "https://web-seven-ecru-29.vercel.app/egertv",
+      "github": "https://github.com/keeltekool/songdrop",
+      "image": "/screenshots/songdrop-guest.webp",
+      "updatedAt": "2026-06-05",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, next-themes, Drizzle ORM, Vitest, Bebas Neue + Inter fonts",
+        "services": "Neon PostgreSQL (DJs, requests, search_cache — shared with dashboard), FastAPI on Render (YouTube Music search via ytmusicapi + playlist writes via YouTube Data API v3), Vercel (hosting + API routes + OAuth), Google OAuth 2.0 (DJ YouTube connect)",
+        "howItWorks": "Guest scans a QR code → lands on /[slug]. 400ms debounced search proxies through Next.js API to FastAPI which queries ytmusicapi (1.5s throttle lock, persistent Neon cache with 24h TTL). Result cards show thumbnail, title, artist, duration, explicit badge. Tap Request → Next.js inserts a pending row in Neon, proxies to FastAPI /add which inserts via YouTube Data API playlistItems.insert (50 quota units, insert-level dedup). Card flips to '✓ The DJ's got it 🎧' + toast. Preview embeds YouTube IFrame inline. Pause state polled every 10s."
+      }
+    },
+    {
+      "id": "songdrop-dashboard",
+      "title": "SongDrop — DJ Dashboard",
+      "description": "DJ's command center for managing song requests at gigs. Live feed with 5-second polling, Pause/Resume toggle, QR code generation for table cards, Open Playlist link, feed density toggle (Comfortable/Compact), and 'New Gig' reset that clears both the DB feed and the YouTube playlist. Session-gated via OAuth cookie.",
+      "url": "https://web-seven-ecru-29.vercel.app/dashboard",
+      "github": "https://github.com/keeltekool/songdrop",
+      "image": "/screenshots/songdrop-dashboard.webp",
+      "updatedAt": "2026-06-05",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, next-themes, Drizzle ORM, Bebas Neue + Inter fonts",
+        "services": "Neon PostgreSQL (DJs, requests — shared with guest page), FastAPI on Render (/clear-playlist endpoint for New Gig reset), Vercel (hosting + session-gated API routes), YouTube Data API v3 (playlist clear via playlistItems.list + delete)",
+        "howItWorks": "Session cookie set at OAuth callback gates all /api/dj/* routes. Feed endpoint returns latest 100 requests with metadata. Dashboard polls every 5s, renders feed rows with thumbnail, title, artist, requester name (accent-colored for shout-outs), relative timestamp, and status dot. Pause toggle flips djs.paused — guest page reflects within 10s. New Gig deletes all request rows (resets dedup) AND empties the YouTube playlist via FastAPI (paginated list + individual delete, 50 quota units per track, guard at 100). QR panel generates from guest URL with Copy Link + Download QR."
+      }
+    },
+    {
       "id": "saku-tennis",
       "title": "Saku Tenniseklubi",
       "description": "Production website + custom weekly-grid booking system for an Estonian clay-court tennis club (live client work). Public site with CMS-driven content, interactive booking calendar with request flow, and a full admin panel — 8 management sections, drag-select/move/resize grid, request inbox with approve/reject, closures, recurring series, and 6 content editors. 71 tests, DST-safe timezone engine, Resend email notifications. Deployed and handed over to client.",
