@@ -10,7 +10,7 @@ export interface Project {
   description: string;
   url: string;
   adminUrl?: string;
-  github: string;
+  github?: string;
   image?: string;
   stack?: Stack;
   updatedAt?: string;
