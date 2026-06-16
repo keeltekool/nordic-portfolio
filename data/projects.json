@@ -6,7 +6,7 @@
       "description": "Private voice-to-second-brain. Press your phone's Action Button, talk — an iOS Shortcut POSTs the thought straight into a database. A weekly Claude Code synthesis then surfaces your themes, the connections between them, and the recurring \"loops\" you keep circling, on a knowledge-graph dashboard. No inbox, no friction — press, speak, done.",
       "url": "https://mindloop-henna-omega.vercel.app/preview",
       "image": "/screenshots/mindloop.webp",
-      "updatedAt": "2026-06-15",
+      "updatedAt": "2026-06-16",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, Clerk, Zod, Vitest, Fraunces + Plus Jakarta Sans + JetBrains Mono fonts",
         "services": "Neon PostgreSQL (captures, themes, thoughts, connections, loops, runs), Vercel (hosting + token-secured POST /api/capture endpoint), Clerk (email auth), iOS Shortcuts + Wispr Flow (voice capture → HTTPS POST), Claude Code (in-session weekly synthesis brain)",
