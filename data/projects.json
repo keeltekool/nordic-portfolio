@@ -3,14 +3,14 @@
     {
       "id": "mindloop",
       "title": "Mindloop",
-      "description": "Private voice-to-second-brain. Press your phone's Action Button, talk — an iOS Shortcut POSTs the thought straight into a database. A weekly Claude Code synthesis then surfaces your themes, the connections between them, and the recurring \"loops\" you keep circling, on a knowledge-graph dashboard. No inbox, no friction — press, speak, done.",
+      "description": "Private voice-to-second-brain. Press your phone's Action Button, talk — an iOS Shortcut POSTs the thought straight into a database. A weekly Claude Code synthesis then surfaces your themes, the connections between them, and the recurring \"loops\" you keep circling, on a responsive knowledge-graph dashboard with a live capture inbox showing each thought land and get synthesized. No inbox, no friction — press, speak, done.",
       "url": "https://mindloop-henna-omega.vercel.app/preview",
       "image": "/screenshots/mindloop.webp",
-      "updatedAt": "2026-06-16",
+      "updatedAt": "2026-06-17",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, Clerk, Zod, Vitest, Fraunces + Plus Jakarta Sans + JetBrains Mono fonts",
         "services": "Neon PostgreSQL (captures, themes, thoughts, connections, loops, runs), Vercel (hosting + token-secured POST /api/capture endpoint), Clerk (email auth), iOS Shortcuts + Wispr Flow (voice capture → HTTPS POST), Claude Code (in-session weekly synthesis brain)",
-        "howItWorks": "Dictate a raw thought on your phone (Wispr Flow); an iOS Shortcut bound to the Action Button POSTs it as JSON to a bearer-token-secured /api/capture route that inserts one row into Neon — no email, no inbox, empty dictations rejected server-side. A weekly Claude Code loop reads unprocessed captures, atomizes them into thoughts, writes per-theme syntheses, draws connections, and resurfaces the recurring open 'loops' you keep circling, writing it all back to Neon for a force-directed knowledge-graph dashboard."
+        "howItWorks": "Dictate a raw thought on your phone (Wispr Flow); an iOS Shortcut bound to the Action Button POSTs it as JSON to a bearer-token-secured /api/capture route that inserts one row into Neon — no email, no inbox, empty dictations rejected server-side. A weekly Claude Code loop reads unprocessed captures, atomizes them into thoughts, writes per-theme syntheses, draws connections, and resurfaces the recurring open 'loops' you keep circling, writing it all back to Neon for a knowledge-graph dashboard. A 'Recent captures' section shows each capture with its processed/unprocessed status, and the whole dashboard collapses cleanly to a mobile layout."
       }
     },
     {
