@@ -1,6 +1,21 @@
 {
   "projects": [
     {
+      "id": "songdrop-pro",
+      "title": "SongDrop — Live Request Platform",
+      "description": "Productized multi-tenant SaaS version of SongDrop. DJs sign up, claim their link, connect YouTube, and customize their page (profile picture, tagline, accent); guests scan a QR, search, and requests drop straight into the DJ's playlist. Self-serve onboarding, a live gig dashboard, and Stripe subscriptions — with strict per-DJ data isolation.",
+      "url": "https://songdrop-app.vercel.app/egertv",
+      "adminUrl": "https://songdrop-app.vercel.app/dashboard",
+      "github": "https://github.com/keeltekool/songdrop-app",
+      "image": "/screenshots/songdrop-guest.webp",
+      "updatedAt": "2026-06-18",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, Clerk v7, Stripe, AWS SDK S3 (R2), FastAPI, Python, Vitest + pytest, Bebas Neue + Inter fonts",
+        "services": "Neon PostgreSQL (accounts, dj_profiles, youtube_connections, requests, search_cache), Clerk (DJ auth + ownership), Google OAuth 2.0 + YouTube Data API v3 (per-DJ playlist writes), FastAPI on Render (ytmusicapi search + playlist insert), Cloudflare R2 (avatar/hero uploads), Stripe (subscriptions — €12/mo, 14-day trial), Vercel (hosting)",
+        "howItWorks": "Three strict identity layers — Clerk user (account) → dj_profile (tenant) → youtube_connection (Google grant) — with every mutation's ownership resolved server-side from the Clerk userId, never a client-supplied id. New DJs self-serve: claim a slug, connect YouTube via a signed-state OAuth flow (CSRF-safe; per-profile refresh token encrypted AES-256-GCM and shared with FastAPI), pick/create a playlist, and set avatar/tagline/accent (R2 uploads rendered additively on the guest page). Guests at /[slug] search YouTube Music and tap Request — Next.js inserts a row and proxies to FastAPI which inserts via YouTube Data API. Stripe Checkout (subscription mode) + Customer Portal + lifecycle webhooks drive each account's plan_status. The original single-DJ SongDrop stays live and untouched on separate infrastructure."
+      }
+    },
+    {
       "id": "mindloop",
       "title": "Mindloop",
       "description": "Private voice-to-second-brain. Press your phone's Action Button, talk — an iOS Shortcut POSTs the thought straight into a database. A weekly Claude Code synthesis then surfaces your themes, the connections between them, and the recurring \"loops\" you keep circling, on a responsive knowledge-graph dashboard with a live capture inbox showing each thought land and get synthesized. No inbox, no friction — press, speak, done.",
