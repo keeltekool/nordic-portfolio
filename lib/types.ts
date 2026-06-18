@@ -10,6 +10,7 @@ export interface Project {
   description: string;
   url: string;
   adminUrl?: string;
+  landingUrl?: string;
   github?: string;
   image?: string;
   stack?: Stack;

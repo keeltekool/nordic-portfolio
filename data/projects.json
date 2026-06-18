@@ -3,9 +3,10 @@
     {
       "id": "songdrop-pro",
       "title": "SongDrop — Live Request Platform",
-      "description": "Productized multi-tenant SaaS version of SongDrop. DJs sign up, claim their link, connect YouTube, and customize their page (profile picture, tagline, accent); guests scan a QR, search, and requests drop straight into the DJ's playlist. Self-serve onboarding, a live gig dashboard, and Stripe subscriptions — with strict per-DJ data isolation.",
+      "description": "Productized multi-tenant SaaS version of SongDrop. DJs sign up, claim their link, connect YouTube, and customize their page (profile picture, tagline, accent); guests scan a QR, search, and requests drop straight into the DJ's playlist. Self-serve onboarding, a live gig dashboard, and Stripe subscriptions — with strict per-DJ data isolation. A dedicated marketing landing page introduces the product and funnels new DJs into sign-up.",
       "url": "https://songdrop-app.vercel.app/egertv",
       "adminUrl": "https://songdrop-app.vercel.app/dashboard",
+      "landingUrl": "https://songdrop-landing.vercel.app",
       "github": "https://github.com/keeltekool/songdrop-app",
       "image": "/screenshots/songdrop-guest.webp",
       "updatedAt": "2026-06-18",
