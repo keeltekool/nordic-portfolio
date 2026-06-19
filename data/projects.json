@@ -1,6 +1,19 @@
 {
   "projects": [
     {
+      "id": "athlon",
+      "title": "Athlon",
+      "description": "Estonian sports site that aggregates athletes' and teams' own Facebook posts into one clean, recency-ordered feed — full content read on Athlon, with a direct link to the original post and its original Facebook date on every entry. Fed by an operator-run, attended local-browser ingestion loop that re-hosts images to R2 and dedups posts into a Neon ledger. 33 tracked entities (incl. team Kalev/Cramo); first scrape pulled 116 posts with re-hosted images.",
+      "url": "https://athlon.vercel.app",
+      "image": "/screenshots/athlon.webp",
+      "updatedAt": "2026-06-19",
+      "stack": {
+        "builtWith": "Next.js 14, React, TypeScript, Tailwind CSS, Drizzle ORM, sharp, Vitest (61 tests), Estonian UI",
+        "services": "Neon PostgreSQL (athletes/teams, posts ledger, per-athlete image pool, ingestion runs), Cloudflare R2 (post images re-hosted as WebP — FB CDN URLs expire), chrome-devtools MCP (attended logged-in Facebook scraping — local only, never on Vercel), Loop Control Center (attended ~2×/week loop schedule), Federated EUDI Tracker Admin (roster + run history), Vercel (hosting, ISR revalidate=60)",
+        "howItWorks": "An operator-run, attended local-browser loop drives a logged-in Chrome through each tracked athlete's and team's Facebook page, extracts their own posts (full text via 'See more' expansion, skipping reels and others' wall posts) and one content image. A deterministic persist step normalizes each permalink to a stable hash, dedups against the Neon ledger, inserts new posts, re-hosts the image to R2 as WebP, and logs the run. The public Next.js site reads Neon via ISR and renders a recency feed (ordered by ingest sequence, since Facebook scrambles logged-in timestamps) with sport/athlete filters, team TIIM badges, image-pool rotation, full-post pages, and — on every entry — a direct 'Vaata Facebookis' link to the cleaned original-post URL plus the original Facebook posting date."
+      }
+    },
+    {
       "id": "songdrop-pro",
       "title": "SongDrop — Live Request Platform",
       "description": "Productized multi-tenant SaaS version of SongDrop. DJs sign up, claim their link, connect YouTube, and customize their page (profile picture, tagline, accent); guests scan a QR, search, and requests drop straight into the DJ's playlist. Self-serve onboarding, a live gig dashboard, and Stripe subscriptions — with strict per-DJ data isolation. A dedicated marketing landing page introduces the product and funnels new DJs into sign-up.",
