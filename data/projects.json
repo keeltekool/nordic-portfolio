@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "ev-launchpad",
+      "title": "Launchpad",
+      "description": "Personal quick-access dashboard for all live projects. Dense visual grid with screenshots, live search filtering, dark/light mode, and keyboard shortcuts. One tile per project, one click to launch — a speed-dial cockpit for 45+ apps, synced from the portfolio on command.",
+      "url": "https://ev-launchpad.vercel.app",
+      "github": "https://github.com/keeltekool/ev-launchpad",
+      "image": "/screenshots/ev-launchpad.webp",
+      "updatedAt": "2026-06-22",
+      "stack": {
+        "builtWith": "HTML, CSS (custom properties, CSS Grid), vanilla JavaScript — zero dependencies, no build step",
+        "services": "Vercel (static hosting, auto-deploy from GitHub)",
+        "howItWorks": "A static single-page dashboard loads project data from a local JSON file, renders a responsive CSS Grid of screenshot tiles with clickable link chips, and filters instantly via client-side search. Screenshots batch-captured by Puppeteer. A /launchpad skill diffs the portfolio page, adds new projects, captures their screenshots, and redeploys."
+      }
+    },
+    {
       "id": "athlon",
       "title": "Athlon",
       "description": "Estonian sports site that aggregates athletes' and teams' own Facebook posts into one clean, recency-ordered feed — full content read on Athlon, with a direct link to the original post and its original Facebook date on every entry. Fed by an operator-run, attended local-browser ingestion loop that re-hosts images to R2 and dedups posts into a Neon ledger. 33 tracked entities (incl. team Kalev/Cramo); first scrape pulled 116 posts with re-hosted images.",
