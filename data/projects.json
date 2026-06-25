@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "keeletark",
+      "title": "Keeletark",
+      "description": "\"Grammarly for Estonian\" — a writing assistant that polishes rough or AI-generated Estonian (or translates English into it). Live correctness + naturalness underlines with pick-and-choose fixes, animated quality scores, and a one-click full rewrite. estnltk is the deterministic ground truth; Claude proposes style fixes and is re-checked against it before anything reaches the user.",
+      "url": "https://keeletark.vercel.app",
+      "github": "https://github.com/keeltekool/keeletark",
+      "image": "/screenshots/keeletark.webp",
+      "updatedAt": "2026-06-25",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, Clerk, @anthropic-ai/sdk (Claude Opus 4.8), Vitest, Geist font",
+        "services": "Neon PostgreSQL (saved documents, glossary terms, correction events), estnltk MCP (estonian-mcp.fly.dev — deterministic Estonian spelling/grammar/case/punctuation, the ground truth), Anthropic Claude Opus 4.8 (naturalness suggestions, EN→ET translation, full-document rewrites), Clerk (invite-only auth), Vercel (hosting)",
+        "howItWorks": "As you type, one analyze pass runs estnltk (red correctness errors) and Claude (blue naturalness suggestions) in parallel on the same text — every Claude replacement is re-validated through estnltk (the deterministic judge) before display, red wins on overlap, and Üldskoor/Õigsus/Loomulikkus scores animate up. Fix/Skip apply surgically with single-level undo; a separate one-click Rewrite streams a full-document Claude rewrite in a chosen style (Neutral/Formal/Friendly/Concise) with before/after Accept/Discard. English input is translated to Estonian first so estnltk only ever sees Estonian. Drafts autosave to localStorage (survive navigation/refresh), a glossary of protected terms is kept verbatim, and finished pieces save to a personal archive with before→after score deltas."
+      }
+    },
+    {
       "id": "ev-launchpad",
       "title": "Launchpad",
       "description": "Personal quick-access dashboard for all live projects. Dense visual grid with screenshots, live search filtering, dark/light mode, and keyboard shortcuts. One tile per project, one click to launch — a speed-dial cockpit for 45+ apps, synced from the portfolio on command.",
