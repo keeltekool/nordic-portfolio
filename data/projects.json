@@ -3,7 +3,7 @@
     {
       "id": "keeletark",
       "title": "Keeletark",
-      "description": "\"Grammarly for Estonian\" — a writing assistant that polishes rough or AI-generated Estonian (or translates English into it). Live correctness + naturalness underlines with pick-and-choose fixes, animated quality scores, and a one-click full rewrite. estnltk is the deterministic ground truth; Claude proposes style fixes and is re-checked against it before anything reaches the user.",
+      "description": "\"Grammarly for Estonian.\" Its core is a dual-layer check where two engines work together: the estnltk MCP flags deterministic grammar/spelling/case errors as ground truth, while Claude Opus 4.8 proposes naturalness fixes — and every Claude suggestion is re-validated through estnltk before it ever reaches you, so the LLM never gets the last word. On top of that: pick-and-choose fixes, animated quality scores, English→Estonian translation, and a one-click full rewrite.",
       "url": "https://keeletark.vercel.app",
       "github": "https://github.com/keeltekool/keeletark",
       "image": "/screenshots/keeletark.webp",
