@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "keepr",
+      "title": "Keepr",
+      "description": "\"Is it a keeper?\" — a barcode-scanning grocery memory PWA. Scan any product at the shelf and instantly know whether past-you liked it: scanning IS adding (zero taps), the verdict answers from your own history in ~300 ms, and rating happens later with one tap from a morning push, a Sunday email, or the in-app queue. Every scan enriches a shared commons catalog that resolves Estonian grocery barcodes live at €0.",
+      "url": "https://keepr-psi.vercel.app",
+      "github": "https://github.com/keeltekool/keepr",
+      "image": "/screenshots/keepr.webp",
+      "updatedAt": "2026-07-05",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, barcode-detector (native BarcodeDetector + ZXing-WASM ponyfill), web-push, Familjen Grotesk + Space Mono",
+        "services": "Neon PostgreSQL (8 tables + 4 SQL views — commons catalog, immutable scan events, verdicts), Selver Elasticsearch + Open Food Facts (live resolve-on-scan, cached forever), Cloudflare R2 (product images, no hotlink rot), Anthropic Claude Haiku (category harmonization at write-gates only — never in the scan path), Web Push VAPID (actionable 1-tap rating notifications), Resend (weekly digest with HMAC-signed one-click rating links), Clerk (auth), Sentry (monitoring), Vercel (hosting + crons)",
+        "howItWorks": "On-device barcode decode fires one batched Neon query that renders the personal verdict instantly from the user's own history (rated / unrated / new-to-you, auto-added with zero taps); commons misses fan out to Selver + Open Food Facts inline, cache the product forever, copy its photo to R2 and harmonize retailer categories through a cached Haiku write-gate — rating then happens later via service-worker push action buttons and signed email links that record verdicts without opening the app, and the installable PWA keeps answering verdicts offline from its service-worker-cached shelf."
+      }
+    },
+    {
       "id": "travel-assist-poland",
       "title": "Poland Travel Companion",
       "description": "Trip companion PWA for a family's 12-day Poland road trip in a Tesla Model Y. A light map shows their exact route — grey behind, Tesla-blue ahead — with a live Model-Y puck, 85 verified worth-a-stop discoveries covering the whole route (incl. the Latvia, Lithuania and long Polish transit legs, so the live 'near you now' feed always has a break-stop) plus the planned itinerary, by-day browsing that auto-selects today, place cards that hand off to Google Maps, shared login-free 'visited' ticks + family notes synced across phones, and a toggleable Tesla Supercharger layer pinning chargers right on the route.",
