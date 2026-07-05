@@ -5,6 +5,7 @@
       "title": "Keepr",
       "description": "\"Is it a keeper?\" — a barcode-scanning grocery memory PWA. Scan any product at the shelf and instantly know whether past-you liked it: scanning IS adding (zero taps), the verdict answers from your own history in ~300 ms, and rating happens later with one tap from a morning push, a Sunday email, or the in-app queue. Every scan enriches a shared commons catalog that resolves Estonian grocery barcodes live at €0.",
       "url": "https://keepr-psi.vercel.app",
+      "adminUrl": "https://keepr-psi.vercel.app/admin",
       "github": "https://github.com/keeltekool/keepr",
       "image": "/screenshots/keepr.webp",
       "updatedAt": "2026-07-05",
