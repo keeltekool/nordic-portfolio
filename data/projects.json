@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "hinnavaht",
+      "title": "Hinnavaht",
+      "description": "Personal grocery price watchdog PWA — scan the barcodes of products you actually buy and Hinnavaht follows their prices across connected retail chains: a deals-first vault opens with the deepest active discount on top, and a bundled push + email digest arrives only when something you follow drops ≥25%. Scan-or-nothing (no catalog, no manual entry), multi-chain architecture from the first commit, Estonian UI throughout.",
+      "url": "https://hinnavaht.vercel.app",
+      "github": "https://github.com/keeltekool/hinnavaht",
+      "image": "/screenshots/hinnavaht.webp",
+      "updatedAt": "2026-07-06",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, barcode-detector (native BarcodeDetector + ZXing-WASM ponyfill), web-push, Familjen Grotesk + Space Mono",
+        "services": "Neon PostgreSQL (products, watches, change-only price time series, digest audit), Selver Elasticsearch (live EAN resolve + batched ~50-EAN price polls via a swappable chain-adapter registry), GitHub Actions (free 2×/day poll + digest cron with keepalive commit), Web Push VAPID (bundled digest notifications), Resend (digest emails), Anthropic Claude Haiku (category harmonization), Clerk (auth), Sentry (client-side monitoring), Vercel (hosting)",
+        "howItWorks": "Scanning IS following: an on-device barcode decode resolves the EAN against every connected chain inline — carried products enter the 50-item vault with their first price snapshot, everything else is honestly rejected and stored nowhere. A GitHub Actions cron polls exactly the union of watched EANs twice a day through per-chain adapters, writing a price row only on change; the digest engine then evaluates each user's cadence (daily / 2×week / weekly) and sends one bundled push + email covering only currently-active drops ≥25% vs regular price — dead deals, repeats and >75% bad data are filtered out, and silence is the default. The vault UI is deals-first (deepest cut on top), shows the effective price with no loyalty-card mechanics, and the whole flow is guarded by 45+ automated assertions including a 19-step Playwright click-through suite run against production."
+      }
+    },
+    {
       "id": "keepr",
       "title": "Keepr",
       "description": "\"Is it a keeper?\" — a barcode-scanning grocery memory PWA. Scan any product at the shelf and instantly know whether past-you liked it: scanning IS adding (zero taps), the verdict answers from your own history in ~300 ms, and rating happens later with one tap from a morning push, a Sunday email, or the in-app queue. Every scan enriches a shared commons catalog that resolves Estonian grocery barcodes live at €0.",
