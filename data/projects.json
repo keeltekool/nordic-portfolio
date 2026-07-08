@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "egert-ai",
+      "title": "Egert AI",
+      "description": "Personal AI builder portfolio and CV page. 45+ production apps showcased with technical depth — from barcode-scanning PWAs to multi-tenant SaaS. Redesigned using the Impeccable front-end design skill: OKLCH palette, Hanken Grotesk typography, varied section layouts, dark stack table. SMB value proposition and contact.",
+      "url": "https://egert-ai.vercel.app",
+      "github": "https://github.com/keeltekool/egert-ai",
+      "image": "/screenshots/egert-ai.webp",
+      "updatedAt": "2026-07-08",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Hanken Grotesk font",
+        "services": "Vercel (hosting), Impeccable skill (front-end design system — OKLCH palette generation, brand register, reflex-reject font/layout guidance)",
+        "howItWorks": "Originally cloned from a reference site, then redesigned with the Impeccable Claude Code skill driving palette (pure white bg + committed amber primary in OKLCH), typography (Hanken Grotesk replacing reflex-rejected Cormorant + Outfit), and layout decisions (varied section structures instead of identical card grids). Featured projects use a split title/detail layout; the stack section uses a dark structured table; the about section includes a short SMB value proposition."
+      }
+    },
+    {
       "id": "hinnavaht",
       "title": "Hinnavaht",
       "description": "Personal grocery price watchdog PWA — scan the barcodes of products you actually buy and Hinnavaht follows their prices across three Estonian retail chains (Selver, Rimi, Barbora/Maxima): a deals-first vault opens with the deepest active discount on top, the product sheet lays the chains side by side cheapest-first, and a bundled push + email digest arrives only when something you follow drops ≥25%. Scan-or-nothing (no catalog, no manual entry), Estonian UI throughout.",
@@ -420,21 +434,6 @@
         "services": "Neon PostgreSQL (36 sources, config storage), Anthropic Claude Sonnet (one-off CSS selector generation, ~$0.01/source), Vercel (hosting)",
         "howItWorks": "Password-protected admin. Add source flow: paste URL, system auto-detects RSS feed or runs Claude API to generate CSS selectors, shows dry-run preview, activate. Batch setup button runs AI analysis on all unconfigured CSS sources at once. Bulk import accepts JSON from AI research with automatic duplicate URL detection. Health dashboard shows source status with last scrape time, article counts, and error details."
       }
-    },
-    {
-      "id": "egert-ai",
-      "title": "Egert AI",
-      "description": "Personal landing page built by cloning an existing site's design with the clone-website Claude Code skill. Dark hero, cream sections, copper accents, elegant serif typography. Single-page layout with projects, services, and contact.",
-      "url": "https://egert-ai.vercel.app",
-      "github": "https://github.com/keeltekool/egert-ai",
-      "image": "/screenshots/egert-ai.webp",
-      "updatedAt": "2026-03-26",
-      "stack": {
-        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4",
-        "services": "Vercel (hosting)",
-        "howItWorks": "Design cloned from a reference site using Chrome MCP to extract exact CSS values, fonts, colors, and layout structure. Components rebuilt to match extracted design tokens with personal content. Cormorant Garamond headings, Outfit body text, copper accent color."
-      },
-      "archived": false
     },
     {
       "id": "price-hntr",
