@@ -434,7 +434,7 @@
         "services": "Vercel (hosting)",
         "howItWorks": "Design cloned from a reference site using Chrome MCP to extract exact CSS values, fonts, colors, and layout structure. Components rebuilt to match extracted design tokens with personal content. Cormorant Garamond headings, Outfit body text, copper accent color."
       },
-      "archived": true
+      "archived": false
     },
     {
       "id": "price-hntr",
