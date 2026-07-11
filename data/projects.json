@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "category-pro",
+      "title": "Category PRO",
+      "description": "A web rebuild of the dead Aldata Range Manager category-management suite — a centimeter-true, sales-connected planogram editor for retail shelf planning. Seeded with real 2016 Nielsen beer data (1,258 SKUs, 36k sales facts, 355 product images), it renders bay, cooler and pallet fixtures, overlays live sales heat and share-of-space vs share-of-sales on every edit, and exports presentation-grade PNGs. Built as slice 1 of a real consulting product, not a prototype.",
+      "url": "https://category-pro-egertv1s-projects.vercel.app",
+      "github": "https://github.com/keeltekool/category-pro",
+      "image": "/screenshots/category-pro.webp",
+      "updatedAt": "2026-07-11",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, SVG canvas (cm-true, 1cm = 3.1px), zustand + immer patch-based undo, Drizzle ORM, ExcelJS + PapaParse (client-side parsing), @resvg/resvg-js (server PNG export), Archivo + IBM Plex Mono",
+        "services": "Neon PostgreSQL (12-table schema: relational sales facts + JSONB planogram documents with version snapshots), Cloudflare R2 (product images), Clerk (auth), Sentry (monitoring), Vercel (hosting)",
+        "howItWorks": "Planograms are JSONB documents whose positions store only product + geometry — sales metrics are never frozen in, always joined live against the planogram context (account × dataset), so switching from Selver to Maxima re-scores every overlay instantly. A one-time Python pipeline parsed the legacy Nielsen XLS matrix and Master Space dimension files into the schema; ongoing data arrives through a 3-step upload wizard (saved mapping templates, EAN-first fuzzy-second SKU matching, all-or-nothing commits, new-product approval queue). Exports render the same document server-side through SVG → resvg at up to 4× print resolution with a title block."
+      }
+    },
+    {
       "id": "livery",
       "title": "Livery",
       "description": "A design system vault — the best design systems from past builds (tokens, fonts, distilled design rationale, component primitives) stored once and reused anywhere: browsed as auto-generated specimens, shared as public brand-book pages, and installed by AI coding agents through MCP, REST, or a shadcn-compatible registry (npx shadcn add @livery/fieldwork).",
