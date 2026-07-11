@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "livery",
+      "title": "Livery",
+      "description": "A design system vault — the best design systems from past builds (tokens, fonts, distilled design rationale, component primitives) stored once and reused anywhere: browsed as auto-generated specimens, shared as public brand-book pages, and installed by AI coding agents through MCP, REST, or a shadcn-compatible registry (npx shadcn add @livery/fieldwork).",
+      "url": "https://livery-sooty.vercel.app",
+      "github": "https://github.com/keeltekool/livery",
+      "image": "/screenshots/livery.webp",
+      "updatedAt": "2026-07-11",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, mcp-handler + zod, JSZip, Archivo + IBM Plex Mono (the vault wears its own first stored system)",
+        "services": "Neon PostgreSQL (systems, files, one-snapshot versioning, share links, hashed API keys), Cloudflare R2 (primitives/assets/hero shots), Clerk (auth, multi-tenant skeleton on the free plan), Vercel (hosting), Google Fonts (per-specimen font loading)",
+        "howItWorks": "The build agent curates at push time (verbatim tokens.css, app-prose-stripped decisions doc, only generic primitives) and pushes via the Livery Connect MCP; the server stays deliberately AI-free — a deterministic CSS parser derives structured token groups and W3C DTCG JSON from the stored CSS, which then power everything: click-to-copy specimen pages, library cards, public brand-book share links with llms.txt companions and revocable download packages, and a shadcn registry that installs a whole design system into any project with one command."
+      }
+    },
+    {
       "id": "egert-ai",
       "title": "Egert AI",
       "description": "Personal AI builder portfolio and CV page. 45+ production apps showcased with technical depth — from barcode-scanning PWAs to multi-tenant SaaS. Redesigned using the Impeccable front-end design skill: OKLCH palette, Hanken Grotesk typography, varied section layouts, dark stack table. SMB value proposition and contact.",
