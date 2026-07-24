@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "vaib",
+      "title": "VAIB",
+      "description": "A front-end taste vault: paste links to well-designed websites and a Claude Code analysis loop standardizes each one into a reproduction-grade design system — DOM-extracted typography, hex palette, spacing, motion, plus a prompt-ready brief — grouped into aesthetic families and consumed by builder AI through MCP or one-click copy. The archival print-paper UI is a deliberate carbon copy of the tool that inspired it, and the vault's first analyzed entry is itself.",
+      "url": "https://vaib-five.vercel.app",
+      "github": "https://github.com/keeltekool/vaib",
+      "image": "/screenshots/vaib.webp",
+      "updatedAt": "2026-07-24",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, mcp-handler + zod, Playwright (analysis extraction + 60+ E2E checks), IBM Plex Mono + Libre Caslon Text",
+        "services": "Neon PostgreSQL (families + entries with a pending/analyzed/failed/reanalyze ledger), Vercel Blob (hero + full-page screenshots), Loop Control Center (manual vaib-analyze loop), MCP at /api/mcp (keyless read-only tools for builder agents), Vercel (hosting), PWA share target (Android capture)",
+        "howItWorks": "Capture is one paste (or phone Share → VAIB); entries wait in a status ledger until the owner triggers the analysis loop, which visits each site with Playwright, extracts computed-style ground truth (real hex values, font stacks, transition curves — never eyeballed from screenshots), composes the design system + aesthetic family, and writes everything back through a key-gated API. Future builds then pull direction natively: an MCP tool call returns the full design system of any vaulted site, making the vault standing equipment in every coding session."
+      }
+    },
+    {
       "id": "category-pro",
       "title": "Category PRO",
       "description": "A web rebuild of the dead Aldata Range Manager category-management suite — a centimeter-true, sales-connected planogram editor for retail shelf planning. Seeded with real 2016 Nielsen beer data (1,258 SKUs, 36k sales facts, 355 product images), it renders bay, cooler and pallet fixtures, overlays live sales heat and share-of-space vs share-of-sales on every edit, and exports presentation-grade PNGs. Built as slice 1 of a real consulting product, not a prototype.",
