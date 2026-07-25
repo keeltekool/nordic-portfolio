@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "vaib-x",
+      "title": "VAIB-X",
+      "description": "An X-bookmarks + YouTube idea vault: saved posts and playlist videos become action-ready \"work order\" cards for Claude Code. A live-browser harvest reads the owner's real X session (no API, no keys, €0), yt-dlp pulls playlist videos with full transcripts, and an in-session enrichment loop sorts everything into five categories with honest verdicts — already-adopted, obsolete, trial-worthy — plus a copy-paste launch prompt per card. The gallery wears VAIB's archival print-paper design system; the corpus was analyzed before the product was designed, and the taxonomy it proposed got overruled by the evidence.",
+      "url": "https://vaib-x.vercel.app",
+      "github": "https://github.com/keeltekool/vaib-x",
+      "image": "/screenshots/vaib-x.webp",
+      "updatedAt": "2026-07-25",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, Playwright (embed screenshots + E2E click-through), yt-dlp (playlist diff + auto-caption transcripts), IBM Plex Mono + Libre Caslon Text",
+        "services": "Neon PostgreSQL (single bookmarks table, pending/analyzed/failed ledger), Cloudflare R2 (tweet screenshots rendered via X's public embed endpoint), chrome-devtools-live MCP (GraphQL capture from the owner's logged-in Chrome), Loop Control Center (three manual triggers: full / X-only / YouTube-only), Vercel (hosting)",
+        "howItWorks": "The harvest hooks fetch/XHR inside the owner's real browser tab and captures X's own GraphQL responses while auto-scrolling — bypassing the paid API and login walls entirely — while YouTube arrives keylessly through yt-dlp with transcripts stored as machine-readable deep capture; a Claude Code session then enriches each item against the owner's actual 40-project setup, so cards say \"already adopted\" or \"rebuild this custom\" instead of generic summaries, consumable via keyless JSON API, a /vault skill, or one-click copy."
+      }
+    },
+    {
       "id": "vaib",
       "title": "VAIB",
       "description": "A front-end taste vault: paste links to well-designed websites and a Claude Code analysis loop standardizes each one into a reproduction-grade design system — DOM-extracted typography, hex palette, spacing, motion, plus a prompt-ready brief — grouped into aesthetic families and consumed by builder AI through MCP or one-click copy. The archival print-paper UI is a deliberate carbon copy of the tool that inspired it, and the vault's first analyzed entry is itself.",
