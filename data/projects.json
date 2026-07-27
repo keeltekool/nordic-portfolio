@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "prindipesa",
+      "title": "Prindipesa",
+      "description": "An Estonian-only 3D-model discovery \"nest\" built for my 10-year-old son: he types whatever he's obsessed with (misspellings welcome — the AI corrects \"Roadblocks\" to Roblox), and a manually-triggered Claude Code hunt browses six model platforms in a live browser, kid-filters ruthlessly, and serves ~6 curated models per topic as cards with one Estonian sentence and a difficulty badge each. Hearts become his print wishlist for the day his saved-up printer arrives; a built-in curriculum unlocks module by module as he grows from browser to builder.",
+      "url": "https://prindipesa.vercel.app",
+      "github": "https://github.com/keeltekool/prindipesa",
+      "image": "/screenshots/prindipesa.webp",
+      "updatedAt": "2026-07-27",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, Playwright (hunt scraping + full E2E battery), react-markdown, Archivo Black + Archivo + Space Mono (outlined-path wordmark SVGs regenerated from a font-fallback design defect)",
+        "services": "Neon PostgreSQL (keywords, sources, models, favorites, loop-maintained lessons; EU region with Vercel functions pinned to fra1 beside it), Loop Control Center (manual-only prindipesa-ingest trigger), Vercel (hosting, installable PWA)",
+        "howItWorks": "The app never scrapes — it only reads the DB, so it works fully between hunts. The owner-triggered loop is the sole writer: it corrects the kid's raw keywords phonetically, live-browses MakerWorld/Printables/Thingiverse/Thangs/MyMiniFactory/Cults3D (fresh browser per query where rate limits demand), drops weapons/NSFW/horror before anything touches the database, curates across sources for beginner printability over raw popularity, and ships every card with a direct source link and a same-origin thumbnail proxy that survives hotlink-blocking CDNs."
+      }
+    },
+    {
       "id": "vaib-x",
       "title": "VAIB-X",
       "description": "An X-bookmarks + YouTube idea vault: saved posts and playlist videos become action-ready \"work order\" cards for Claude Code. A live-browser harvest reads the owner's real X session (no API, no keys, €0), yt-dlp pulls playlist videos with full transcripts, and an in-session enrichment loop sorts everything into five categories with honest verdicts — already-adopted, obsolete, trial-worthy — plus a copy-paste launch prompt per card. The gallery wears VAIB's archival print-paper design system; the corpus was analyzed before the product was designed, and the taxonomy it proposed got overruled by the evidence.",
