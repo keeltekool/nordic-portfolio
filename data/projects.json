@@ -3,7 +3,7 @@
     {
       "id": "skill4win",
       "title": "Skill4Win",
-      "description": "A universal, fully-brandable technique-training shell built for my 9-year-old son's basketball practice: curated YouTube reference videos side by side with his own filmed attempts, a keep-everything dated filmstrip as the progression timeline, and opt-in goals with confetti record celebrations he logs himself — no login, no PIN. The code contains zero basketball and zero Keila KK: every brand element (name, logo, icon, colors, fonts) and every drill is data authored from a PIN-gated admin, proven by a gate that deploys a blank copy and rebuilds it into a different sport without touching code.",
+      "description": "A brandable technique-training app built for my 9-year-old son’s basketball practice: curated reference videos side by side with his own filmed attempts, plus a dated filmstrip that shows his progress over time. Every drill and brand element is data — the same shell can become any sport’s app without touching code.",
       "url": "https://skill4win.vercel.app",
       "github": "https://github.com/keeltekool/skill4win",
       "image": "/screenshots/skill4win.webp",
@@ -17,7 +17,7 @@
     {
       "id": "prindipesa",
       "title": "Prindipesa",
-      "description": "An Estonian-only 3D-model discovery \"nest\" built for my 10-year-old son: he types whatever he's obsessed with (misspellings welcome — the AI corrects \"Roadblocks\" to Roblox), and a manually-triggered Claude Code hunt browses six model platforms in a live browser, kid-filters ruthlessly, and serves ~6 curated models per topic as cards with one Estonian sentence and a difficulty badge each. Hearts become his print wishlist for the day his saved-up printer arrives; a built-in curriculum unlocks module by module as he grows from browser to builder.",
+      "description": "An Estonian 3D-model discovery “nest” for my 10-year-old son: he types what he’s obsessed with, an AI hunt browses six model platforms, and he gets ~6 kid-safe curated models per topic. Hearts become his print wishlist for the day his saved-up printer arrives.",
       "url": "https://prindipesa.vercel.app",
       "github": "https://github.com/keeltekool/prindipesa",
       "image": "/screenshots/prindipesa.webp",
@@ -31,7 +31,7 @@
     {
       "id": "vaib-x",
       "title": "VAIB-X",
-      "description": "An X-bookmarks + YouTube idea vault: saved posts and playlist videos become action-ready \"work order\" cards for Claude Code. A live-browser harvest reads the owner's real X session (no API, no keys, €0), yt-dlp pulls playlist videos with full transcripts, and an in-session enrichment loop sorts everything into five categories with honest verdicts — already-adopted, obsolete, trial-worthy — plus a copy-paste launch prompt per card. The gallery wears VAIB's archival print-paper design system; the corpus was analyzed before the product was designed, and the taxonomy it proposed got overruled by the evidence.",
+      "description": "An X-bookmarks + YouTube idea vault: saved posts and playlist videos become action-ready “work order” cards for Claude Code, sorted into five categories with honest verdicts and a copy-paste launch prompt per card.",
       "url": "https://vaib-x.vercel.app",
       "github": "https://github.com/keeltekool/vaib-x",
       "image": "/screenshots/vaib-x.webp",
@@ -45,7 +45,7 @@
     {
       "id": "vaib",
       "title": "VAIB",
-      "description": "A front-end taste vault: paste links to well-designed websites and a Claude Code analysis loop standardizes each one into a reproduction-grade design system — DOM-extracted typography, hex palette, spacing, motion, plus a prompt-ready brief — grouped into aesthetic families and consumed by builder AI through MCP or one-click copy. The archival print-paper UI is a deliberate carbon copy of the tool that inspired it, and the vault's first analyzed entry is itself.",
+      "description": "A front-end taste vault: paste links to well-designed websites and an analysis loop distills each one into a reproduction-grade design system, consumable by builder AI through MCP or one-click copy.",
       "url": "https://vaib-five.vercel.app",
       "github": "https://github.com/keeltekool/vaib",
       "image": "/screenshots/vaib.webp",
@@ -59,7 +59,7 @@
     {
       "id": "category-pro",
       "title": "Category PRO",
-      "description": "A web rebuild of the dead Aldata Range Manager category-management suite — a centimeter-true, sales-connected planogram editor for retail shelf planning. Seeded with real 2016 Nielsen beer data (1,258 SKUs, 36k sales facts, 355 product images), it renders bay, cooler and pallet fixtures, overlays live sales heat and share-of-space vs share-of-sales on every edit, and exports presentation-grade PNGs. Built as slice 1 of a real consulting product, not a prototype.",
+      "description": "A web rebuild of the dead Aldata Range Manager suite — a centimeter-true, sales-connected planogram editor for retail shelf planning, seeded with real Nielsen beer data. Built as slice 1 of a real consulting product, not a prototype.",
       "url": "https://category-pro-egertv1s-projects.vercel.app",
       "github": "https://github.com/keeltekool/category-pro",
       "image": "/screenshots/category-pro.webp",
@@ -101,7 +101,7 @@
     {
       "id": "hinnavaht",
       "title": "Hinnavaht",
-      "description": "Personal grocery price watchdog PWA — scan the barcodes of products you actually buy and Hinnavaht follows their prices across three Estonian retail chains (Selver, Rimi, Barbora/Maxima): a deals-first vault opens with the deepest active discount on top, the product sheet lays the chains side by side cheapest-first, and a bundled push + email digest arrives only when something you follow drops ≥25%. Scan-or-nothing (no catalog, no manual entry), Estonian UI throughout.",
+      "description": "Personal grocery price watchdog PWA: scan the barcodes of products you actually buy and it follows their prices across three Estonian retail chains, alerting you only when something you follow drops ≥25%.",
       "url": "https://hinnavaht.vercel.app",
       "github": "https://github.com/keeltekool/hinnavaht",
       "image": "/screenshots/hinnavaht.webp",
@@ -115,7 +115,7 @@
     {
       "id": "keepr",
       "title": "Keepr",
-      "description": "\"Is it a keeper?\" — a barcode-scanning grocery memory PWA. Scan any product at the shelf and instantly know whether past-you liked it: scanning IS adding (zero taps), the verdict answers from your own history in ~300 ms, and rating happens later with one tap from a morning push, a Sunday email, or the in-app queue. Every scan enriches a shared commons catalog that resolves Estonian grocery barcodes live at €0.",
+      "description": "“Is it a keeper?” — a barcode-scanning grocery memory PWA: scan any product at the shelf and instantly know whether past-you liked it. Scanning is adding; rating happens later with one tap.",
       "url": "https://keepr-psi.vercel.app",
       "adminUrl": "https://keepr-psi.vercel.app/admin",
       "github": "https://github.com/keeltekool/keepr",
@@ -130,7 +130,7 @@
     {
       "id": "travel-assist-poland",
       "title": "Poland Travel Companion",
-      "description": "Trip companion PWA for a family's 12-day Poland road trip in a Tesla Model Y. A light map shows their exact route — grey behind, Tesla-blue ahead — with a live Model-Y puck, 85 verified worth-a-stop discoveries covering the whole route (incl. the Latvia, Lithuania and long Polish transit legs, so the live 'near you now' feed always has a break-stop) plus the planned itinerary, by-day browsing that auto-selects today, place cards that hand off to Google Maps, shared login-free 'visited' ticks + family notes synced across phones, and a toggleable Tesla Supercharger layer pinning chargers right on the route.",
+      "description": "Trip companion PWA for our family’s 12-day Poland road trip in a Tesla Model Y: live route map, 85 verified worth-a-stop discoveries, day-by-day itinerary, and shared login-free “visited” ticks synced across phones.",
       "url": "https://travel-assist-poland.vercel.app",
       "image": "/screenshots/travel-assist-poland.webp",
       "updatedAt": "2026-06-26",
@@ -143,7 +143,7 @@
     {
       "id": "keeletark",
       "title": "Keeletark",
-      "description": "\"Grammarly for Estonian.\" Its core is a dual-layer check where two engines work together: the estnltk MCP flags deterministic grammar/spelling/case errors as ground truth, while Claude Opus 4.8 proposes naturalness fixes — and every Claude suggestion is re-validated through estnltk before it ever reaches you, so the LLM never gets the last word. On top of that: pick-and-choose fixes, animated quality scores, English→Estonian translation, and a one-click full rewrite.",
+      "description": "“Grammarly for Estonian”: a deterministic grammar engine and Claude work together — every AI suggestion is re-validated by the grammar engine before it reaches you. Includes translation and one-click rewrite.",
       "url": "https://keeletark.vercel.app",
       "github": "https://github.com/keeltekool/keeletark",
       "image": "/screenshots/keeletark.webp",
@@ -171,7 +171,7 @@
     {
       "id": "athlon",
       "title": "Athlon",
-      "description": "Estonian sports site that aggregates athletes' and teams' own Facebook posts into one clean, recency-ordered feed — full content read on Athlon, with a direct link to the original post and its original Facebook date on every entry. Fed by an operator-run, attended local-browser ingestion loop that re-hosts images to R2 and dedups posts into a Neon ledger. 33 tracked entities (incl. team Kalev/Cramo); first scrape pulled 116 posts with re-hosted images.",
+      "description": "Estonian sports site that aggregates athletes’ and teams’ own Facebook posts into one clean, recency-ordered feed, with a link to the original post on every entry.",
       "url": "https://athlon.vercel.app",
       "image": "/screenshots/athlon.webp",
       "updatedAt": "2026-06-19",
@@ -184,7 +184,7 @@
     {
       "id": "songdrop-pro",
       "title": "SongDrop — Live Request Platform",
-      "description": "Productized multi-tenant SaaS version of SongDrop. DJs sign up, claim their link, connect YouTube, and customize their page (profile picture, tagline, accent); guests scan a QR, search, and requests drop straight into the DJ's playlist. Self-serve onboarding, a live gig dashboard, and Stripe subscriptions — with strict per-DJ data isolation. A dedicated marketing landing page introduces the product and funnels new DJs into sign-up.",
+      "description": "Multi-tenant SaaS version of SongDrop: DJs claim their link, connect YouTube, and customize their page; guests scan a QR and requests drop straight into the DJ’s playlist. Stripe subscriptions and a live gig dashboard included.",
       "url": "https://songdrop-app.vercel.app/egertv",
       "adminUrl": "https://songdrop-app.vercel.app/dashboard",
       "landingUrl": "https://songdrop-landing.vercel.app",
@@ -200,7 +200,7 @@
     {
       "id": "mindloop",
       "title": "Mindloop",
-      "description": "Private voice-to-second-brain. Press your phone's Action Button, talk — an iOS Shortcut POSTs the thought straight into a database. A weekly Claude Code synthesis then surfaces your themes, the connections between them, and the recurring \"loops\" you keep circling, on a responsive knowledge-graph dashboard with a live capture inbox showing each thought land and get synthesized. No inbox, no friction — press, speak, done.",
+      "description": "Private voice-to-second-brain: press the iPhone Action Button, talk, and the thought lands in a database. A weekly Claude synthesis surfaces your themes and recurring loops on a knowledge-graph dashboard.",
       "url": "https://mindloop-henna-omega.vercel.app/preview",
       "image": "/screenshots/mindloop.webp",
       "updatedAt": "2026-06-17",
@@ -241,7 +241,7 @@
     {
       "id": "saku-tennis",
       "title": "Saku Tenniseklubi",
-      "description": "Production website + custom weekly-grid booking system for an Estonian clay-court tennis club (live client work). Public site with CMS-driven content, interactive booking calendar with request flow, and a full admin panel — 8 management sections, drag-select/move/resize grid, request inbox with approve/reject, closures, recurring series, and 6 content editors. 71 tests, DST-safe timezone engine, Resend email notifications. Deployed and handed over to client.",
+      "description": "Production website + custom weekly-grid booking system for an Estonian clay-court tennis club (live client work): public CMS-driven site, booking calendar with request flow, and a full admin panel. Deployed and handed over to the client.",
       "url": "https://saku-tennis-revamp.vercel.app",
       "adminUrl": "https://saku-tennis-revamp.vercel.app/admin",
       "github": "https://github.com/keeltekool/saku-tennis-revamp",
