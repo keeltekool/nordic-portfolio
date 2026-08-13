@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "skill4win",
+      "title": "Skill4Win",
+      "description": "A universal, fully-brandable technique-training shell built for my 9-year-old son's basketball practice: curated YouTube reference videos side by side with his own filmed attempts, a keep-everything dated filmstrip as the progression timeline, and opt-in goals with confetti record celebrations he logs himself — no login, no PIN. The code contains zero basketball and zero Keila KK: every brand element (name, logo, icon, colors, fonts) and every drill is data authored from a PIN-gated admin, proven by a gate that deploys a blank copy and rebuilds it into a different sport without touching code.",
+      "url": "https://skill4win.vercel.app",
+      "github": "https://github.com/keeltekool/skill4win",
+      "image": "/screenshots/skill4win.webp",
+      "updatedAt": "2026-08-13",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, canvas-confetti, YouTube IFrame API (nocookie embeds with real playback-rate control), Playwright (194-check E2E battery at 375/1440/1920), theme-driven Google Fonts loading (Archivo + Open Sans as the shipped default)",
+        "services": "Neon PostgreSQL (drills, attempts, goals, one theme row that IS the entire brand), Cloudflare R2 (presigned direct uploads, zero-egress video playback, trash/ prefix with 30-day lifecycle instead of hard deletes), Vercel (hosting, force-dynamic so a DB rebrand re-skins live with no redeploy)",
+        "howItWorks": "The comparison is the product: one reference player beside one attempt player, 0.25×/0.5× slow-motion on both, filmstrip taps swapping clips in place. Phone videos go straight to R2 via presigned PUT (Vercel never touches the bytes) with a client-canvas thumbnail; the athlete's result logging is deliberately PIN-free while every curator mutation is server-checked. Theme colors and fonts become CSS custom properties on <html>, so /seaded can turn the whole deployment into a tennis app — new name, logo, palette, typography — in one save, and a blank copy (SEED_CONTENT=none) starts genuinely empty for the next sport."
+      }
+    },
+    {
       "id": "prindipesa",
       "title": "Prindipesa",
       "description": "An Estonian-only 3D-model discovery \"nest\" built for my 10-year-old son: he types whatever he's obsessed with (misspellings welcome — the AI corrects \"Roadblocks\" to Roblox), and a manually-triggered Claude Code hunt browses six model platforms in a live browser, kid-filters ruthlessly, and serves ~6 curated models per topic as cards with one Estonian sentence and a difficulty badge each. Hearts become his print wishlist for the day his saved-up printer arrives; a built-in curriculum unlocks module by module as he grows from browser to builder.",
