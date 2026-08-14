@@ -3,15 +3,15 @@
     {
       "id": "skill4win",
       "title": "Skill4Win",
-      "description": "A brandable technique-training app built for my 9-year-old son’s basketball practice: curated reference videos side by side with his own filmed attempts, plus a dated filmstrip that shows his progress over time. Every drill and brand element is data — the same shell can become any sport’s app without touching code.",
+      "description": "A multisport technique trainer for my son — basketball (Keila KK) and football (Keila JK) in one app with a crest switcher, each fully branded. Curated reference videos beside his own filmed attempts; every drill and brand element is data.",
       "url": "https://skill4win.vercel.app",
       "github": "https://github.com/keeltekool/skill4win",
       "image": "/screenshots/skill4win.webp",
-      "updatedAt": "2026-08-13",
+      "updatedAt": "2026-08-14",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, canvas-confetti, YouTube IFrame API (nocookie embeds with real playback-rate control), Playwright (194-check E2E battery at 375/1440/1920), theme-driven Google Fonts loading (Archivo + Open Sans as the shipped default)",
-        "services": "Neon PostgreSQL (drills, attempts, goals, one theme row that IS the entire brand), Cloudflare R2 (presigned direct uploads, zero-egress video playback, trash/ prefix with 30-day lifecycle instead of hard deletes), Vercel (hosting, force-dynamic so a DB rebrand re-skins live with no redeploy)",
-        "howItWorks": "The comparison is the product: one reference player beside one attempt player, 0.25×/0.5× slow-motion on both, filmstrip taps swapping clips in place. Phone videos go straight to R2 via presigned PUT (Vercel never touches the bytes) with a client-canvas thumbnail; the athlete's result logging is deliberately PIN-free while every curator mutation is server-checked. Theme colors and fonts become CSS custom properties on <html>, so /seaded can turn the whole deployment into a tennis app — new name, logo, palette, typography — in one save, and a blank copy (SEED_CONTENT=none) starts genuinely empty for the next sport."
+        "services": "Neon PostgreSQL (disciplines, drills, attempts, goals — one theme row per discipline IS that sport's entire brand), Cloudflare R2 (presigned direct uploads, zero-egress video playback, trash/ prefix with 30-day lifecycle instead of hard deletes), Vercel (hosting, force-dynamic so a DB rebrand re-skins live with no redeploy)",
+        "howItWorks": "The comparison is the product: one reference player beside one attempt player, 0.25×/0.5× slow-motion on both, filmstrip taps swapping clips in place. One instance now holds multiple disciplines — a two-crest switcher sets a cookie and the whole server tree re-renders under the other club's brand and drill library, no accounts and no new API surface. Phone videos go straight to R2 via presigned PUT with a client-canvas thumbnail; athlete logging is deliberately PIN-free while every curator mutation is server-checked. Theme colors and fonts become CSS custom properties on <html>, so /seaded can rebrand each discipline independently in one save, and the disciplines table is the ready-made seam for future multi-tenant SaaS."
       }
     },
     {
