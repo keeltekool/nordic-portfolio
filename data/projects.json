@@ -775,15 +775,15 @@
     {
       "id": "applykit",
       "title": "ApplyKit",
-      "description": "Full-stack AI job application platform. Upload your CV, paste a job posting, get a tailored CV, cover letter, and interview prep sheet. Two-phase interview preparation: chat with an AI interview coach, then compile a structured prep sheet with likely questions, talking points, and salary negotiation tips.",
+      "description": "Full-stack AI job application platform: tailored CVs, cover letters, and interview prep. Now surfaces its own daily Top Picks — an autonomous routine matches fresh Estonian job listings against your CV three mornings a week.",
       "url": "https://cv-tailor-plus.vercel.app",
       "github": "https://github.com/keeltekool/cv-tailor-plus",
       "image": "/screenshots/applykit.webp",
-      "updatedAt": "2026-02-27",
+      "updatedAt": "2026-08-16",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4",
-        "services": "Supabase (auth + PostgreSQL + storage), Vercel (hosting), Anthropic Claude Sonnet (AI tailoring, cover letters, interview prep, career consult, PDF extraction)",
-        "howItWorks": "Three CV templates with visual editor, AI-powered job-to-CV matching, smart cover letter generation, interview prep with AI coach (chat freely then compile structured prep sheet), PDF import, job workspace with parsed requirements, TööRadar job search (Töötukassa + CV Keskus), and career consult chat."
+        "services": "Supabase (auth + PostgreSQL + storage), Vercel (hosting), Anthropic Claude (AI tailoring, letters, prep, fit analysis; Claude Code cloud routine for Top Picks)",
+        "howItWorks": "Three CV templates with visual editor, AI-powered job-to-CV matching, smart cover letter generation, interview prep with AI coach (chat freely then compile structured prep sheet), PDF import, job workspace with parsed requirements, TööRadar job search (Töötukassa + CV Keskus + CV Online), autonomous Top Picks (cloud routine skims fresh listings by CV fit Mon/We/Fr, permanent no-repeats ledger, renewal-proof date checks, one-line why-you reasoning per pick), deep Job Fit analysis on demand, and career consult chat."
       }
     },
     {
