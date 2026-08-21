@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "build-in-sight",
+      "title": "Build_IN_Sight",
+      "description": "A private, PIN-gated archive for the memos my reflection loops write — freshest-first — plus an MCP server so Claude Code reads any memo by number and label instead of me copy-pasting. Built because the loop's throwaway artifact page kept getting deleted.",
+      "url": "https://build-in-sight.vercel.app",
+      "github": "https://github.com/keeltekool/build-in-sight",
+      "image": "/screenshots/build-in-sight.webp",
+      "updatedAt": "2026-08-21",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, mcp-handler + zod, Playwright (ingest/auth/MCP smoke + full E2E flow at 375/1440), Crimson Pro + Newsreader + DM Sans + JetBrains Mono (Claude Design editorial system)",
+        "services": "Neon PostgreSQL (single documents table — memos keyed by source_loop + run number, labels a text[] with a non-empty CHECK), Vercel (hosting, git-connected), MCP at /api/mcp (bearer-gated: list_memos / get_latest / get_memo / search_memos)",
+        "howItWorks": "No Clerk — a Web Crypto HMAC session cookie behind a shared PIN, enforced in Next 16's edge proxy so no memo bytes leave the server unauthenticated. A reflection loop POSTs each memo as structured, fully-labelled JSON (patterns, challenges, tools, outside-signal) to a token-guarded ingest route; the same queries render the human archive and answer the MCP, so a person reads the memo in a 720px reading column while an agent pulls the identical content by number and label with zero copy-paste."
+      }
+    },
+    {
       "id": "skill4win",
       "title": "Skill4Win",
       "description": "A multisport technique trainer for my son — basketball (Keila KK) and football (Keila JK) in one app with a crest switcher, each fully branded. Curated reference videos beside his own filmed attempts; every drill and brand element is data.",
