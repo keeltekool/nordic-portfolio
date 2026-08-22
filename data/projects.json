@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "drive-doctor",
+      "title": "Drive Doctor",
+      "description": "A local Windows app that diagnoses where the C: drive went and frees space safely — a tiered cleanup ledger, one decision per item, every action verified by re-measure. Runs from a desktop icon; nothing leaves the machine.",
+      "url": "https://github.com/keeltekool/drive-doctor",
+      "github": "https://github.com/keeltekool/drive-doctor",
+      "image": "/screenshots/drive-doctor.webp",
+      "updatedAt": "2026-08-22",
+      "stack": {
+        "builtWith": "Node.js ≥20 with zero npm dependencies and no build step, vanilla HTML/CSS/JS dashboard, robocopy list-mode scan engine (read-only by construction), Playwright verification suite with live-fire cleanups, IBM Plex Sans/Mono + Source Serif 4 (Claude Design “clinical paper” system)",
+        "services": "None — deliberately. Binds 127.0.0.1 only, no telemetry, no cloud; private GitHub repo for code custody. The consult feature exports copy-paste snippets to any AI instead of integrating one.",
+        "howItWorks": "A whitelist knowledge base turns raw folder sizes into a tiered prescription list — safe items execute in-app through official vendor commands after live pre-checks (Recycle Bin by default), judgment calls get per-item consent with stated trade-offs, system zones get exact Windows-native instructions the app itself never performs — then every cleanup is re-measured (predicted vs actual) and every rescan exposes what regrew since last time."
+      }
+    },
+    {
       "id": "build-in-sight",
       "title": "Build_IN_Sight",
       "description": "A private, PIN-gated archive for the memos my reflection loops write — freshest-first — plus an MCP server so Claude Code reads any memo by number and label instead of me copy-pasting. Built because the loop's throwaway artifact page kept getting deleted.",
