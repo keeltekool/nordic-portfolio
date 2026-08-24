@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "deepcrate",
+      "title": "DEEPCRATE",
+      "description": "A local music-discovery app that turns a DJ's 9,941-track collection into a visual album-art wall with instant hover playback. Seed tracks feed YouTube Music's radio engine; one button pushes the resulting new-music playlist to the account.",
+      "url": "https://github.com/keeltekool/deepcrate",
+      "github": "https://github.com/keeltekool/deepcrate",
+      "image": "/screenshots/deepcrate.webp",
+      "updatedAt": "2026-08-24",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, better-sqlite3, music-metadata, sharp, @tanstack/react-virtual, Python FastAPI sidecar with ytmusicapi, Playwright (fixture + real-index click-through suites with a <200 ms audio-latency gate), Archivo Black + Space Mono + Archivo (Option C \"Acid Gallery\" system)",
+        "services": "Google Cloud (dedicated project: OAuth + YouTube Data API v3 playlist push). Otherwise none by design — SQLite index and thumbnails on C:, audio streamed straight from the collection drive, binds 127.0.0.1, desktop icon launcher, private GitHub repo.",
+        "howItWorks": "A read-only scanner (one choke-point module, backed by a shell guard that blocks any command touching the collection drive) indexes file tags and embedded art into SQLite; the wall virtualizes all 9,941 tiles with hover/click → audible in well under 200 ms via Range streaming. Seeds resolve through unauthenticated ytmusicapi radio — depth-sliced by similarity rank, round-robin interleaved, already-owned tracks dropped by normalized artist|title key — and the push goes through the Data API with real tag casing in the playlist name."
+      }
+    },
+    {
       "id": "drive-doctor",
       "title": "Drive Doctor",
       "description": "A local Windows app that diagnoses where the C: drive went and frees space safely — a tiered cleanup ledger, one decision per item, every action verified by re-measure. Runs from a desktop icon; nothing leaves the machine.",
