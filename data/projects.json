@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "spordipaev",
+      "title": "Spordipäev (Keila JÕUD)",
+      "description": "A phone-first scorer for our annual kids' track & field day — type each measured result once, and placements, points and live standings compute themselves. Replaced two sheets of crossed-out paper.",
+      "url": "https://spordipaev-blond.vercel.app",
+      "github": "https://github.com/keeltekool/spordipaev",
+      "image": "/screenshots/spordipaev.webp",
+      "updatedAt": "2026-08-29",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, @neondatabase/serverless (raw SQL, no ORM), Playwright (39-flow self-cleaning production battery at 375/1440/1920), Fraunces + DM Sans + Epilogue + JetBrains Mono (HOOG \"Baltic Precision\" system from the Livery vault)",
+        "services": "Neon PostgreSQL (athletes registry, competitions, disciplines, raw results — five tables), Vercel (hosting, git-connected). No auth by design: single operator at a sports field, open URL and work.",
+        "howItWorks": "Raw attempts are the only stored scoring data — a pure engine shared verbatim by server and client derives bests (foul ✕ attempts excluded), competition-ranking placements, placement points (skippers get last place) and standings, so a transcription error is structurally impossible. The entry screen is one scrolling list tuned for stopwatch-in-hand speed: autosave on blur, Enter jumps to the next kid, failures stay loud with a retry. Last year's paper sheets were OCR-reconstructed and seeded as a sealed reference competition, ambiguous cells amber-flagged for one-tap correction, and the engine's self-check reproduces the paper's hand-circled totals."
+      }
+    },
+    {
       "id": "deepcrate",
       "title": "DEEPCRATE",
       "description": "A local music-discovery app that turns a DJ's ~10k-track collection into a visual album-art wall with instant hover playback — seed tracks roll YouTube Music radio into one-button playlists. Now with Playbox set lists (a real queue player with YTM push + CSV export) and a safe duplicate cleaner.",
