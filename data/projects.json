@@ -2,14 +2,14 @@
   "projects": [
     {
       "id": "spordipaev",
-      "title": "Spordipäev (Keila JÕUD)",
-      "description": "Competition management for youth track & field events: rapid mobile result entry, automatic placement-based scoring, and multi-year athlete history. Generates award ceremonies, A4 diplomas and archival protocols straight from the results.",
+      "title": "TIPP",
+      "description": "Competition management for youth track & field events: rapid mobile result entry, automatic placement scoring, live personal-record detection, and multi-year athlete history. Generates award ceremonies, A4 diplomas and archival protocols straight from the results.",
       "url": "https://spordipaev-blond.vercel.app",
       "github": "https://github.com/keeltekool/spordipaev",
       "image": "/screenshots/spordipaev.webp",
-      "updatedAt": "2026-08-30",
+      "updatedAt": "2026-08-31",
       "stack": {
-        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, @neondatabase/serverless (raw SQL, no ORM), Playwright (39-flow self-cleaning production battery at 375/1440/1920), Fraunces + DM Sans + Epilogue + JetBrains Mono (HOOG \"Baltic Precision\" system from the Livery vault)",
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, @neondatabase/serverless (raw SQL, no ORM), Playwright (39-flow self-cleaning production battery at 375/1440/1920), Archivo + Hanken Grotesk (TIPP brand on the Athlon design language — chevron-peak mark, ember accent; per-event monikers like Keila JÕUD live on the documents)",
         "services": "Neon PostgreSQL (athletes registry, competitions, disciplines, raw results — five tables), Vercel (hosting, git-connected). No auth by design: single operator at a sports field, open URL and work.",
         "howItWorks": "Raw attempts are the only stored scoring data — a pure engine shared verbatim by server and client derives bests (foul ✕ attempts excluded), competition-ranking placements, placement points (skippers get last place) and standings, so a transcription error is structurally impossible. The entry screen is one scrolling list tuned for stopwatch-in-hand speed: autosave on blur, Enter jumps to the next kid, failures stay loud with a retry. Last year's paper sheets were OCR-reconstructed and seeded as a sealed reference competition, ambiguous cells amber-flagged for one-tap correction, and the engine's self-check reproduces the paper's hand-circled totals."
       }
