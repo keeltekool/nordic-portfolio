@@ -3,7 +3,7 @@
     {
       "id": "catch",
       "title": "Catch",
-      "description": "A Windows desktop app for sampling: press Record and it waits; the moment anything plays on the PC it starts a 24-bit WAV, trims the silent tail on Stop, then loops and cuts the take into sampler-ready pieces you drag straight into Maschine.",
+      "description": "A Windows desktop app for sampling: press Record and it waits; the moment anything plays on the PC it starts a 24-bit WAV, trims the silent tail on Stop, then loops one region until it sits right and saves it as a single named file you drag straight into Maschine.",
       "url": "https://github.com/keeltekool/catch",
       "github": "https://github.com/keeltekool/catch",
       "image": "/screenshots/catch.webp",
@@ -11,7 +11,7 @@
       "stack": {
         "builtWith": "Electron 44 (Chromium WASAPI loopback capture, AudioWorklet gate), plain ES-module renderer, wavesurfer.js 7 + Regions, Tailwind CSS 4 tokens from a Claude Design \"Label\" direction (one yellow field, black ink, Barlow Condensed / Barlow / Chivo Mono), electron-builder NSIS per-user installer, Playwright Electron flows + ffmpeg/ffprobe capture assertions",
         "services": "None by design — nothing leaves the machine. Takes and cuts are plain 48 kHz / 24-bit WAV files in Music\\Catch; settings in one JSON; private GitHub repo for code custody.",
-        "howItWorks": "On Record the renderer asks for system audio (no gesture needed, so the app can re-arm itself after each take); the main process answers the display-media request with the screen source plus audio: 'loopback', so the Windows mix arrives at 48 kHz float with AGC/EC/NS off (measured transparent to 0.001 dB, a −120 dBFS tone survives). An AudioWorklet batches 4096 frames with per-128-frame peaks; the first peak above the −60 dBFS gate opens a streaming WAV writer, the last one marks the tail-trim point, and Stop ftruncates to it and patches the header. The same window then loads the take through a catch:// protocol with Range support into a region editor — Space loops the region, arrows nudge 10 ms, Export snaps both edges to the nearest zero crossing within ±5 ms, applies 2 ms fades and writes _cutN.wav next to the untouched take; cut rows are native OS drag sources, Discard sends take and cuts to the Recycle Bin and re-arms."
+        "howItWorks": "On Record the renderer asks for system audio (no gesture needed, so the app can re-arm itself after each take); the main process answers the display-media request with the screen source plus audio: 'loopback', so the Windows mix arrives at 48 kHz float with AGC/EC/NS off (measured transparent to 0.001 dB, a −120 dBFS tone survives). An AudioWorklet batches 4096 frames with per-128-frame peaks; the first peak above the −60 dBFS gate opens a streaming WAV writer, the last one marks the tail-trim point, and Stop ftruncates to it and patches the header. The same window then loads the take through a catch:// protocol with Range support into a region editor — Space loops the region, arrows nudge 10 ms, Save snaps both edges to the nearest zero crossing within ±5 ms, applies 2 ms fades and writes one named file per take (save again to replace, rename to rename); the saved row is a native OS drag source, leaving the editor drops the working take to the Recycle Bin, Discard drops take and result and re-arms."
       }
     },
     {
