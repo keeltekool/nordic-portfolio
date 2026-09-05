@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "lonkero-cruise-hki",
+      "title": "Lonkero Cruise HKI",
+      "description": "Self-updating Helsinki night-out page: scans RA and venue sites weekly, filters by the owner's taste, and pushes a digest the group can act on with one tap.",
+      "url": "https://lonkero-cruise-hki.vercel.app",
+      "github": "https://github.com/keeltekool/lonkero-cruise-hki",
+      "image": "/screenshots/lonkero-cruise-hki.webp",
+      "updatedAt": "2026-09-05",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM + @neondatabase/serverless (neon-http), node-html-parser, Resend, Vitest, Playwright, Jost + Familjen Grotesk (Print modernism design — 28px stripe livery, Finnish 1970s poster grammar)",
+        "services": "Neon PostgreSQL (events, digests, runs — six tables), Vercel fra1 (hosting, git-connected), Resend (gate email via test sender), Claude cloud routine (Monday 07:00 Tallinn, Sonnet 5 — ingests, judges, drafts digest)",
+        "howItWorks": "A weekly cloud routine calls five token-guarded endpoints: ingest fetches RA GraphQL and four venue HTML pages, dedupes by date+venue+title key, applies a keyword hard-out filter and upserts; the routine then judges each pending event against the owner's taste rubric (recognition gate + crate fit), writes verdicts with backstories; every second Monday, if new gems appeared, the app drafts a digest (max 1800 chars for WhatsApp), sends a gate email with a signed share link, and the owner taps one button to open the WhatsApp picker with the digest pre-filled."
+      }
+    },
+    {
       "id": "catch",
       "title": "Catch",
       "description": "A Windows desktop app for sampling: press Record and it waits; the moment anything plays on the PC it starts a 24-bit WAV, trims the silent tail on Stop, then loops one region until it sits right and saves it as a single named file you drag straight into Maschine.",
