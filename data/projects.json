@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "deepcrate",
+      "title": "DEEPCRATE",
+      "description": "A DJ's ~10k-track collection as an album-art wall with instant hover playback, plus a crate builder: a random, tempo-and-key-spread draw to your parameters, ordered into a set journey by tempo curve and Camelot moves, with BPM, key and stars read from a copy of the Engine DJ database (never written). Set lists push to YouTube Music or export as CSV; a guarded duplicate cleaner keeps the vault clean.",
+      "url": "https://github.com/keeltekool/deepcrate",
+      "github": "https://github.com/keeltekool/deepcrate",
+      "image": "/screenshots/deepcrate.webp",
+      "updatedAt": "2026-09-06",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, better-sqlite3, music-metadata, sharp, @tanstack/react-virtual, Python FastAPI sidecar with ytmusicapi, Playwright (fixture + real-index click-through suites with a <200 ms audio-latency gate), Archivo Black + Space Mono + Archivo (Option C \"Acid Gallery\" system)",
+        "services": "Google Cloud (dedicated project: OAuth + YouTube Data API v3 playlist push). Otherwise none by design — SQLite index and thumbnails on C:, audio streamed straight from the collection drive, binds 127.0.0.1, desktop icon launcher, private GitHub repo.",
+        "howItWorks": "A read-only scanner (one choke-point module, backed by a shell guard that blocks any command touching the collection drive) indexes file tags and embedded art into SQLite; the wall virtualizes all 9,941 tiles with hover/click → audible in well under 200 ms via Range streaming. Seeds resolve through unauthenticated ytmusicapi radio — depth-sliced by similarity rank, round-robin interleaved, already-owned tracks dropped by normalized artist|title key — and the push goes through the Data API with real tag casing in the playlist name. The Library mode computes duplicate groups live from the index (name-normalized key + duration clustering, never file size), suggests a keeper (lossless first), and deletes surplus copies through a single sanctioned module with pre-flight verification, keep-one enforcement, an append-only audit log, and a CI grep gate that bans deletion primitives everywhere else — 133 groups and 3.6 GB found on the real collection at ship (the owner's first attended cleanup reclaimed 3.47 GB, every file audit-logged). The Playbox mode keeps persistent named set lists in SQLite — drag tiles in, reorder by handle, play through with shuffle/repeat via an ended-hook queue over the same audio engine — and exports each list as a fresh private YTM playlist (per-track radio-engine resolve) or a BOM-correct Title,Artist CSV for Spotify import tooling. The Crate Builder byte-copies Engine DJ's SQLite database through the same read-only reader (refused while Engine DJ runs; quick_check + schema guard; a full refresh of BPM / key / star flag by file path — 9 812 of 9 812 tracks matched on the real collection), then draws crates with variety: tempo bands with half/double time folded in, a per-key cap, star quotas. ARC re-orders any list mechanically — a target-BPM curve per shape (RISE / SLOW BUILD / PEAK / FLAT) and greedy slot assignment by the standard Camelot moves, JUMPs flagged in a MOVE column rather than hidden. No AI anywhere; nothing is ever written to an Engine file."
+      }
+    },
+    {
       "id": "lonkero-cruise-hki",
       "title": "Lonkero Cruise HKI",
       "description": "Self-updating Helsinki night-out page: scans RA and venue sites weekly, filters by the owner's taste, and pushes a digest the group can act on with one tap.",
@@ -40,20 +54,6 @@
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, @neondatabase/serverless (raw SQL, no ORM), Playwright (39-flow self-cleaning production battery at 375/1440/1920), Archivo + Hanken Grotesk (TIPP brand on the Athlon design language — chevron-peak mark, ember accent; per-event monikers like Keila JÕUD live on the documents)",
         "services": "Neon PostgreSQL (athletes registry, competitions, disciplines, raw results — five tables), Vercel (hosting, git-connected). No auth by design: single operator at a sports field, open URL and work.",
         "howItWorks": "Raw attempts are the only stored scoring data — a pure engine shared verbatim by server and client derives bests (foul ✕ attempts excluded), competition-ranking placements, placement points (skippers get last place) and standings, so a transcription error is structurally impossible. The entry screen is one scrolling list tuned for stopwatch-in-hand speed: autosave on blur, Enter jumps to the next kid, failures stay loud with a retry. Last year's paper sheets were OCR-reconstructed and seeded as a sealed reference competition, ambiguous cells amber-flagged for one-tap correction, and the engine's self-check reproduces the paper's hand-circled totals."
-      }
-    },
-    {
-      "id": "deepcrate",
-      "title": "DEEPCRATE",
-      "description": "A local music-discovery app that turns a DJ's ~10k-track collection into a visual album-art wall with instant hover playback — seed tracks roll YouTube Music radio into one-button playlists. Now with Playbox set lists (a real queue player with YTM push + CSV export) and a safe duplicate cleaner.",
-      "url": "https://github.com/keeltekool/deepcrate",
-      "github": "https://github.com/keeltekool/deepcrate",
-      "image": "/screenshots/deepcrate.webp",
-      "updatedAt": "2026-08-26",
-      "stack": {
-        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, better-sqlite3, music-metadata, sharp, @tanstack/react-virtual, Python FastAPI sidecar with ytmusicapi, Playwright (fixture + real-index click-through suites with a <200 ms audio-latency gate), Archivo Black + Space Mono + Archivo (Option C \"Acid Gallery\" system)",
-        "services": "Google Cloud (dedicated project: OAuth + YouTube Data API v3 playlist push). Otherwise none by design — SQLite index and thumbnails on C:, audio streamed straight from the collection drive, binds 127.0.0.1, desktop icon launcher, private GitHub repo.",
-        "howItWorks": "A read-only scanner (one choke-point module, backed by a shell guard that blocks any command touching the collection drive) indexes file tags and embedded art into SQLite; the wall virtualizes all 9,941 tiles with hover/click → audible in well under 200 ms via Range streaming. Seeds resolve through unauthenticated ytmusicapi radio — depth-sliced by similarity rank, round-robin interleaved, already-owned tracks dropped by normalized artist|title key — and the push goes through the Data API with real tag casing in the playlist name. The Library mode computes duplicate groups live from the index (name-normalized key + duration clustering, never file size), suggests a keeper (lossless first), and deletes surplus copies through a single sanctioned module with pre-flight verification, keep-one enforcement, an append-only audit log, and a CI grep gate that bans deletion primitives everywhere else — 133 groups and 3.6 GB found on the real collection at ship (the owner's first attended cleanup reclaimed 3.47 GB, every file audit-logged). The Playbox mode keeps persistent named set lists in SQLite — drag tiles in, reorder by handle, play through with shuffle/repeat via an ended-hook queue over the same audio engine — and exports each list as a fresh private YTM playlist (per-track radio-engine resolve) or a BOM-correct Title,Artist CSV for Spotify import tooling."
       }
     },
     {
