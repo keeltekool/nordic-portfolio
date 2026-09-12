@@ -480,15 +480,15 @@
     {
       "id": "whodis-screensaver",
       "title": "WHO DIS? — The Wall",
-      "description": "Branded hub + fullscreen celebrity photo screensaver. Auto-cycling slideshow with B&W portraits, cool facts, and configurable settings. Gateway to the WHO DIS? experience collection.",
+      "description": "Celebrity photo arcade with 6 modes, 632 photos, and 50 deathmatch matchups. Bi-weekly gamified emails rotate three editions: predict a fight winner, guess an icon from their photo, or answer a trivia question.",
       "url": "https://whodis-screensaver.vercel.app",
       "github": "https://github.com/keeltekool/whodis-screensaver",
       "image": "/screenshots/whodis-screensaver.webp",
-      "updatedAt": "2026-04-05",
+      "updatedAt": "2026-09-12",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Space Grotesk + Manrope fonts",
-        "services": "Neon PostgreSQL (shared celebrity DB — read-only), Cloudflare R2 (shared photo CDN), Vercel (hosting + serverless API)",
-        "howItWorks": "Hub landing page with 3 experience cards. Screensaver fetches all celebrities from Neon, applies user filters (category, era, shuffle), auto-advances with configurable transitions. Settings persisted in localStorage. Keyboard controls for pause, skip, fullscreen."
+        "services": "Neon PostgreSQL (shared celebrity DB + matchups + subscribers), Cloudflare R2 (459 B&W + 30 color photos), Resend (bi-weekly newsletter), Vercel (hosting + cron 1st & 15th 7AM UTC)",
+        "howItWorks": "Hub with 6 modes: guessing game, fullscreen wall with filters, color gallery, 459-photo vault, and 50 deathmatch matchups (350 fact-checked questions, server-validated answers, localStorage rank progression). A bi-weekly cron cycles three gamified email editions — DEATHMATCH (VS photos with prediction buttons), ICON SPOTLIGHT (photo with hidden name, fun-fact clue, reveal on scroll), TRIVIA DROP (one question with answer buttons) — each with a rotating fun fact from the 350-question pool."
       }
     },
     {
@@ -578,15 +578,15 @@
     {
       "id": "eudi-wallet-tracker",
       "title": "EUDI Wallet Tracker",
-      "description": "Automated intelligence monitoring for EU Digital Identity Wallet developments. Three-stage AI pipeline: scrapes 36 sources twice weekly, filters for EUDI relevance, then AI-curates with summaries and scoring. Three public tabs — raw feed, filtered, and curated — with search, category filters, and source filtering.",
+      "description": "Fully autonomous EUDI Wallet intelligence platform for SK ID Solutions. A weekly cloud routine scrapes 79 sources, filters, AI-curates (threshold 8/10), and updates a 14-section Strategy Brief. Newsletter via Resend. 612 curated articles, 18 intelligence updates.",
       "url": "https://eudi-wallet-tracker.vercel.app",
       "github": "https://github.com/keeltekool/eudi-wallet-tracker",
       "image": "/screenshots/eudi-wallet-tracker.webp",
-      "updatedAt": "2026-03-26",
+      "updatedAt": "2026-09-12",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, Cheerio, rss-parser",
-        "services": "Neon PostgreSQL (sources, articles, scrape runs), GitHub Actions (twice-weekly scraper), Anthropic Claude (CSS selector analysis), Loop Control Center (AI loop scheduling), Vercel (hosting), Google Fonts (Fraunces, DM Sans, Epilogue)",
-        "howItWorks": "GitHub Actions scrapes 36 RSS and CSS sources twice weekly into Neon. Claude Code filter loop marks articles as EUDI-relevant or irrelevant. Curation loop scores accepted articles 1-10, writes summaries, and assigns categories. Three public dashboard tabs show raw feed, filtered (noise removed), and curated (AI-scored with summaries). SÕEL-inspired design with warm parchment palette."
+        "services": "Neon PostgreSQL (sources, articles, living doc, subscribers), GitHub Actions (twice-weekly scraper, 79 sources), Anthropic cloud routine (EUDI Pipeline — Wed 06:30 Tallinn, Opus 5, 3-stage filter→curate→living-doc), Resend (newsletter), Vercel (hosting + Loop API), Google Fonts (Fraunces, DM Sans, Epilogue)",
+        "howItWorks": "A weekly cloud routine calls token-guarded Loop API endpoints to run the full 3-stage pipeline unattended: filter (relevant/irrelevant, 3 rounds x 100), curate (dedup, fetch bodies, score 1-10 threshold 8, summaries + categories), and living-doc update (NEW_FACT/DEEPENED_INSIGHT entries against a 14-section Strategy Brief stored in Neon). GitHub Actions scrapes 79 RSS and CSS sources twice weekly. Newsletter triggers after living-doc updates via Resend."
       }
     },
     {
