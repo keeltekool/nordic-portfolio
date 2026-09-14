@@ -368,15 +368,15 @@
     {
       "id": "idea-radar",
       "title": "Idea Radar",
-      "description": "Personal inspiration discovery dashboard for indie builders. Scrapes 15 sources across 7 platforms, AI-scores projects for feasibility, novelty, and stretch against your builder portfolio. Growth compass — surfaces what you haven't built yet, not more of the same.",
+      "description": "Two radars in one app. Main Radar scrapes 20 consumer-product sources twice weekly, AI-scores with PUSH/LEVEL UP growth-gap lanes, sends a prose coaching newsletter. YouTube Radar scrapes 21 tutorial channels weekly, pulls transcripts via yt-dlp, analyzes what each video teaches, and sends a visual digest with thumbnails and build suggestions.",
       "url": "https://idea-radar-topaz.vercel.app",
       "github": "https://github.com/keeltekool/idea-radar",
       "image": "/screenshots/idea-radar.webp",
-      "updatedAt": "2026-05-04",
+      "updatedAt": "2026-09-14",
       "stack": {
-        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, Newsreader + Plus Jakarta Sans fonts",
-        "services": "Neon PostgreSQL (discoveries, sources, builder profile, scrape runs), Vercel (hosting), Loop Control Center (manual pipeline scheduling), Federated Tracker Admin (shared with EUDI + Allekirjoitus)",
-        "howItWorks": "Three-stage pipeline cloned from EUDI Wallet Tracker: 15 source parsers (Product Hunt, GitHub Search API, Hacker News Show HN, Dev.to, Reddit, Lobsters, Medium) fetch raw items into Neon. Keyword pre-filter drops 60-70% noise. Claude Code in-session scores survivors against a Builder Profile (auto-generated from 41 project STACK.md files) on feasibility/novelty/stretch axes with wildcard picks for maximum growth. Dashboard shows curated cards with composite scores, 'Why this matters' summaries, and Sparked/Pass feedback buttons."
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, youtube-transcript, yt-dlp (GH Actions), rss-parser, Newsreader + Plus Jakarta Sans fonts",
+        "services": "Neon PostgreSQL (discoveries, youtube_videos, sources, builder_profile, builder_memos, youtube_memos, scrape_runs), Vercel (hosting + loop APIs), Resend (newsletters), Two Anthropic cloud routines (Opus 5 — Main Radar Mon/Thu 04:00 UTC, YouTube Radar Sunday 17:00 UTC), GitHub Actions (scrape crons — Main Mon/Thu 03:00, YouTube Sunday 14:00 + yt-dlp transcript pulling), Federated Tracker Admin (two projects: Idea Radar + Idea Radar YouTube)",
+        "howItWorks": "Main Radar: 20 text sources (Product Hunt, HN Show/Launch, Reddit, Dev.to, Medium, Kicktraq) scraped by GH Actions, keyword-filtered, then a cloud routine scores survivors against a Builder Profile using PUSH (unfamiliar domains) and LEVEL UP (do it better) lanes with comfort-zone penalties and growth-gap bonuses, generates a coaching memo and sends a prose newsletter with inline discovery references. YouTube Radar: 21 tutorial channels scraped via RSS (full descriptions, view counts, ratings, thumbnails), transcripts pulled via yt-dlp in GH Actions, then a cloud routine gate-checks tutorials, reads transcripts for top candidates, extracts tools/techniques/takeaways/build suggestions, and sends a visual newsletter with thumbnails. Radar switcher dropdown toggles between Main Radar, YouTube Radar, and EE Watch."
       }
     },
     {
