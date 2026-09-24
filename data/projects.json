@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "radar-check",
+      "title": "Radar-Check",
+      "description": "One page for six info radars: when each last ran, whether it worked, and the command to start the manual ones.",
+      "url": "https://radar-check.vercel.app",
+      "github": "https://github.com/keeltekool/radar-check",
+      "image": "/screenshots/radar-check.webp",
+      "updatedAt": "2026-09-24",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, @neondatabase/serverless (raw SQL, one table), Playwright, IBM Plex Mono + Libre Caslon Text (VAIB design system, archival mono on warm paper)",
+        "services": "Neon PostgreSQL (reports), Vercel fra1 (hosting, git-connected), Claude cloud routines (five radar routines report their own run status)",
+        "howItWorks": "Each cloud routine ends its run with one token-guarded POST of OK or failed. The page reads the latest report per radar and compares it with the routine schedule, so a run that never reported shows as MISSED two hours after its slot. Manual loops get a copy-to-terminal chip instead of tracking."
+      }
+    },
+    {
       "id": "deepcrate",
       "title": "DEEPCRATE",
       "description": "A DJ's ~10k-track collection as an album-art wall with instant hover playback, plus a crate builder: a random, tempo-and-key-spread draw to your parameters, ordered into a set journey by tempo curve and Camelot moves, with BPM, key and stars read from a copy of the Engine DJ database (never written). Set lists push to YouTube Music or export as CSV; a guarded duplicate cleaner keeps the vault clean.",
