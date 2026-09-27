@@ -15,6 +15,20 @@
       }
     },
     {
+      "id": "market-watch",
+      "title": "Market Watch",
+      "description": "Hunts Facebook Marketplace and buy/sell groups for the things you want and ranks the finds by how good a deal they are, with an opening offer and a first message for each.",
+      "url": "https://market-watch-seven.vercel.app",
+      "github": "https://github.com/keeltekool/market-watch",
+      "image": "/screenshots/market-watch.webp",
+      "updatedAt": "2026-09-28",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM + @neondatabase/serverless, Zod, Playwright",
+        "services": "Neon PostgreSQL, Vercel Blob (listing photos), Vercel fra1, Claude API (New watch summary only), Loop Control Center (the runner loop)",
+        "howItWorks": "A Claude Code loop reads Facebook in the owner's own logged-in Chrome, scores every listing against the owner's reference listings and the local market, and posts the verdicts to the app. The app computes the deal score, keeps wrong sizes and cheaper classes off the board, and shows a structured market brief per run."
+      }
+    },
+    {
       "id": "radar-check",
       "title": "Radar-Check",
       "description": "One page for six info radars: when each last ran, whether it worked, and the command to start the manual ones.",
