@@ -2,6 +2,7 @@
   "projects": [
     {
       "id": "career-recall",
+      "pinLast": true,
       "title": "Career Recall",
       "description": "A private knowledge base of your own product work, on the desktop and online behind one password: 19 Product Lead fields rated against a 198-practice library, each with a long-form learning guide, interview material and an AI chat over the whole record.",
       "url": "https://career-recall.vercel.app",

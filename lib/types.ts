@@ -16,6 +16,7 @@ export interface Project {
   stack?: Stack;
   updatedAt?: string;
   archived?: boolean;
+  pinLast?: boolean;
 }
 
 export interface ProjectsData {

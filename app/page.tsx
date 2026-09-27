@@ -10,6 +10,7 @@ export default function Home() {
   const activeProjects = [...(projectsData.projects as Project[])]
     .filter((p) => !p.archived)
     .sort((a, b) => {
+      if (a.pinLast !== b.pinLast) return a.pinLast ? 1 : -1;
       const dateA = a.updatedAt ? new Date(a.updatedAt).getTime() : 0;
       const dateB = b.updatedAt ? new Date(b.updatedAt).getTime() : 0;
       return dateB - dateA;
