@@ -3,13 +3,14 @@
     {
       "id": "career-recall",
       "title": "Career Recall",
-      "description": "A private desktop knowledge base of your own product work: 19 Product Lead fields rated against a 198-practice library, each with a long-form learning guide, interview material and an AI chat over the whole record.",
+      "description": "A private knowledge base of your own product work, on the desktop and online behind one password: 19 Product Lead fields rated against a 198-practice library, each with a long-form learning guide, interview material and an AI chat over the whole record.",
+      "url": "https://career-recall.vercel.app",
       "image": "/screenshots/career-recall.webp",
       "updatedAt": "2026-09-27",
       "stack": {
-        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, react-markdown, Playwright (92-step click-through at three desktop widths), DM Sans + DM Mono",
-        "services": "Anthropic Claude Opus 5 (chat with server-side fallback and prompt caching); no database, no hosting: runs on 127.0.0.1 from a desktop icon",
-        "howItWorks": "Content follows an open YAML and Markdown format with fill rules and a validator, so any AI can fill it. The viewer reads it from disk: per field the examples, how the work got harder, a per-practice benchmark with coaching, a relearn list and interview answers. A companion PM Practice Library supplies 198 practices with long lessons, and the chat answers over a cached brief of every page, linking back to it."
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, react-markdown, @neondatabase/serverless, Playwright (click-through at 375, 768, 1090, 1440 and 1920 px, logged out and in), DM Sans + DM Mono",
+        "services": "Anthropic Claude Opus 5 (chat with server-side fallback and prompt caching); Neon PostgreSQL (web mode: content, library and chat); Vercel fra1 (web mode, one password); the desktop app runs on 127.0.0.1 with no database",
+        "howItWorks": "Content follows an open YAML and Markdown format with fill rules and a validator, so any AI can fill it. One codebase runs two ways: the desktop app reads the folder from disk, and web mode reads the same files from Postgres after a one-command sync, behind a password page. Per field: the examples, how the work got harder, a per-practice benchmark with coaching, a relearn list and interview answers. A companion PM Practice Library supplies 198 practices with long lessons, and the chat answers over a cached brief of every page, linking back to it."
       }
     },
     {
