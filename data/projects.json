@@ -1,6 +1,18 @@
 {
   "projects": [
     {
+      "id": "career-recall",
+      "title": "Career Recall",
+      "description": "A private desktop knowledge base of your own product work: 19 Product Lead fields rated against a 198-practice library, each with a long-form learning guide, interview material and an AI chat over the whole record.",
+      "image": "/screenshots/career-recall.webp",
+      "updatedAt": "2026-09-27",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, react-markdown, Playwright (92-step click-through at three desktop widths), DM Sans + DM Mono",
+        "services": "Anthropic Claude Opus 5 (chat with server-side fallback and prompt caching); no database, no hosting: runs on 127.0.0.1 from a desktop icon",
+        "howItWorks": "Content follows an open YAML and Markdown format with fill rules and a validator, so any AI can fill it. The viewer reads it from disk: per field the examples, how the work got harder, a per-practice benchmark with coaching, a relearn list and interview answers. A companion PM Practice Library supplies 198 practices with long lessons, and the chat answers over a cached brief of every page, linking back to it."
+      }
+    },
+    {
       "id": "radar-check",
       "title": "Radar-Check",
       "description": "One page for six info radars: when each last ran, whether it worked, and the command to start the manual ones.",

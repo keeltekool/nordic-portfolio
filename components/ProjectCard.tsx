@@ -17,7 +17,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           href={project.url}
           target="_blank"
           rel="noopener noreferrer"
-          className="block overflow-hidden"
+          className={`block overflow-hidden ${project.url ? "" : "pointer-events-none"}`}
         >
           <img
             src={project.image}
@@ -38,6 +38,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
           {project.description}
         </p>
         <div className="mt-4 flex flex-col gap-2">
+          {project.url && (
           <a
             href={project.url}
             target="_blank"
@@ -61,6 +62,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
             </svg>
             <span>Open App</span>
           </a>
+          )}
           {project.adminUrl && (
             <a
               href={project.adminUrl}

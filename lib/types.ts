@@ -8,7 +8,7 @@ export interface Project {
   id: string;
   title: string;
   description: string;
-  url: string;
+  url?: string; // absent for a local-only app: no Open App link
   adminUrl?: string;
   landingUrl?: string;
   github?: string;
