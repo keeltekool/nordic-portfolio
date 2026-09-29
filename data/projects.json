@@ -631,20 +631,6 @@
       }
     },
     {
-      "id": "eudi-wallet-tracker-admin",
-      "title": "EUDI Wallet Tracker — Admin",
-      "description": "Source management console for the EUDI Wallet Tracker. Add sources by URL with automatic RSS detection or AI-powered CSS selector analysis. Health monitoring (healthy/needs setup/broken/paused), dry-run preview, batch AI selector setup for CSS sources, bulk import with duplicate detection, and scrape run history.",
-      "url": "https://eudi-wallet-tracker.vercel.app/admin",
-      "github": "https://github.com/keeltekool/eudi-wallet-tracker",
-      "image": "/screenshots/eudi-wallet-tracker-admin.webp",
-      "updatedAt": "2026-03-26",
-      "stack": {
-        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM",
-        "services": "Neon PostgreSQL (36 sources, config storage), Anthropic Claude Sonnet (one-off CSS selector generation, ~$0.01/source), Vercel (hosting)",
-        "howItWorks": "Password-protected admin. Add source flow: paste URL, system auto-detects RSS feed or runs Claude API to generate CSS selectors, shows dry-run preview, activate. Batch setup button runs AI analysis on all unconfigured CSS sources at once. Bulk import accepts JSON from AI research with automatic duplicate URL detection. Health dashboard shows source status with last scrape time, article counts, and error details."
-      }
-    },
-    {
       "id": "price-hntr",
       "title": "PriceHNTR",
       "description": "Mobile-only drink price comparison app for Estonia. Browse the cheapest drinks across 5 retail chains (Selver, Prisma, Rimi, Barbora, Cityalko) with store, category, and package size filters. Search any product to find the cheapest store. Bilingual EN/ET. First official consumer of the Alkoholiks API.",
