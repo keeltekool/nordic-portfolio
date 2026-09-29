@@ -29,6 +29,19 @@
       }
     },
     {
+      "id": "scrapyard",
+      "title": "Scrapyard",
+      "description": "One control panel for every scraping radar: sources, their health and runs, with an AI fix loop that repairs broken feeds and selectors.",
+      "url": "https://scrapyard-ten.vercel.app",
+      "image": "/screenshots/scrapyard.webp",
+      "updatedAt": "2026-09-30",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, @neondatabase/serverless (parameterized SQL, no ORM), cheerio + rss-parser (test scrapes), Playwright, Barlow + Barlow Condensed (engineering drawing sheet design)",
+        "services": "Neon PostgreSQL (the six radars' own databases, no database of its own), Vercel fra1 (hosting, git-connected), Claude Code on the subscription (the /scrapyard-fix loop)",
+        "howItWorks": "A registry file per radar names the tables and columns Scrapyard may touch, so one set of screens serves every radar and a new radar is one file. Health comes only from what the last scrape reported. Broken sources queue up on the home page; a manually started Claude Code loop finds new feeds, moved pages or CSS selectors, proves each fix with a test scrape and saves it through a token-guarded API."
+      }
+    },
+    {
       "id": "radar-check",
       "title": "Radar-Check",
       "description": "One page for six info radars: when each last ran, whether it worked, and the command to start the manual ones.",
