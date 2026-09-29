@@ -606,15 +606,15 @@
     {
       "id": "eudi-wallet-tracker",
       "title": "EUDI Wallet Tracker",
-      "description": "Fully autonomous EUDI Wallet intelligence platform for SK ID Solutions. A weekly cloud routine scrapes 79 sources, filters, AI-curates (threshold 8/10), and updates a 14-section Strategy Brief. Newsletter via Resend. 612 curated articles, 18 intelligence updates.",
+      "description": "EUDI Wallet intelligence for SK ID Solutions, running on its own. Jev sorts articles from 78 sources as they are scraped; a weekly Opus routine curates them, patches the Strategy Brief section by section and emails the update.",
       "url": "https://eudi-wallet-tracker.vercel.app",
       "github": "https://github.com/keeltekool/eudi-wallet-tracker",
       "image": "/screenshots/eudi-wallet-tracker.webp",
-      "updatedAt": "2026-09-12",
+      "updatedAt": "2026-09-29",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, Cheerio, rss-parser",
-        "services": "Neon PostgreSQL (sources, articles, living doc, subscribers), GitHub Actions (twice-weekly scraper, 79 sources), Anthropic cloud routine (EUDI Pipeline — Wed 06:30 Tallinn, Opus 5, 3-stage filter→curate→living-doc), Resend (newsletter), Vercel (hosting + Loop API), Google Fonts (Fraunces, DM Sans, Epilogue)",
-        "howItWorks": "A weekly cloud routine calls token-guarded Loop API endpoints to run the full 3-stage pipeline unattended: filter (relevant/irrelevant, 3 rounds x 100), curate (dedup, fetch bodies, score 1-10 threshold 8, summaries + categories), and living-doc update (NEW_FACT/DEEPENED_INSIGHT entries against a 14-section Strategy Brief stored in Neon). GitHub Actions scrapes 79 RSS and CSS sources twice weekly. Newsletter triggers after living-doc updates via Resend."
+        "services": "Neon PostgreSQL (sources, articles, Strategy Brief, subscribers), GitHub Actions (twice-weekly scraper + Jev filter), TypeSafe AI Jev (relevance filter at scrape time), Anthropic cloud routine (EUDI Pipeline, Wed 06:30 Tallinn, Opus 5), Resend (newsletter), Vercel (hosting + Loop API), Google Fonts (Fraunces, DM Sans, Epilogue)",
+        "howItWorks": "GitHub Actions scrapes 78 RSS and CSS sources twice a week, marks copies of the same story, and Jev (TypeSafe) sorts every new article relevant or irrelevant. A weekly cloud routine follows one rules file in the repo: it curates the relevant articles (score 1-10, threshold 8, summaries and categories), writes the week's NEW_FACT and UPDATED_FACT findings, patches the matching Strategy Brief sections through a guarded API with a one-row restore point, and the update is emailed via Resend."
       }
     },
     {
