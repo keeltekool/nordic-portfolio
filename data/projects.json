@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "tube-heureka",
+      "title": "Tube_Heureka",
+      "description": "Paste a YouTube link and get a code. Paste the code into Claude Code and it reads the whole video, ready to talk it through.",
+      "url": "https://tube-heureka.vercel.app",
+      "github": "https://github.com/keeltekool/tube-heureka",
+      "image": "/screenshots/tube-heureka.webp",
+      "updatedAt": "2026-10-03",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM + @neondatabase/serverless, MCP TypeScript SDK, yt-dlp, Playwright",
+        "services": "Neon PostgreSQL, Vercel fra1, YouTube oEmbed (titles), a local stdio MCP server registered in Claude Code",
+        "howItWorks": "The web app stores pasted videos with permanent codes. Because YouTube blocks transcript requests from data centres, the transcript is fetched on the owner's own PC: a local MCP server runs yt-dlp when a code is pasted into Claude Code, saves the timestamped transcript, chapters and description to the database, and hands the video to Claude. Notes from the conversation are saved back only on request."
+      }
+    },
+    {
       "id": "career-recall",
       "pinLast": true,
       "title": "Career Recall",
