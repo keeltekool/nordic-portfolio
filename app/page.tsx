@@ -1,6 +1,5 @@
 import { Header } from "@/components/Header";
 import { Intro } from "@/components/Intro";
-import { ProjectTabs } from "@/components/ProjectTabs";
 import { ProjectGrid } from "@/components/ProjectGrid";
 import { Footer } from "@/components/Footer";
 import projectsData from "@/data/projects.json";
@@ -21,7 +20,6 @@ export default function Home() {
       <Header />
       <Intro />
       <section className="py-8">
-        <ProjectTabs />
         <ProjectGrid projects={activeProjects} />
       </section>
       <Footer />

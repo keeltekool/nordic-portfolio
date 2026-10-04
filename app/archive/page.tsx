@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Header } from "@/components/Header";
 import { Intro } from "@/components/Intro";
-import { ProjectTabs } from "@/components/ProjectTabs";
 import { ProjectGrid } from "@/components/ProjectGrid";
 import { Footer } from "@/components/Footer";
 import projectsData from "@/data/projects.json";
@@ -26,12 +25,7 @@ export default function ArchivePage() {
       <Header />
       <Intro />
       <section className="py-8">
-        <ProjectTabs />
-        {archivedProjects.length > 0 ? (
-          <ProjectGrid projects={archivedProjects} />
-        ) : (
-          <p className="text-sm text-[var(--muted)]">No archived projects.</p>
-        )}
+        <ProjectGrid projects={archivedProjects} />
       </section>
       <Footer />
     </>

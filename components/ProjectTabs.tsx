@@ -8,7 +8,7 @@ export function ProjectTabs() {
   const isArchive = pathname === "/archive";
 
   return (
-    <div className="flex gap-6 mb-6">
+    <div className="flex gap-6">
       <Link
         href="/"
         className={`text-sm font-medium uppercase tracking-wider pb-2 border-b-2 transition-colors ${
