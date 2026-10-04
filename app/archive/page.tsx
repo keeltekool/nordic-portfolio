@@ -25,7 +25,10 @@ export default function ArchivePage() {
       <Header />
       <Intro />
       <section className="py-8">
-        <ProjectGrid projects={archivedProjects} />
+        <ProjectGrid
+          projects={archivedProjects}
+          counts={{ projects: projectsData.projects.length - archivedProjects.length, archive: archivedProjects.length }}
+        />
       </section>
       <Footer />
     </>

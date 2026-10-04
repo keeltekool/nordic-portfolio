@@ -30,12 +30,14 @@ for (const [vp, width, height] of [["375", 375, 812], ["1440", 1440, 900]]) {
   page.on("response", (r) => r.status() >= 400 && errors.push(`${r.status()} ${r.url()}`));
 
   const search = page.getByRole("searchbox", { name: "Search projects" });
+  const tab = (name) => page.getByRole("link", { name }).textContent();
   const cards = page.locator("main h3");
   const count = () => cards.count();
 
   await page.goto(BASE, { waitUntil: "networkidle" });
   check("home lists every active project", (await count()) === active.length, `${await count()} vs ${active.length}`);
   check("search box visible", await search.isVisible());
+  check("tabs show counts", (await tab("Projects")) === `Projects${active.length}` && (await tab("Archive")) === `Archive${archived.length}`, `${await tab("Projects")} / ${await tab("Archive")}`);
   check("no horizontal scroll", await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
 
   const name = active[0].title;
@@ -44,12 +46,13 @@ for (const [vp, width, height] of [["375", 375, 812], ["1440", 1440, 900]]) {
 
   await search.fill("radar");
   check('"radar" matches title + description filter', (await count()) === matches(active, "radar"), `${await count()} vs ${matches(active, "radar")}`);
+  check('tab shows "N of total" while searching', (await tab("Projects")) === `Projects${matches(active, "radar")} of ${active.length}`, await tab("Projects"));
 
   await search.fill("zzqqxx");
   check("no match shows empty message", (await count()) === 0 && (await page.getByText('No projects match "zzqqxx".').isVisible()));
 
   await search.fill("");
-  check("clearing restores all cards", (await count()) === active.length);
+  check("clearing restores all cards and the plain count", (await count()) === active.length && (await tab("Projects")) === `Projects${active.length}`);
 
   await page.evaluate(() => scrollTo(0, 4000));
   const box = await search.boundingBox();

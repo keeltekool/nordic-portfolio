@@ -20,7 +20,10 @@ export default function Home() {
       <Header />
       <Intro />
       <section className="py-8">
-        <ProjectGrid projects={activeProjects} />
+        <ProjectGrid
+          projects={activeProjects}
+          counts={{ projects: activeProjects.length, archive: projectsData.projects.length - activeProjects.length }}
+        />
       </section>
       <Footer />
     </>

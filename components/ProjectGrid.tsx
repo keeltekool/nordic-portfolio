@@ -7,9 +7,10 @@ import { ProjectTabs } from "./ProjectTabs";
 
 interface ProjectGridProps {
   projects: Project[];
+  counts: { projects: number; archive: number };
 }
 
-export function ProjectGrid({ projects }: ProjectGridProps) {
+export function ProjectGrid({ projects, counts }: ProjectGridProps) {
   const [query, setQuery] = useState("");
   const [compact, setCompact] = useState(false);
   useEffect(() => {
@@ -31,7 +32,7 @@ export function ProjectGrid({ projects }: ProjectGridProps) {
   return (
     <>
       <div className="sticky top-0 z-10 bg-[var(--background)] py-3 mb-3 flex flex-wrap items-center justify-between gap-x-6 gap-y-4">
-        <ProjectTabs />
+        <ProjectTabs counts={counts} matches={q ? shown.length : undefined} />
         <div className="flex gap-2 w-full sm:w-auto">
           <div className="relative flex-1 sm:flex-none sm:w-64">
             <svg
