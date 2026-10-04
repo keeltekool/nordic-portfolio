@@ -226,15 +226,15 @@
     {
       "id": "livery",
       "title": "Livery",
-      "description": "A design system vault — the best design systems from past builds (tokens, fonts, distilled design rationale, component primitives) stored once and reused anywhere: browsed as auto-generated specimens, shared as public brand-book pages, and installed by AI coding agents through MCP, REST, or a shadcn-compatible registry (npx shadcn add @livery/fieldwork).",
+      "description": "A vault for the design systems of past builds. Push one with a single command, and any new app can start from it and come out looking like the original.",
       "url": "https://livery-sooty.vercel.app",
       "github": "https://github.com/keeltekool/livery",
       "image": "/screenshots/livery.webp",
-      "updatedAt": "2026-07-11",
+      "updatedAt": "2026-10-04",
       "stack": {
-        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, mcp-handler + zod, JSZip, Archivo + IBM Plex Mono (the vault wears its own first stored system)",
-        "services": "Neon PostgreSQL (systems, files, one-snapshot versioning, share links, hashed API keys), Cloudflare R2 (primitives/assets/hero shots), Clerk (auth, multi-tenant skeleton on the free plan), Vercel (hosting), Google Fonts (per-specimen font loading)",
-        "howItWorks": "The build agent curates at push time (verbatim tokens.css, app-prose-stripped decisions doc, only generic primitives) and pushes via the Livery Connect MCP; the server stays deliberately AI-free — a deterministic CSS parser derives structured token groups and W3C DTCG JSON from the stored CSS, which then power everything: click-to-copy specimen pages, library cards, public brand-book share links with llms.txt companions and revocable download packages, and a shadcn registry that installs a whole design system into any project with one command."
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, mcp-handler + zod, yaml, JSZip, Playwright (push command and checks)",
+        "services": "Neon PostgreSQL (systems, files, versions, share links, hashed API keys), Cloudflare R2 (starter files, screenshots, staged uploads), Vercel (hosting), Google Fonts",
+        "howItWorks": "A design system is stored the way it was built: the screenshots it started from, a DESIGN.md in Google's open format, the exact tokens, a runnable starter app with page templates, and screenshots of the original next to the starter at desktop and phone width. One push command validates the package, builds the starter, captures both and verifies every byte after upload. A new project pulls it through MCP, REST or a shadcn registry; in a test, a fresh Claude session rebuilt a page from the vault alone. The server uses no AI, and its token export validates against the W3C DTCG 2025.10 schema."
       }
     },
     {
