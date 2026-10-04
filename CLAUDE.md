@@ -126,7 +126,7 @@ nordic-portfolio/
 │   ├── Header.tsx        # Name + LinkedIn + theme toggle
 │   ├── Intro.tsx         # Author bio
 │   ├── ProjectCard.tsx   # Card: screenshot + title + desc + links + stack
-│   ├── ProjectGrid.tsx   # Tabs + search box + 2-column grid (client-side filter)
+│   ├── ProjectGrid.tsx   # Sticky tabs + search + list/cards toggle, 2-column grid or compact list
 │   ├── Footer.tsx        # Footer
 │   ├── ThemeProvider.tsx  # Dark/light mode wrapper
 │   └── ThemeToggle.tsx   # Theme switch button

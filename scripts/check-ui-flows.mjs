@@ -51,6 +51,22 @@ for (const [vp, width, height] of [["375", 375, 812], ["1440", 1440, 900]]) {
   await search.fill("");
   check("clearing restores all cards", (await count()) === active.length);
 
+  await page.evaluate(() => scrollTo(0, 4000));
+  const box = await search.boundingBox();
+  const onTop = await page.evaluate(([x, y]) => document.elementFromPoint(x, y)?.type === "search", [box.x + box.width / 2, box.y + box.height / 2]);
+  check("search stays pinned on top while scrolling", box.y >= 0 && box.y < 120 && onTop, `y=${box.y}`);
+
+  const rows = page.getByRole("list", { name: "Projects" }).getByRole("listitem");
+  await page.getByRole("button", { name: "Show as list" }).click();
+  check("list view shows every project as a row", (await rows.count()) === active.length && (await count()) === 0);
+  check("list view: no horizontal scroll", await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
+  await search.fill("radar");
+  check("search filters list rows", (await rows.count()) === matches(active, "radar"));
+  await page.reload({ waitUntil: "networkidle" });
+  check("list view persists after reload", (await rows.count()) === active.length);
+  await page.getByRole("button", { name: "Show as cards" }).click();
+  check("back to cards", (await count()) === active.length && (await rows.count()) === 0);
+
   await page.getByRole("link", { name: "Archive" }).click();
   await page.waitForURL(`${BASE}/archive`);
   check("archive lists every archived project", (await count()) === archived.length, `${await count()} vs ${archived.length}`);
