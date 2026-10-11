@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "keila-leht-ultra",
+      "title": "Keila Leht Ultra",
+      "description": "An Estonian broadsheet about the town of Keila, written twice a week by an autonomous Claude Managed Agent. Every fact is checked against its source sentence before it prints.",
+      "url": "https://keila-leht-ultra.vercel.app",
+      "github": "https://github.com/keeltekool/keila-leht-ultra",
+      "image": "/screenshots/keila-leht-ultra.webp",
+      "updatedAt": "2026-10-11",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, mcp-handler (MCP over Streamable HTTP), Anthropic SDK (Managed Agents), Playwright (production flow battery at 375/1440/1920), Old Standard TT + Source Serif 4",
+        "services": "Claude Managed Agents (scheduled deployment Tue/Fri 06:00: Sonnet 5.5 editor, Opus 5.5 writer subagent, outcome grader, vault, webhooks), Neon PostgreSQL (registry of ~70 Keila sources, printed ledger, runs, subscribers), Serper + Brave (search), Resend (edition and subscriber email), Open-Meteo (weather), Vercel (fra1, daily crons)",
+        "howItWorks": "At 06:00 the agent reads Keila's sources through the app's MCP newsroom, searches beyond them and hands the verified facts to a writer subagent; the app's gate prints an item only if its date, Keila link and exact source sentence check out, and a grader judges the Estonian. When the session ends, a webhook publishes the edition, records what was printed so nothing repeats, leaves empty sections out and emails it."
+      }
+    },
+    {
       "id": "tube-heureka",
       "title": "Tube_Heureka",
       "description": "Paste a YouTube link and get a code. Paste the code into Claude Code and it reads the whole video, ready to talk it through.",
