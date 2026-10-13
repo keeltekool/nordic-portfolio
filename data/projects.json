@@ -5,6 +5,7 @@
       "title": "Keila Leht Ultra",
       "description": "An Estonian broadsheet about the town of Keila, written twice a week by an autonomous Claude Managed Agent. Every fact is checked against its source sentence before it prints.",
       "url": "https://keila-leht-ultra.vercel.app",
+      "adminUrl": "https://keila-leht-ultra.vercel.app/toimetus",
       "github": "https://github.com/keeltekool/keila-leht-ultra",
       "image": "/screenshots/keila-leht-ultra.webp",
       "updatedAt": "2026-10-11",
