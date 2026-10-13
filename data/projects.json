@@ -11,7 +11,7 @@
       "stack": {
         "builtWith": "Next.js (static export), TypeScript, Tailwind CSS, heic-to (libheif WebAssembly), ffmpeg.wasm, fflate",
         "services": "Vercel (hosting), jsDelivr (audio converter download)",
-        "howItWorks": "Drop HEIC photos, M4A voice memos or a ZIP, press Convert, download the files or one ZIP. libheif and FFmpeg run as WebAssembly in the tab."
+        "howItWorks": "Drop HEIC photos, M4A voice memos or a ZIP and press Convert; the JPGs and MP3s save to Downloads by themselves, as files or one ZIP. libheif and FFmpeg run as WebAssembly in the tab."
       }
     },
     {
