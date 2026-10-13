@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "fileshift",
+      "title": "Fileshift",
+      "description": "Turns iPhone photos into JPGs and voice memos into MP3s, one file or a whole ZIP at a time. Everything converts in the browser, so nothing is uploaded.",
+      "url": "https://getfileshift.vercel.app",
+      "github": "https://github.com/keeltekool/fileshift",
+      "image": "/screenshots/fileshift.webp",
+      "updatedAt": "2026-10-13",
+      "stack": {
+        "builtWith": "Next.js (static export), TypeScript, Tailwind CSS, heic-to (libheif WebAssembly), ffmpeg.wasm, fflate",
+        "services": "Vercel (hosting), jsDelivr (audio converter download)",
+        "howItWorks": "Drop HEIC photos, M4A voice memos or a ZIP, press Convert, download the files or one ZIP. libheif and FFmpeg run as WebAssembly in the tab."
+      }
+    },
+    {
       "id": "keila-leht-ultra",
       "title": "Keila Leht Ultra",
       "description": "An Estonian broadsheet about the town of Keila, written twice a week by an autonomous Claude Managed Agent. Every fact is checked against its source sentence before it prints.",
