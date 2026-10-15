@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "mini-me",
+      "title": "Mini Me",
+      "description": "A voice twin you brief once and send into browser voice calls. ElevenLabs speaks, a Claude brain answers from your brief, and every call is kept as a transcript.",
+      "url": "https://mini-me-amber.vercel.app",
+      "github": "https://github.com/keeltekool/mini-me",
+      "image": "/screenshots/mini-me.webp",
+      "updatedAt": "2026-10-15",
+      "stack": {
+        "builtWith": "Next.js 16, TypeScript, Tailwind CSS, Drizzle ORM, @elevenlabs/client, Anthropic SDK",
+        "services": "Vercel (hosting, fra1), Neon (Postgres), ElevenLabs Agents (voice, custom LLM), Anthropic (Claude Fable 5.1)",
+        "howItWorks": "Upload a brief file and start a call from the laptop; the other side speaks first. ElevenLabs hears and speaks, the server answers each turn with Claude Fable 5.1 from the brief, and the post-call webhook stores the final transcript."
+      }
+    },
+    {
       "id": "fileshift",
       "title": "Fileshift",
       "description": "Turns iPhone photos into JPGs and voice memos into MP3s, one file or a whole ZIP at a time. Everything converts in the browser, so nothing is uploaded.",
