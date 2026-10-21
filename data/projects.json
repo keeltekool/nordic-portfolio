@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "kasilane",
+      "title": "Käsilane",
+      "description": "Personal agents I create in Claude Code and start by hand in my own Chrome. The first one applies to the jobs I tick in CV Tailor, with proof of every application.",
+      "url": "https://kasilane.vercel.app",
+      "github": "https://github.com/keeltekool/kasilane",
+      "image": "/screenshots/kasilane.webp",
+      "updatedAt": "2026-10-21",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM + @neondatabase/serverless, mcp-handler (MCP server), Playwright",
+        "services": "Neon PostgreSQL, Vercel fra1, Vercel Blob (private proof files), Claude Code skills and hooks on the owner's PC",
+        "howItWorks": "Agents are created and changed by describing them in Claude Code; a skill drafts the agent and saves it through Käsilane's MCP server, so every agent has the same shape and a version history. A run starts when the owner pastes the agent's command into Claude Code: one subagent per item works in his own logged-in Chrome, logs each step, uploads the files it sent and screenshots of the form and confirmation, and updates what it learned about each site. The dashboard shows the steps live; a hook closes the run and shows the result on the desktop."
+      }
+    },
+    {
       "id": "mini-me",
       "title": "Mini Me",
       "description": "A voice twin you brief once and send into browser voice calls. ElevenLabs speaks, a Claude brain answers from your brief, and every call is kept as a transcript.",
