@@ -3,11 +3,11 @@
     {
       "id": "kasilane",
       "title": "Käsilane",
-      "description": "Personal agents I create in Claude Code and start by hand in my own Chrome. The first one applies to the jobs I tick in CV Tailor, with proof of every application.",
+      "description": "Personal agents I create in Claude Code and start by hand in my own Chrome: one applies to jobs, one lists things on Vinted. The dashboard shows what they made, from sent cover letters to live listings.",
       "url": "https://kasilane.vercel.app",
       "github": "https://github.com/keeltekool/kasilane",
       "image": "/screenshots/kasilane.webp",
-      "updatedAt": "2026-10-21",
+      "updatedAt": "2026-10-22",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM + @neondatabase/serverless, mcp-handler (MCP server), Playwright",
         "services": "Neon PostgreSQL, Vercel fra1, Vercel Blob (private proof files), Claude Code skills and hooks on the owner's PC",
