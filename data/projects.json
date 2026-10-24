@@ -1029,7 +1029,7 @@
     {
       "id": "pocket-clone",
       "title": "Pocket Clone",
-      "description": "A Raindrop replacement: save a link from phone or desktop and a Claude Managed Agent reads the page and files it into your buckets through the app's own MCP server. When Unsorted gathers a topic, it suggests a new bucket. Any saved link pulls into Claude Code as pocket #N, so the vault feeds the next build.",
+      "description": "A Raindrop replacement: save a link from phone or desktop and a Claude Managed Agent reads the page and files it into your buckets through the app's own MCP server. Every save opens in a built-in reader with the page text in paragraphs, and a heart keeps favourites one tap away. Any saved link pulls into Claude Code as pocket #N.",
       "url": "https://pocket-clone-virid.vercel.app",
       "github": "https://github.com/keeltekool/Pocket_Clone",
       "image": "/screenshots/pocket-clone.webp",
@@ -1037,7 +1037,7 @@
       "stack": {
         "builtWith": "Next.js 16, TypeScript, Tailwind 4, Drizzle ORM",
         "services": "Neon PostgreSQL, Claude Managed Agents (Fable 5.1), MCP server (mcp-handler), Vercel",
-        "howItWorks": "Every save fetches the page server-side and starts a -capped Managed Agent session that files the link through the app's own MCP server; the owner only adds links. Suggestions for new buckets appear when Unsorted gathers a topic. Password gate, iPhone Shortcut, bookmarklet."
+        "howItWorks": "Every save fetches the page server-side and starts a $1-capped Managed Agent session that files the link through the app's own MCP server; the owner only adds links. Suggestions for new buckets appear when Unsorted gathers a topic. The reader at /read/N shows the saved text; favourites are a heart and a filter. Password gate, iPhone Shortcut, bookmarklet."
       }
     },
     {
