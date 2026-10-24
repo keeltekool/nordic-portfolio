@@ -3,7 +3,7 @@
     {
       "id": "kasilane",
       "title": "Käsilane",
-      "description": "Personal agents I create in Claude Code and start by hand in my own Chrome: one applies to jobs, one lists things on Vinted. The dashboard shows what they made, from sent cover letters to live listings.",
+      "description": "Personal agents described in Claude Code and run by hand in my own logged-in Chrome: one applies to jobs, one lists things on Vinted. Every run works one item at a time, logs each step, and uploads the cover letter it sent or a screenshot of the live listing. The dashboard shows the steps as they happen and the results afterwards.",
       "url": "https://kasilane.vercel.app",
       "github": "https://github.com/keeltekool/kasilane",
       "image": "/screenshots/kasilane.webp",
@@ -17,7 +17,7 @@
     {
       "id": "mini-me",
       "title": "Mini Me",
-      "description": "A voice twin you brief once and send into browser voice calls. ElevenLabs speaks, a Claude brain answers from your brief, and every call is kept as a transcript.",
+      "description": "A voice twin you brief once and send into browser voice calls. ElevenLabs hears and speaks, a Claude Fable 5.1 brain answers every turn from your brief, and a post-call webhook stores the full transcript. Upload a brief, start the call, and let the other side speak first.",
       "url": "https://mini-me-amber.vercel.app",
       "github": "https://github.com/keeltekool/mini-me",
       "image": "/screenshots/mini-me.webp",
@@ -31,7 +31,7 @@
     {
       "id": "fileshift",
       "title": "Fileshift",
-      "description": "Turns iPhone photos into JPGs and voice memos into MP3s, one file or a whole ZIP at a time. Everything converts in the browser, so nothing is uploaded.",
+      "description": "Turns iPhone photos into JPGs and voice memos into MP3s, one file or a whole ZIP at a time. libheif and FFmpeg run as WebAssembly inside the tab, so nothing is uploaded and the results land in Downloads by themselves. One page, no account, no server round trip.",
       "url": "https://getfileshift.vercel.app",
       "github": "https://github.com/keeltekool/fileshift",
       "image": "/screenshots/fileshift.webp",
@@ -45,7 +45,7 @@
     {
       "id": "keila-leht-ultra",
       "title": "Keila Leht Ultra",
-      "description": "An Estonian broadsheet about the town of Keila, written twice a week by an autonomous Claude Managed Agent. Every fact is checked against its source sentence before it prints.",
+      "description": "An Estonian broadsheet about the town of Keila, written twice a week by an autonomous Claude Managed Agent. At 06:00 it reads Keila's sources through the app's MCP newsroom; a gate prints an item only if its date, Keila link and exact source sentence check out, and a grader judges the Estonian. The finished edition publishes itself and goes out by email.",
       "url": "https://keila-leht-ultra.vercel.app",
       "adminUrl": "https://keila-leht-ultra.vercel.app/toimetus",
       "github": "https://github.com/keeltekool/keila-leht-ultra",
@@ -60,7 +60,7 @@
     {
       "id": "tube-heureka",
       "title": "Tube_Heureka",
-      "description": "Paste a YouTube link and get a code. Paste the code into Claude Code and it reads the whole video, ready to talk it through.",
+      "description": "Paste a YouTube link and get a code; paste the code into Claude Code and it reads the whole video, ready to talk it through. Because YouTube blocks transcript requests from data centres, a local MCP server runs yt-dlp on the owner's own PC and saves the timestamped transcript, chapters and description. Notes from the conversation save back on request.",
       "url": "https://tube-heureka.vercel.app",
       "github": "https://github.com/keeltekool/tube-heureka",
       "image": "/screenshots/tube-heureka.webp",
@@ -75,7 +75,7 @@
       "id": "career-recall",
       "pinLast": true,
       "title": "Career Recall",
-      "description": "A private knowledge base of your own product work, on the desktop and online behind one password: 19 Product Lead fields rated against a 198-practice library, each with a long-form learning guide, interview material and an AI chat over the whole record.",
+      "description": "A private knowledge base of your own product work: 19 Product Lead fields rated against a 198-practice library, each with a long-form learning guide, interview answers and an AI chat over the whole record. One codebase runs two ways, as a desktop app reading the folder from disk and as a password-gated web app reading the same files from Postgres. Content follows an open YAML and Markdown format any AI can fill.",
       "url": "https://career-recall.vercel.app",
       "image": "/screenshots/career-recall.webp",
       "updatedAt": "2026-09-27",
@@ -88,7 +88,7 @@
     {
       "id": "market-watch",
       "title": "Market Watch",
-      "description": "Hunts Facebook Marketplace and buy/sell groups for the things you want and ranks the finds by how good a deal they are, with an opening offer and a first message for each.",
+      "description": "Hunts Facebook Marketplace and buy/sell groups for the things you want. A Claude Code loop reads Facebook in the owner's own logged-in Chrome, scores every listing against reference listings and the local market, and posts the verdicts to the app. Each find gets a deal score, an opening offer and a first message; wrong sizes and cheaper classes never reach the board.",
       "url": "https://market-watch-seven.vercel.app",
       "github": "https://github.com/keeltekool/market-watch",
       "image": "/screenshots/market-watch.webp",
@@ -102,7 +102,7 @@
     {
       "id": "scrapyard",
       "title": "Scrapyard",
-      "description": "One control panel for every scraping radar. Its fix loop repairs broken sources and deletes the ones still broken on a second run.",
+      "description": "One admin panel for every scraping radar: a registry file per radar names the tables it may touch, so a new radar costs one file. Health comes only from what the last scrape reported. A manually started Claude Code fix loop repairs broken sources when the radar's own rules prove the fix, strikes what it can't, and deletes a source still broken on the second run.",
       "url": "https://scrapyard-ten.vercel.app",
       "image": "/screenshots/scrapyard.webp",
       "updatedAt": "2026-09-30",
@@ -115,7 +115,7 @@
     {
       "id": "radar-check",
       "title": "Radar-Check",
-      "description": "One page for six info radars: when each last ran, whether it worked, and the command to start the manual ones.",
+      "description": "One page for six info radars: when each last ran, whether it worked, and the command to start the manual ones. Every cloud routine ends its run with one token-guarded POST of OK or failed; the page compares the latest report with the schedule, so a run that never reported shows as MISSED two hours after its slot.",
       "url": "https://radar-check.vercel.app",
       "github": "https://github.com/keeltekool/radar-check",
       "image": "/screenshots/radar-check.webp",
@@ -143,7 +143,7 @@
     {
       "id": "lonkero-cruise-hki",
       "title": "Lonkero Cruise HKI",
-      "description": "Self-updating Helsinki night-out page: scans RA and venue sites weekly, filters by the owner's taste, and pushes a digest the group can act on with one tap.",
+      "description": "A self-updating Helsinki night-out page. A weekly cloud routine pulls events from Resident Advisor and four venue sites, dedupes them, and judges each one against the owner's taste rubric with a backstory per verdict. Every second Monday, if new gems appeared, it drafts a WhatsApp-length digest and the owner sends it to the group with one tap.",
       "url": "https://lonkero-cruise-hki.vercel.app",
       "github": "https://github.com/keeltekool/lonkero-cruise-hki",
       "image": "/screenshots/lonkero-cruise-hki.webp",
@@ -283,7 +283,7 @@
     {
       "id": "livery",
       "title": "Livery",
-      "description": "A vault for the design systems of past builds. Push one with a single command, and any new app can start from it and come out looking like the original.",
+      "description": "A vault for the design systems of past builds. One push command stores a system the way it was built: source screenshots, a DESIGN.md, exact tokens and a runnable starter with page templates, verified byte by byte after upload. Any new app pulls it through MCP, REST or a shadcn registry; in a test, a fresh Claude session rebuilt a page from the vault alone.",
       "url": "https://livery-sooty.vercel.app",
       "github": "https://github.com/keeltekool/livery",
       "image": "/screenshots/livery.webp",
@@ -690,7 +690,7 @@
     {
       "id": "eudi-wallet-tracker",
       "title": "EUDI Wallet Tracker",
-      "description": "EUDI Wallet intelligence for SK ID Solutions, running on its own. Jev sorts articles from 78 sources as they are scraped; a weekly Opus routine curates them, patches the Strategy Brief section by section and emails the update.",
+      "description": "EUDI Wallet intelligence for SK ID Solutions, running on its own. GitHub Actions scrapes 78 RSS and CSS sources twice a week and Jev, a TypeSafe decision model, sorts every article relevant or irrelevant as it lands. A weekly Opus routine scores the keepers, patches the Strategy Brief section by section behind a one-row restore point, and emails the update.",
       "url": "https://eudi-wallet-tracker.vercel.app",
       "github": "https://github.com/keeltekool/eudi-wallet-tracker",
       "image": "/screenshots/eudi-wallet-tracker.webp",
@@ -957,7 +957,7 @@
     {
       "id": "applykit",
       "title": "ApplyKit",
-      "description": "Full-stack AI job application platform: tailored CVs, cover letters, interview prep and autonomous Top Picks. Rebuilt for phones in October 2026: everything the desktop does now works one-handed on a 375 px screen.",
+      "description": "An AI job-application platform: three CV templates, job-to-CV matching, cover letters, an interview coach and a TööRadar search across three Estonian job boards. A cloud routine skims fresh listings three times a week and hands you Top Picks with a one-line reason each. Rebuilt in October 2026 so everything works one-handed on a phone.",
       "url": "https://cv-tailor-plus.vercel.app",
       "github": "https://github.com/keeltekool/cv-tailor-plus",
       "image": "/screenshots/applykit.webp",
@@ -1029,7 +1029,7 @@
     {
       "id": "pocket-clone",
       "title": "Pocket Clone",
-      "description": "Save a link from phone or desktop; a Claude agent reads the page and files it into your buckets. Any link pulls into Claude Code as pocket #N.",
+      "description": "A Raindrop replacement: save a link from phone or desktop and a Claude Managed Agent reads the page and files it into your buckets through the app's own MCP server. When Unsorted gathers a topic, it suggests a new bucket. Any saved link pulls into Claude Code as pocket #N, so the vault feeds the next build.",
       "url": "https://pocket-clone-virid.vercel.app",
       "github": "https://github.com/keeltekool/Pocket_Clone",
       "image": "/screenshots/pocket-clone.webp",

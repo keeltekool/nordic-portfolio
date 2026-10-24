@@ -23,7 +23,7 @@
 {
   "id": "unique-kebab-case-id",
   "title": "Project Title",
-  "description": "Short description (1-2 sentences max).",
+  "description": "2-3 sentences, 250-400 chars. See Description Style below.",
   "url": "https://live-app-url.com",
   "github": "https://github.com/keeltekool/repo-name",
   "image": "/screenshots/unique-kebab-case-id.webp",
@@ -35,14 +35,28 @@
   }
 }
 ```
-3. **Set `updatedAt` to today's date** (YYYY-MM-DD) — this is displayed on the card as "Updated YYYY-MM-DD"
-4. **Capture a screenshot** (MANDATORY — see Screenshot Rules below)
-5. Commit and push — Vercel auto-deploys
+3. **Write the description in the house style** (see Description Style below)
+4. **Set `updatedAt` to today's date** (YYYY-MM-DD) — this is displayed on the card as "Updated YYYY-MM-DD"
+5. **Capture a screenshot** (MANDATORY — see Screenshot Rules below)
+6. Commit and push — Vercel auto-deploys
 
 **Note**: To find live URLs for projects, run:
 ```bash
 gh repo list keeltekool --json name,homepageUrl -L 20
 ```
+
+### Description Style (MANDATORY for every project)
+
+Set 2026-10-24 after two swings: 450-600-char feature paragraphs (too much), then 110-220-char one-liners (too thin). The target is the middle.
+
+- **Length:** 2-3 sentences, 250-400 characters. Under 240 reads as a stub; over 420 belongs in Stack details.
+- **Sentence 1, the hook:** what it is and who it serves. The list view truncates to this sentence, so it must stand alone.
+- **Sentence 2, the mechanism:** how it works in one concrete clause with real names and numbers (sources count, model, tool, schedule). Pull it from `howItWorks`, do not summarise it vaguely.
+- **Sentence 3, optional, the kicker:** one guarantee, result or distinctive design choice ("nothing is uploaded", "a fresh Claude session rebuilt a page from the vault alone").
+- **Voice:** plain declarative sentences, no feature lists, no adjectives doing the selling. Numbers and proper nouns are the showiness.
+- **Still forbidden:** bullet-style comma chains of features, stack name-dropping without a mechanism, anything already said in `builtWith`/`services`.
+
+Reference entries in this style: `livery`, `scrapyard`, `keila-leht-ultra`, `market-watch`.
 
 ### Screenshot Rules (MANDATORY for every project)
 
@@ -165,7 +179,7 @@ nordic-portfolio/
 Each card displays:
 - **Screenshot** (fixed height, cropped hero/branding — links to live app)
 - **Title** (project name)
-- **Description** (1-2 sentences)
+- **Description** (2-3 sentences, 250-400 chars, see Description Style)
 - **"Open App"** link → `url` field (opens live app)
 - **"GitHub"** link → `github` field (opens repo)
 - **"Updated YYYY-MM-DD"** → `updatedAt` field (clock icon, shows last update date)
