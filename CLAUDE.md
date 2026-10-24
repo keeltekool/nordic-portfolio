@@ -45,18 +45,9 @@
 gh repo list keeltekool --json name,homepageUrl -L 20
 ```
 
-### Description Style (MANDATORY for every project)
+### Description Style
 
-Set 2026-10-24 after two swings: 450-600-char feature paragraphs (too much), then 110-220-char one-liners (too thin). The target is the middle.
-
-- **Length:** 2-3 sentences, 250-400 characters. Under 240 reads as a stub; over 420 belongs in Stack details.
-- **Sentence 1, the hook:** what it is and who it serves. The list view truncates to this sentence, so it must stand alone.
-- **Sentence 2, the mechanism:** how it works in one concrete clause with real names and numbers (sources count, model, tool, schedule). Pull it from `howItWorks`, do not summarise it vaguely.
-- **Sentence 3, optional, the kicker:** one guarantee, result or distinctive design choice ("nothing is uploaded", "a fresh Claude session rebuilt a page from the vault alone").
-- **Voice:** plain declarative sentences, no feature lists, no adjectives doing the selling. Numbers and proper nouns are the showiness.
-- **Still forbidden:** bullet-style comma chains of features, stack name-dropping without a mechanism, anything already said in `builtWith`/`services`.
-
-Reference entries in this style: `livery`, `scrapyard`, `keila-leht-ultra`, `market-watch`.
+The full rule lives in `~/.claude/commands/portfolio.md` (the `/portfolio` command), because entries are written from other repos during `/wrap-up` and this file is not loaded there. Short form: 2-3 sentences, 250-400 chars, hook + concrete mechanism + optional kicker.
 
 ### Screenshot Rules (MANDATORY for every project)
 
