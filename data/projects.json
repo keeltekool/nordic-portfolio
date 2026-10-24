@@ -1029,15 +1029,15 @@
     {
       "id": "pocket-clone",
       "title": "Pocket Clone",
-      "description": "Save articles for later. Minimal link-saving with auto-fetched titles, thumbnails, and AI-powered categorization.",
+      "description": "Save a link from phone or desktop; a Claude agent reads the page and files it into your buckets. Any link pulls into Claude Code as pocket #N.",
       "url": "https://pocket-clone-virid.vercel.app",
       "github": "https://github.com/keeltekool/Pocket_Clone",
       "image": "/screenshots/pocket-clone.webp",
-      "updatedAt": "2024-10-20",
+      "updatedAt": "2026-10-24",
       "stack": {
-        "builtWith": "Vanilla JS, TypeScript, Drizzle ORM",
-        "services": "Clerk (auth), Neon PostgreSQL (database), Anthropic Claude 3.5 (AI categorization), Vercel (hosting + serverless)",
-        "howItWorks": "Links saved instantly, metadata fetched in background via CORS proxy. AI auto-categorizes into user buckets."
+        "builtWith": "Next.js 16, TypeScript, Tailwind 4, Drizzle ORM",
+        "services": "Neon PostgreSQL, Claude Managed Agents (Fable 5.1), MCP server (mcp-handler), Vercel",
+        "howItWorks": "Every save fetches the page server-side and starts a -capped Managed Agent session that files the link through the app's own MCP server; the owner only adds links. Suggestions for new buckets appear when Unsorted gathers a topic. Password gate, iPhone Shortcut, bookmarklet."
       }
     },
     {
