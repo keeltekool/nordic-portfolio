@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "claude-usage-cockpit",
+      "title": "Claude Usage Cockpit",
+      "description": "A public cockpit for where one person's Claude usage goes: the Claude Max week with its pace, run-out time and daily budget, and the monthly API credit split by project, agent and model. A nightly Sonnet routine reads the limits and every cloud routine's run record, then republishes the claude.ai artifact. Built the evening the weekly limit was on pace for 132%.",
+      "url": "https://claude.ai/artifact/C3N36roX2Xv8wMySarEmDn",
+      "github": "https://github.com/keeltekool/claude-usage-cockpit",
+      "image": "/screenshots/claude-usage-cockpit.webp",
+      "updatedAt": "2026-10-26",
+      "stack": {
+        "builtWith": "Plain HTML page published as a claude.ai artifact, d3 7.9, a dependency-free Node collector, Livery \"Seasats\" design system (Newsreader, Geist, Geist Mono)",
+        "services": "Claude Code login (subscription limits, weekly split, cloud routine run records), Claude Console (API cost and tokens per key, Managed Agent and model), a Claude cloud routine on Sonnet 5.5 (nightly refresh at 23:00), public claude.ai artifact link",
+        "howItWorks": "Two pots on one page. Claude Max is read per limit week: session, weekly and Fable limits with the time passed, the pace they land at, the predicted run-out and the daily budget left, Anthropic's Claude Code / Cowork / Chats split, a reading-by-reading climb chart, and every cloud routine run priced from its own token record at API list price. API credits are read per month: spend against the $100 credit and the spend limit, and every project (keys and Managed Agents grouped) opening into its keys, agents, models and daily cost. A nightly cloud routine runs the collector and republishes the artifact with a fresh data file, keeping the history of weeks and months."
+      }
+    },
+    {
       "id": "kasilane",
       "title": "Käsilane",
       "description": "Personal agents described in Claude Code and run by hand in my own logged-in Chrome: one applies to jobs, one lists things on Vinted. Every run works one item at a time, logs each step, and uploads the cover letter it sent or a screenshot of the live listing. The dashboard shows the steps as they happen and the results afterwards.",
