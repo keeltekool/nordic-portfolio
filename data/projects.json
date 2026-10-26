@@ -295,6 +295,20 @@
       }
     },
     {
+      "id": "range-pro",
+      "title": "Range PRO",
+      "description": "Shows an Estonian food and drink maker which of its products Selver, Rimi and Barbora carry online, at what shelf price and on what promo. The maker uploads its price list, Opus 5.5 reads every row, and a daily scan links each chain listing to an EAN through code rules, then Haiku. A Monday brief arrives by email, and code rejects any number in it the scan data doesn't hold.",
+      "url": "https://range-pro.vercel.app",
+      "github": "https://github.com/keeltekool/range-pro",
+      "image": "/screenshots/range-pro.webp",
+      "updatedAt": "2026-10-26",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, pdf.js + pdf-lib, sharp, Playwright (flow checks), Archivo + IBM Plex Mono",
+        "services": "Neon PostgreSQL, Clerk (companies as Organizations), Claude API (four keys: reading, matching, pictures, brief), Vercel Blob (private price lists, public pack shots), Cloudflare Worker (Rimi search), Resend (Monday brief), Vercel Cron, Sentry",
+        "howItWorks": "A user uploads the company's official price list (PDF, Excel, Word or CSV). Code finds every EAN and Opus 5.5 reads names, sizes and packs, which code then checks against the row's own numbers; the AI drafts the company's category list and the user confirms it. A daily cron searches Selver, Rimi and Barbora by brand, links each listing to a product by chain EAN, code rules, Haiku 4.5 with pack photos, or Sonnet when unsure, and remembers every decision. The view page shows a SKU × chain Matrix (listed, shelf price, promo depth, card-only) or a Shelf of pack shots, with this week's new, delisted, price and promo changes. On Mondays one Opus call writes a short brief from the week's facts; code rejects any number not in the facts and the email links back to the filtered view."
+      }
+    },
+    {
       "id": "livery",
       "title": "Livery",
       "description": "A vault for the design systems of past builds. One push command stores a system the way it was built: source screenshots, a DESIGN.md, exact tokens and a runnable starter with page templates, verified byte by byte after upload. Any new app pulls it through MCP, REST or a shadcn registry; in a test, a fresh Claude session rebuilt a page from the vault alone.",
