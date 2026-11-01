@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "uhiskassa",
+      "title": "Ühiskassa",
+      "description": "A shared credits till for my apps: users get a signup gift, buy packs through Stripe Checkout, and each paid AI action costs its real Anthropic token price times a markup. Before every call the app asks Ühiskassa for a hold sized to the worst case, then settles the true cost in a Postgres ledger. Claude Code connects an app through an MCP server and a CLI.",
+      "url": "https://uhiskassa.vercel.app",
+      "github": "https://github.com/keeltekool/uhiskassa",
+      "image": "/screenshots/uhiskassa.webp",
+      "updatedAt": "2026-11-01",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, mcp-handler + zod, decimal.js, pgledger (vendored SQL), Playwright (checks)",
+        "services": "Neon PostgreSQL (ledger, holds, configs, call log), Stripe (Checkout per app account, webhooks, VAT tax rate), Clerk (owner-only console), npm (@keeltekool/uhiskassa SDK + CLI), Sentry, Vercel (hosting + daily cron)",
+        "howItWorks": "Each app keeps its pricing in uhiskassa.config.ts (credit value, markup, signup gift, operations, packs) and pushes it after a preview, or edits it in the console. Before a paid AI call the app server asks for a check: allowed when the balance covers the typical charge, with a hold up to the worst case. After the call it sends the real token usage; the engine prices it at the model's per-token rates × USD→EUR × markup and settles it in one PL/pgSQL call that locks the customer row, so a balance never goes negative. Packs are one-off Stripe Checkout payments in the app's own Stripe account; the webhook and the return page share one idempotent fulfilment. The owner console shows money in against AI cost per operation, every ledger entry and every API call. Claude Code drives it through 16 MCP tools and a CLI. ApplyKit is the first app on it, in test mode."
+      }
+    },
+    {
       "id": "claude-usage-cockpit",
       "title": "Claude Usage Cockpit",
       "description": "A public cockpit for where one person's Claude usage goes: the Claude Max week with its pace, run-out time and daily budget, and the monthly API credit split by project, agent and model. A Loop Control Center loop on the laptop reads the limits and the Console spend, checks the page and republishes the claude.ai artifact. Built the evening the weekly limit was on pace for 132%.",
@@ -985,14 +999,14 @@
     {
       "id": "applykit",
       "title": "ApplyKit",
-      "description": "An AI job-application platform: three CV templates, job-to-CV matching, cover letters, an interview coach and a TööRadar search across three Estonian job boards. A cloud routine skims fresh listings three times a week and hands you Top Picks with a one-line reason each. Rebuilt in October 2026 so everything works one-handed on a phone.",
+      "description": "An AI job-application platform: three CV templates, job-to-CV matching, cover letters, an interview coach and a TööRadar search across three Estonian job boards. A cloud routine skims fresh listings three times a week and hands you Top Picks with a one-line reason each. Paid AI actions run on Ühiskassa credits with a signup gift, and PDF export is free.",
       "url": "https://cv-tailor-plus.vercel.app",
       "github": "https://github.com/keeltekool/cv-tailor-plus",
       "image": "/screenshots/applykit.webp",
-      "updatedAt": "2026-10-24",
+      "updatedAt": "2026-11-01",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4",
-        "services": "Supabase (auth + PostgreSQL + storage), Vercel (hosting), Anthropic Claude (AI tailoring, letters, prep, fit analysis; Claude Code cloud routine for Top Picks)",
+        "services": "Supabase (auth + PostgreSQL + storage), Vercel (hosting), Ühiskassa (credits for paid AI actions, packs via Stripe Checkout), Anthropic Claude (AI tailoring, letters, prep, fit analysis; Claude Code cloud routine for Top Picks)",
         "howItWorks": "Three CV templates with visual editor, AI-powered job-to-CV matching, smart cover letter generation, interview prep with AI coach (chat freely then compile structured prep sheet), PDF import, job workspace with parsed requirements, TööRadar job search (Töötukassa + CV Keskus + CV Online), autonomous Top Picks (cloud routine skims fresh listings by CV fit Mon/We/Fr, permanent no-repeats ledger, renewal-proof date checks, one-line why-you reasoning per pick), deep Job Fit analysis on demand, and career consult chat. Phone layout: bottom tab bar, bottom sheets for menus, full-screen workspace with Letter / Skills·CV / Prep tabs and a Chat / Draft switch, editors with a thumb-reach action bar."
       }
     },
