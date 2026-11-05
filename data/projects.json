@@ -357,7 +357,7 @@
       "url": "https://hinnavaht.vercel.app",
       "github": "https://github.com/keeltekool/hinnavaht",
       "image": "/screenshots/hinnavaht.webp",
-      "updatedAt": "2026-11-04",
+      "updatedAt": "2026-11-05",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, barcode-detector (native BarcodeDetector + ZXing-WASM ponyfill), web-push, Familjen Grotesk + Space Mono",
         "services": "Neon PostgreSQL (products, watches, change-only price time series, digest audit), Selver Elasticsearch (live EAN resolve by any of a product's barcodes + batched price polls), Selver's Klevu search (product search from the phone), Barbora Constructor.io search + PDP prices, Rimi via a Cloudflare Worker proxy (browser-grade headers open the bot gate), Coop via Haapsalu eCoop's WooCommerce Store API (EAN = sku) plus Coop's national iPaper flyer (weekly campaign prices), GitHub Actions (free 2×/day poll + digest cron with keepalive commit), Web Push VAPID, Resend (digest emails), Anthropic Claude Haiku (category harmonization), Clerk (auth), Sentry (client-side monitoring), Vercel (hosting)",
@@ -999,15 +999,15 @@
     {
       "id": "applykit",
       "title": "ApplyKit",
-      "description": "An AI job-application platform: three CV templates, job-to-CV matching, cover letters, an interview coach and a job search that ranks three Estonian boards by title match. A cloud routine skims fresh listings three times a week and hands you Top Picks with a one-line reason each. Paid AI actions run on Ühiskassa credits with a signup gift, and PDF export is free.",
+      "description": "An AI job-application platform: three CV templates, job-to-CV matching, cover letters, an interview coach and a job search that ranks CV Keskus, CV Online and LinkedIn Estonia listings by title match. A cloud routine skims fresh listings three times a week and hands you Top Picks with a one-line reason each. Paid AI actions run on Ühiskassa credits with a signup gift, and PDF export is free.",
       "url": "https://cv-tailor-plus.vercel.app",
       "github": "https://github.com/keeltekool/cv-tailor-plus",
       "image": "/screenshots/applykit.webp",
       "updatedAt": "2026-11-04",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4",
-        "services": "Supabase (auth + PostgreSQL + storage), Vercel (hosting), Ühiskassa (credits for paid AI actions, packs via Stripe Checkout), Anthropic Claude (AI tailoring, letters, prep, fit analysis; Claude Code cloud routine for Top Picks)",
-        "howItWorks": "Three CV templates with visual editor, AI-powered job-to-CV matching, smart cover letter generation, interview prep with AI coach (chat freely then compile structured prep sheet), PDF import, job workspace with parsed requirements, job search across Töötukassa + CV Keskus + CV Online, ranked into one list by a deterministic Estonian-aware title matcher (inflections, compounds, split titles) over cached portal inventories, one posted date per ad, autonomous Top Picks (cloud routine skims fresh listings by CV fit Mon/We/Fr, permanent no-repeats ledger, renewal-proof date checks, one-line why-you reasoning per pick), deep Job Fit analysis on demand, and career consult chat. Phone layout: bottom tab bar, bottom sheets for menus, full-screen workspace with Letter / Skills·CV / Prep tabs and a Chat / Draft switch, editors with a thumb-reach action bar."
+        "services": "Supabase (auth + PostgreSQL + storage), Vercel (hosting, cron for the LinkedIn feed), Ühiskassa (credits for paid AI actions, packs via Stripe Checkout), Anthropic Claude (AI tailoring, letters, prep, fit analysis; Claude Code cloud routine for Top Picks)",
+        "howItWorks": "Three CV templates with visual editor, AI-powered job-to-CV matching, smart cover letter generation, interview prep with AI coach (chat freely then compile structured prep sheet), PDF import, job workspace with parsed requirements, job search across CV Keskus + CV Online + LinkedIn Estonia (a feed the app ingests from LinkedIn's logged-out job search three times a day, headline rows only; the full ad is read when a listing is saved), ranked into one list by a deterministic Estonian-aware title matcher (inflections, compounds, split titles) over cached portal inventories, one posted date per ad, autonomous Top Picks (cloud routine skims fresh listings by CV fit Mon/We/Fr, permanent no-repeats ledger, renewal-proof date checks, one-line why-you reasoning per pick), deep Job Fit analysis on demand, and career consult chat. Phone layout: bottom tab bar, bottom sheets for menus, full-screen workspace with Letter / Skills·CV / Prep tabs and a Chat / Draft switch, editors with a thumb-reach action bar."
       }
     },
     {
