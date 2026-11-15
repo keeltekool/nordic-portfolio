@@ -999,11 +999,11 @@
     {
       "id": "applykit",
       "title": "ApplyKit",
-      "description": "An AI job-application platform for job seekers in Estonia, Latvia and Lithuania, each a separate market in its own language: a CV editor, cover letters, an interview coach and one job search over stored ads. Three mornings a week Haiku 5.5 reads every new ad in your market against your CV and picks up to 10 with a one-line reason, free for every user.",
+      "description": "An AI job-application platform for job seekers in Estonia, Latvia and Lithuania, each market in its own language: a CV editor, cover letters, an interview coach and one job search over stored ads. Three mornings a week Haiku 5.5 picks up to 10 new ads per user, each with a one-line reason. CVs come in and go out as PDF or Word, and skill matching reads Baltic case endings.",
       "url": "https://cv-tailor-plus.vercel.app",
       "github": "https://github.com/keeltekool/cv-tailor-plus",
       "image": "/screenshots/applykit.webp",
-      "updatedAt": "2026-11-11",
+      "updatedAt": "2026-11-15",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4",
         "services": "Supabase (auth + PostgreSQL + storage), Vercel (hosting, crons for the ad feeds and Top Picks), Ühiskassa (credits for paid AI actions, packs via Stripe Checkout), Anthropic Claude (AI tailoring, letters, prep, fit analysis; Haiku 5.5 scheduled Top Picks, Opus 5.5 first picks)",
