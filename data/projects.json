@@ -1,6 +1,19 @@
 {
   "projects": [
     {
+      "id": "lugemata",
+      "title": "Lugemata",
+      "description": "A personal magazine made from my new X bookmarks, modelled on Jarmo Tuisk's setup. Every Sunday at 08:00 a Claude Desktop scheduled task opens the bookmarks through Claude in Chrome, reads each post and the article it links to, and republishes one Artifact page with what each story means for my work. Nobody starts it, and each story has a Deep dive button that asks Claude.",
+      "url": "https://claude.ai/code/artifact/0953f5e1-8ed5-4680-8408-a95d0306183b",
+      "image": "/screenshots/lugemata.webp",
+      "updatedAt": "2026-11-22",
+      "stack": {
+        "builtWith": "Plain HTML page rendered by a Node script (build.mjs), Geist, Livery ApplyKit design system (Raspberry accent)",
+        "services": "Claude Desktop local scheduled task (Code tab, Sunday 08:00, Auto mode), Claude in Chrome extension (the owner's logged-in Chrome), claude.ai Artifacts (sample capability for Deep dive), Loop Control Center (run steps and run log), GitHub (issues and state)",
+        "howItWorks": "Claude Desktop fires the task on Sunday morning, or once on wake if the PC slept through it. The task runs the Loop Control Center loop `run loop lugemata`: Claude in Chrome opens x.com/i/bookmarks, collects posts until it reaches one already covered, opens each post and its linked article, and writes the issue as JSON with a summary and a For you line per story. A Node script renders the page, the Artifact tool republishes it to the same link, the state is committed, and the run is logged back to LCC. The first issue on 22.11.2026 ran with nobody at the keyboard: six bookmarks became four stories."
+      }
+    },
+    {
       "id": "uhiskassa",
       "title": "Ühiskassa",
       "description": "A shared credits till for my apps: users get a signup gift, buy packs through Stripe Checkout, and each paid AI action costs its real Anthropic token price times a markup. Before every call the app asks Ühiskassa for a hold sized to the worst case, then settles the true cost in a Postgres ledger. Claude Code connects an app through an MCP server and a CLI.",
