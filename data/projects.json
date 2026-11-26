@@ -1,6 +1,20 @@
 {
   "projects": [
     {
+      "id": "thrift-shop-king",
+      "title": "Thrift Shop King",
+      "description": "A phone web app for thrift-shop hunting: one photo of a vintage football shirt on the rack shows the kit and what a dealer would pay for it. A SigLIP 2 fingerprint in the browser shortlists 10 of 18,075 kits and Claude Opus 5.5 picks one. Every price is a real listing from one dealer shop, with its condition stamped next to it.",
+      "url": "https://thrift-shop-king.vercel.app",
+      "github": "https://github.com/keeltekool/thrift-shop-king",
+      "image": "/screenshots/thrift-shop-king.webp",
+      "updatedAt": "2026-11-26",
+      "stack": {
+        "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, Transformers.js (SigLIP 2 in the browser), sharp, Playwright (flow checks)",
+        "services": "Neon PostgreSQL + pgvector (kits, dealer listings, scans, Locker), Cloudflare R2 (kit photos), Anthropic API (Claude Opus 5.5), Vercel (hosting)",
+        "howItWorks": "The catalogue is built from three dealers: Classic Football Shirts, Vintage Football Shirts and Cult Kits, 18,075 kits from 1990 on with about 73,000 graded listings, including the last prices of shirts that left the shop. On the phone, a SigLIP 2 model fingerprints the photo in the browser, Neon pgvector returns the 10 closest priced kits, and Claude Opus 5.5 picks one or says none. The price comes from one shop per kit, Classic Football Shirts whenever it has the kit, Good first, then the closest condition; dealer pays is 65% of it. Bought asks for the condition of the shirt in hand and what was paid, and saves it to the Locker. A PIN keeps the app private."
+      }
+    },
+    {
       "id": "unread",
       "title": "The Unread",
       "description": "A personal magazine made from my new X bookmarks, modelled on Jarmo Tuisk's Lugemata. Every Sunday at 08:00 a Claude Desktop scheduled task opens the bookmarks through Claude in Chrome, reads each post and the article it links to, and republishes one Artifact page with a picture of every post and what it means for my work. Nobody starts it.",
