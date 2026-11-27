@@ -3,15 +3,15 @@
     {
       "id": "thrift-shop-king",
       "title": "Thrift Shop King",
-      "description": "A phone web app for thrift-shop hunting: one photo of a vintage football shirt shows the exact kit, then what dealers pay for it in every condition. A SigLIP 2 fingerprint in the browser shortlists 10 of 17,909 kits and Claude Opus 5.5 picks one. You judge the shirt in your hand, tap its condition, and keep it in the Locker.",
+      "description": "A phone web app for thrift-shop hunting: one photo of a vintage football shirt shows the exact kit, then what dealers pay for it in every condition. A SigLIP 2 fingerprint in the browser shortlists 10 of 17,909 kits and Claude Opus 5.5 picks one. Saved shirts live in the Locker, the first screen, and one tap emails a shirt's details to you.",
       "url": "https://thrift-shop-king.vercel.app",
       "github": "https://github.com/keeltekool/thrift-shop-king",
       "image": "/screenshots/thrift-shop-king.webp",
-      "updatedAt": "2026-11-26",
+      "updatedAt": "2026-11-27",
       "stack": {
         "builtWith": "Next.js 16, React 19, TypeScript, Tailwind CSS 4, Drizzle ORM, Transformers.js (SigLIP 2 in the browser), sharp, Playwright (flow checks)",
-        "services": "Neon PostgreSQL + pgvector (kits, dealer listings, scans, Locker), Cloudflare R2 (kit photos), Anthropic API (Claude Opus 5.5), Vercel (hosting)",
-        "howItWorks": "The catalogue is built from three dealers: Classic Football Shirts, Vintage Football Shirts and Cult Kits, 17,909 kits from 1990 on with about 73,000 graded listings, including the last prices of shirts that left the shop; the same shirt filed twice under two names is folded into one kit. The app opens straight into the camera. A SigLIP 2 model fingerprints the photo in the browser, Neon pgvector returns the 10 closest priced kits, and Claude Opus 5.5 picks one or says none. After \"That's the one\", the Prices screen lists every condition the kit's shop has, best to worst, with the real shop price and the 65% a dealer pays; one shop per kit, Classic Football Shirts whenever it has it. The user taps the condition of the shirt in hand, adds what they paid if they bought it, and saves it to the Locker, where it can be changed or removed later. A PIN keeps the app private."
+        "services": "Neon PostgreSQL + pgvector (kits, dealer listings, scans, Locker), Cloudflare R2 (kit photos), Anthropic API (Claude Opus 5.5), Resend (Send via email), Vercel (hosting)",
+        "howItWorks": "The catalogue is built from three dealers: Classic Football Shirts, Vintage Football Shirts and Cult Kits, 17,909 kits from 1990 on with about 73,000 graded listings, including the last prices of shirts that left the shop; the same shirt filed twice under two names is folded into one kit. The app opens on the Locker, the saved shirts; the round pitch button hands the shot to the phone's own camera, so the app never holds a camera stream. A SigLIP 2 model fingerprints the photo in the browser, Neon pgvector returns the 10 closest priced kits, and Claude Opus 5.5 picks one or says none. After \"That's the one\", the Prices screen lists every condition the kit's shop has, best to worst, with the real shop price and the 65% a dealer pays; one shop per kit, Classic Football Shirts whenever it has it. The user taps the condition of the shirt in hand, adds what they paid if they bought it, and saves it to the Locker, where it can be changed or removed later; the three dots on a shirt send its details by email through Resend to the address in Settings. Each person has a PIN of their own: a phone and a computer with the same PIN show the same Locker, and the computer only manages it."
       }
     },
     {
