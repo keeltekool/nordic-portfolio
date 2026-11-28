@@ -40,6 +40,16 @@ for (const [vp, width, height] of [["375", 375, 812], ["1440", 1440, 900]]) {
   check("tabs show counts", (await tab("Projects")) === `Projects${active.length}` && (await tab("Archive")) === `Archive${archived.length}`, `${await tab("Projects")} / ${await tab("Archive")}`);
   check("no horizontal scroll", await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth));
 
+  const multi = active.find((p) => p.links?.length);
+  if (multi) {
+    const wanted = [{ label: multi.urlLabel ?? "Open App", url: multi.url }, ...multi.links];
+    const found = await Promise.all(wanted.map((l) => page.locator(`a[href="${l.url}"]`, { hasText: l.label }).count()));
+    check(`${multi.title} card shows its ${wanted.length} labelled links`, found.every((n) => n === 1), found.join(","));
+  }
+  const pinned = active.filter((p) => p.pinLast).map((p) => p.title).sort();
+  const tail = (await cards.allTextContents()).slice(-pinned.length).sort();
+  check("pinLast entries sit at the very bottom", pinned.length === 0 || pinned.join("|") === tail.join("|"), tail.join("|"));
+
   const name = active[0].title;
   await search.fill(name.toLowerCase());
   check(`"${name.toLowerCase()}" finds ${name}`, (await cards.allTextContents()).some((t) => t.includes(name)));

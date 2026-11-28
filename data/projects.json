@@ -1179,6 +1179,27 @@
         "services": "Clerk (auth), Vercel (hosting), Anthropic Claude (AI PDF extraction)",
         "howItWorks": "Build CVs with customizable templates, fonts, and colors. Import existing PDFs with AI extraction."
       }
+    },
+    {
+      "id": "credit-line-card-prototype",
+      "pinLast": true,
+      "title": "Credit Line Card Prototype",
+      "description": "A clickable iPhone prototype and a build and launch plan for adding a virtual Visa card to a consumer lender's credit line, made as a Product Owner home assignment. Three flows across 19 screens cover getting the card, one limit shared by card payments and bank withdrawals, and the offer to a new customer. Every new screen is drawn in the lender's own design system, measured from its live app.",
+      "url": "https://claude.ai/artifact/9bHRfka3TfuRvs2MWsz7R2",
+      "urlLabel": "Open prototype",
+      "links": [
+        {
+          "label": "Build and launch plan",
+          "url": "https://claude.ai/artifact/2SuWDmcPL3Y7xiyaGwkpVv"
+        }
+      ],
+      "image": "/screenshots/credit-line-card-prototype.webp",
+      "updatedAt": "2026-11-19",
+      "stack": {
+        "builtWith": "One self-contained HTML file per deliverable: HTML, CSS custom properties, vanilla JavaScript, inline SVG, Inter. No framework, no build step",
+        "services": "Claude Code (research, design-token extraction from the live app, build), Claude artifacts (hosting and share links)",
+        "howItWorks": "The prototype is a small state machine: each flow lists its screens and the taps that move between them, so a reviewer clicks the real path (offer, documents, Smart-ID signing, card active, Apple Wallet) while a step strip shows where they are. Tokens and components were rebuilt from the live app's compiled CSS, and the card patterns the app lacks were drawn in the same style. The plan is one page: product, customer flows, card-issuer integration, support, marketing, legal, data, then a 7-step launch with a timeline, a checklist and open questions."
+      }
     }
   ]
 }

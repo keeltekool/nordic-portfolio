@@ -35,6 +35,7 @@
   }
 }
 ```
+   Optional fields: `urlLabel` replaces the "Open App" text for an entry that is not an app, `links` (`[{ "label", "url" }]`) adds further links under it, `pinLast: true` keeps the entry at the bottom of the list whatever its date.
 3. **Write the description in the house style** (see Description Style below)
 4. **Set `updatedAt` to today's date** (YYYY-MM-DD) — this is displayed on the card as "Updated YYYY-MM-DD"
 5. **Capture a screenshot** (MANDATORY — see Screenshot Rules below)
